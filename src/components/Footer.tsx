@@ -174,7 +174,7 @@ export const Footer = () => {
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <span>&copy; {currentYear} Donate Lanka. All rights reserved.</span>
               <span>•</span>
-              <span>Licensed by Central Bank of Sri Lanka</span>
+              <span>Licensed by Central</span>
               <span>•</span>
               <span>Reg. No: NPO/2024/001</span>
             </div>
