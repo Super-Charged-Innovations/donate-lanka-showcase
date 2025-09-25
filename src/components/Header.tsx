@@ -49,14 +49,9 @@ export const Header = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-1 flex-shrink-0">
               <img 
-                src="/logo.png" 
-                alt="DonateLanka Logo" 
+                src="/fund-lanka-logo.png" 
+                alt="Fund Lanka Logo" 
                 className="h-10 w-auto sm:h-12 object-contain"
-              />
-              <img 
-                src="/logo-text.png" 
-                alt="DonateLanka Text" 
-                className="h-8 w-auto sm:h-10 object-contain"
               />
             </Link>
 

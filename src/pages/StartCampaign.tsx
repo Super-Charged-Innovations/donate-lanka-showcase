@@ -897,8 +897,8 @@ const StartCampaign = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <img 
-                src="/logo.png" 
-                alt="DonateLanka Logo" 
+                src="/fund-lanka-logo.png" 
+                alt="Fund Lanka Logo" 
                 className="h-8 w-auto"
               />
               <span className="text-xl font-bold text-secondary-foreground">DonateLanka</span>
