@@ -166,14 +166,14 @@ export default {
 						transform: 'translateX(0)'
 					},
 					'100%': {
-						transform: 'translateX(-33.333%)'
+						transform: 'translateX(-50%)'
 					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'scroll': 'scroll 20s linear infinite'
+				'scroll': 'scroll 15s linear infinite'
 			}
 		}
 	},
