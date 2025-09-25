@@ -7,47 +7,44 @@ const companyLogos = [
 ];
 
 const LogoSlideshow = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % companyLogos.length);
-    }, 3000); // Change every 3 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="relative w-full overflow-hidden">
-      <div className="flex items-center justify-center space-x-8 py-8">
-        {companyLogos.map((company, index) => {
-          const isCenter = index === currentIndex;
-          const isLeft = index === (currentIndex - 1 + companyLogos.length) % companyLogos.length;
-          const isRight = index === (currentIndex + 1) % companyLogos.length;
-          
-          let animationClass = "opacity-0 scale-75";
-          if (isCenter) {
-            animationClass = "opacity-100 scale-100";
-          } else if (isLeft || isRight) {
-            animationClass = "opacity-60 scale-90";
-          }
-
-          return (
-            <div
-              key={company.name}
-              className={`transition-all duration-500 ease-in-out transform ${animationClass} ${
-                !isCenter && !isLeft && !isRight ? "hidden" : "flex"
-              } items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 border border-border/50`}
-            >
-              <span className="text-2xl font-bold text-primary">{company.logo}</span>
-            </div>
-          );
-        })}
+    <div className="relative w-full overflow-hidden py-8">
+      {/* Moving logos container */}
+      <div className="flex animate-scroll space-x-12">
+        {/* First set of logos */}
+        {companyLogos.map((company, index) => (
+          <div
+            key={`set1-${index}`}
+            className="flex-shrink-0 flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 border border-border/50"
+          >
+            <span className="text-2xl font-bold text-primary">{company.logo}</span>
+          </div>
+        ))}
+        
+        {/* Duplicate set for seamless loop */}
+        {companyLogos.map((company, index) => (
+          <div
+            key={`set2-${index}`}
+            className="flex-shrink-0 flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 border border-border/50"
+          >
+            <span className="text-2xl font-bold text-primary">{company.logo}</span>
+          </div>
+        ))}
+        
+        {/* Third set for extra seamless effect */}
+        {companyLogos.map((company, index) => (
+          <div
+            key={`set3-${index}`}
+            className="flex-shrink-0 flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 border border-border/50"
+          >
+            <span className="text-2xl font-bold text-primary">{company.logo}</span>
+          </div>
+        ))}
       </div>
       
-      {/* Fade edges */}
-      <div className="absolute top-0 left-0 w-16 h-full bg-gradient-to-r from-muted/30 to-transparent pointer-events-none" />
-      <div className="absolute top-0 right-0 w-16 h-full bg-gradient-to-l from-muted/30 to-transparent pointer-events-none" />
+      {/* Fade edges for disappearing effect */}
+      <div className="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-muted/30 via-muted/30 to-transparent pointer-events-none z-10" />
+      <div className="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-muted/30 via-muted/30 to-transparent pointer-events-none z-10" />
     </div>
   );
 };
