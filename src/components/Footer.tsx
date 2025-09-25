@@ -71,11 +71,7 @@ export const Footer = () => {
             <div className="flex justify-center items-center gap-4">
               <div className="flex items-center gap-2 px-3 py-2 bg-background rounded-lg border border-border">
                 <CreditCard className="w-4 h-4" />
-                <span className="text-sm">Visa</span>
-              </div>
-              <div className="flex items-center gap-2 px-3 py-2 bg-background rounded-lg border border-border">
-                <CreditCard className="w-4 h-4" />
-                <span className="text-sm">Mastercard</span>
+                <span className="text-sm">Credit Card</span>
               </div>
               <div className="flex items-center gap-2 px-3 py-2 bg-background rounded-lg border border-border">
                 <CreditCard className="w-4 h-4" />
