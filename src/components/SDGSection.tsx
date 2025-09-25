@@ -6,25 +6,19 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Target, Users, Lightbulb } from "lucide-react";
 import { sdgData, SDG } from "@/types/sdg";
 import { cn } from "@/lib/utils";
-
 export const SDGSection = () => {
   const [selectedSDG, setSelectedSDG] = useState<SDG | null>(null);
-
   const handleSDGClick = (sdg: SDG) => {
     setSelectedSDG(sdg);
   };
-
   const handleBrowseProjects = () => {
     // Navigate to projects page with SDG filter
     window.location.href = "/projects";
   };
-
   const handleLearnMore = () => {
     window.open("https://sdgs.un.org/goals", "_blank");
   };
-
-  return (
-    <section className="py-16 px-4 bg-gradient-to-br from-background via-muted/30 to-background">
+  return <section className="py-16 px-4 bg-gradient-to-br from-background via-muted/30 to-background">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12">
@@ -45,23 +39,11 @@ export const SDGSection = () => {
         <div className="mb-12">
           {/* Mobile/Tablet: Simple responsive grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:hidden">
-            {sdgData.map((sdg) => (
-              <Card 
-                key={sdg.id}
-                className={cn(
-                  "cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg",
-                  "border-2 hover:border-primary/50 group"
-                )}
-                onClick={() => handleSDGClick(sdg)}
-              >
+            {sdgData.map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-primary/50 group")} onClick={() => handleSDGClick(sdg)}>
                 <CardContent className="p-6 text-center">
                   {/* Official UN SDG Icon */}
                   <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                    <img 
-                      src={sdg.iconPath}
-                      alt={`SDG ${sdg.id}: ${sdg.title}`}
-                      className="w-full h-full object-cover"
-                    />
+                    <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
                   </div>
                   
                   {/* Title */}
@@ -79,31 +61,18 @@ export const SDGSection = () => {
                     {sdg.sriLankanContext}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
           {/* Desktop: Custom row layout */}
           <div className="hidden lg:block space-y-3">
             {/* Row 1: SDGs 1-5 */}
             <div className="flex justify-center gap-4">
-              {sdgData.slice(0, 5).map((sdg) => (
-                <Card 
-                  key={sdg.id}
-                  className={cn(
-                    "cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg",
-                    "border-2 hover:border-primary/50 group w-44"
-                  )}
-                  onClick={() => handleSDGClick(sdg)}
-                >
+              {sdgData.slice(0, 5).map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-primary/50 group w-44")} onClick={() => handleSDGClick(sdg)}>
                   <CardContent className="p-4 text-center">
                     {/* Official UN SDG Icon */}
                     <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                      <img 
-                        src={sdg.iconPath}
-                        alt={`SDG ${sdg.id}: ${sdg.title}`}
-                        className="w-full h-full object-cover"
-                      />
+                      <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
                     </div>
                     
                     {/* Title */}
@@ -116,29 +85,16 @@ export const SDGSection = () => {
                       {sdg.sriLankanContext}
                     </p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
 
             {/* Row 2: SDGs 6-10 */}
             <div className="flex justify-center gap-4">
-              {sdgData.slice(5, 10).map((sdg) => (
-                <Card 
-                  key={sdg.id}
-                  className={cn(
-                    "cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg",
-                    "border-2 hover:border-primary/50 group w-44"
-                  )}
-                  onClick={() => handleSDGClick(sdg)}
-                >
+              {sdgData.slice(5, 10).map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-primary/50 group w-44")} onClick={() => handleSDGClick(sdg)}>
                   <CardContent className="p-4 text-center">
                     {/* Official UN SDG Icon */}
                     <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                      <img 
-                        src={sdg.iconPath}
-                        alt={`SDG ${sdg.id}: ${sdg.title}`}
-                        className="w-full h-full object-cover"
-                      />
+                      <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
                     </div>
                     
                     {/* Title */}
@@ -151,29 +107,16 @@ export const SDGSection = () => {
                       {sdg.sriLankanContext}
                     </p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
 
             {/* Row 3: SDGs 11-14 */}
             <div className="flex justify-center gap-4">
-              {sdgData.slice(10, 14).map((sdg) => (
-                <Card 
-                  key={sdg.id}
-                  className={cn(
-                    "cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg",
-                    "border-2 hover:border-primary/50 group w-44"
-                  )}
-                  onClick={() => handleSDGClick(sdg)}
-                >
+              {sdgData.slice(10, 14).map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-primary/50 group w-44")} onClick={() => handleSDGClick(sdg)}>
                   <CardContent className="p-4 text-center">
                     {/* Official UN SDG Icon */}
                     <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                      <img 
-                        src={sdg.iconPath}
-                        alt={`SDG ${sdg.id}: ${sdg.title}`}
-                        className="w-full h-full object-cover"
-                      />
+                      <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
                     </div>
                     
                     {/* Title */}
@@ -186,29 +129,16 @@ export const SDGSection = () => {
                       {sdg.sriLankanContext}
                     </p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
 
             {/* Row 4: SDGs 15-17 */}
             <div className="flex justify-center gap-4">
-              {sdgData.slice(14, 17).map((sdg) => (
-                <Card 
-                  key={sdg.id}
-                  className={cn(
-                    "cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg",
-                    "border-2 hover:border-primary/50 group w-44"
-                  )}
-                  onClick={() => handleSDGClick(sdg)}
-                >
+              {sdgData.slice(14, 17).map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-primary/50 group w-44")} onClick={() => handleSDGClick(sdg)}>
                   <CardContent className="p-4 text-center">
                     {/* Official UN SDG Icon */}
                     <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                      <img 
-                        src={sdg.iconPath}
-                        alt={`SDG ${sdg.id}: ${sdg.title}`}
-                        className="w-full h-full object-cover"
-                      />
+                      <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
                     </div>
                     
                     {/* Title */}
@@ -221,8 +151,7 @@ export const SDGSection = () => {
                       {sdg.sriLankanContext}
                     </p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -237,20 +166,11 @@ export const SDGSection = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              onClick={handleBrowseProjects}
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
-            >
+            <Button onClick={handleBrowseProjects} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
               <Target className="mr-2 h-5 w-5" />
               Browse Projects by SDG
             </Button>
-            <Button 
-              onClick={handleLearnMore}
-              variant="outline"
-              size="lg"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-            >
+            <Button onClick={handleLearnMore} variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
               <ExternalLink className="mr-2 h-5 w-5" />
               Learn More About the SDGs
             </Button>
@@ -259,32 +179,18 @@ export const SDGSection = () => {
 
         {/* Footer Note */}
         <div className="mt-12 text-center">
-          <p className="text-sm text-muted-foreground">
-            FundLanka is committed to transparency and impact. Track our progress toward the SDGs in our{" "}
-            <Button 
-              variant="link" 
-              className="p-0 h-auto text-sm text-primary underline"
-              onClick={() => window.location.href = "/impact"}
-            >
-              Annual Impact Report
-            </Button>
-          </p>
+          
         </div>
       </div>
 
       {/* SDG Detail Modal */}
       <Dialog open={!!selectedSDG} onOpenChange={() => setSelectedSDG(null)}>
         <DialogContent className="max-w-2xl">
-          {selectedSDG && (
-            <>
+          {selectedSDG && <>
               <DialogHeader>
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 rounded-lg overflow-hidden shadow-md">
-                    <img 
-                      src={selectedSDG.iconPath}
-                      alt={`SDG ${selectedSDG.id}: ${selectedSDG.title}`}
-                      className="w-full h-full object-cover"
-                    />
+                    <img src={selectedSDG.iconPath} alt={`SDG ${selectedSDG.id}: ${selectedSDG.title}`} className="w-full h-full object-cover" />
                   </div>
                   <div>
                     <DialogTitle className="text-xl">{selectedSDG.title}</DialogTitle>
@@ -310,26 +216,18 @@ export const SDGSection = () => {
                 </div>
                 
                 <div className="flex gap-3">
-                  <Button 
-                    onClick={handleBrowseProjects}
-                    className="flex-1"
-                  >
+                  <Button onClick={handleBrowseProjects} className="flex-1">
                     <Target className="mr-2 h-4 w-4" />
                     View Related Projects
                   </Button>
-                  <Button 
-                    variant="outline"
-                    onClick={() => window.open(`https://sdgs.un.org/goals/goal${selectedSDG.id}`, "_blank")}
-                  >
+                  <Button variant="outline" onClick={() => window.open(`https://sdgs.un.org/goals/goal${selectedSDG.id}`, "_blank")}>
                     <Lightbulb className="mr-2 h-4 w-4" />
                     Learn More
                   </Button>
                 </div>
               </div>
-            </>
-          )}
+            </>}
         </DialogContent>
       </Dialog>
-    </section>
-  );
+    </section>;
 };
