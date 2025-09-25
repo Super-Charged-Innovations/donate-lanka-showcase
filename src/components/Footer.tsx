@@ -125,10 +125,11 @@ export const Footer = () => {
             {/* Brand Section */}
             <div className="lg:col-span-1">
               <Link to="/" className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">DL</span>
-                </div>
-                
+                <img 
+                  src="/fund-lanka-logo.png" 
+                  alt="Fund Lanka Logo" 
+                  className="h-8 w-auto object-contain"
+                />
               </Link>
               <p className="text-sm text-muted-foreground mb-4">
                 Empowering Sri Lankan communities through transparent, secure crowdfunding. 
