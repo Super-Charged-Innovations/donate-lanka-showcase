@@ -1,10 +1,12 @@
 import { ArrowRight, Play, Users, Heart, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { InteractiveGradient } from "./InteractiveGradient";
 export const Hero = () => {
     return <section className="relative min-h-screen flex items-center overflow-hidden pt-20 md:pt-0">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-hero opacity-80" />
+      <InteractiveGradient />
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-20 h-20 md:w-32 md:h-32 bg-primary/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-20 right-10 w-32 h-32 md:w-48 md:h-48 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-1000" />
