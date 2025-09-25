@@ -128,9 +128,7 @@ export const Footer = () => {
                 <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-lg">DL</span>
                 </div>
-                <span className="text-xl font-bold text-foreground">
-                  Donate Lanka
-                </span>
+                
               </Link>
               <p className="text-sm text-muted-foreground mb-4">
                 Empowering Sri Lankan communities through transparent, secure crowdfunding. 
