@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 const navigationItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
+  { label: "Partners", href: "/partners" },
 ];
 
 export const Header = () => {
@@ -46,7 +47,7 @@ export const Header = () => {
         )}>
           <div className="flex items-center justify-between h-12 lg:h-14 px-2">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-1">
+            <Link to="/" className="flex items-center space-x-1 flex-shrink-0">
               <img 
                 src="/logo.png" 
                 alt="DonateLanka Logo" 
@@ -59,8 +60,8 @@ export const Header = () => {
               />
             </Link>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-1">
+            {/* Desktop Navigation - Centered */}
+            <nav className="hidden lg:flex items-center space-x-1 absolute left-1/2 transform -translate-x-1/2">
               {navigationItems.map((item) => (
                 <Link
                   key={item.href}
@@ -80,6 +81,18 @@ export const Header = () => {
 
             {/* Actions */}
             <div className="flex items-center space-x-3">
+              {/* Connect with Us Button - Desktop */}
+              <Button
+                variant="default"
+                size="sm"
+                className={cn(
+                  "hidden lg:flex rounded-full text-sm font-medium",
+                  "bg-warning/90 text-warning-foreground hover:bg-warning",
+                  "backdrop-blur-sm border border-warning/30"
+                )}
+              >
+                Connect with Us
+              </Button>
 
               {/* Mobile Menu Button */}
               <Button
