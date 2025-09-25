@@ -176,7 +176,7 @@ export const Footer = () => {
               <span>•</span>
               <span>Licensed by Central</span>
               <span>•</span>
-              <span>Reg. No: NPO/2024/001</span>
+              
             </div>
 
             <div className="flex items-center gap-4">
