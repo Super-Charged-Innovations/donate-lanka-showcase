@@ -1,12 +1,8 @@
 import { ArrowRight, Play, Users, Heart, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-
 export const Hero = () => {
-
-
-  return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-hero opacity-80" />
       <div className="absolute inset-0">
@@ -50,20 +46,7 @@ export const Hero = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-muted-foreground">
-            <div className="flex items-center">
-              <Users className="w-4 h-4 mr-2" />
-              72,850+ Active Donors
-            </div>
-            <div className="flex items-center">
-              <Heart className="w-4 h-4 mr-2" />
-              LKR 875M+ Raised Successfully
-            </div>
-            <div className="flex items-center">
-              <Globe className="w-4 h-4 mr-2" />
-              All 25 Districts • 12,400+ Communities
-            </div>
-          </div>
+          
         </div>
       </div>
 
@@ -73,6 +56,5 @@ export const Hero = () => {
           <div className="w-1 h-3 bg-muted-foreground rounded-full mt-2 animate-pulse" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
