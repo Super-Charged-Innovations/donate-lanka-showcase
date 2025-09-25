@@ -52,20 +52,20 @@ export const InteractiveGradient = () => {
   const gradientStyle = {
     background: `
       radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, 
-        hsl(var(--primary) / ${isHovered ? 0.15 : 0.08}) 0%, 
-        hsl(var(--primary) / ${isHovered ? 0.08 : 0.04}) 25%, 
+        hsl(var(--primary) / ${isHovered ? 0.25 : 0.15}) 0%, 
+        hsl(var(--primary) / ${isHovered ? 0.15 : 0.08}) 25%, 
         transparent 50%),
       radial-gradient(circle at ${100 - mousePosition.x}% ${100 - mousePosition.y}%, 
-        hsl(var(--secondary) / ${isHovered ? 0.12 : 0.06}) 0%, 
-        hsl(var(--secondary) / ${isHovered ? 0.06 : 0.03}) 30%, 
+        hsl(var(--secondary) / ${isHovered ? 0.2 : 0.12}) 0%, 
+        hsl(var(--secondary) / ${isHovered ? 0.1 : 0.06}) 30%, 
         transparent 60%),
       radial-gradient(circle at ${mousePosition.x * 0.8}% ${mousePosition.y * 1.2}%, 
-        hsl(var(--accent) / ${isHovered ? 0.1 : 0.05}) 0%, 
+        hsl(var(--accent) / ${isHovered ? 0.18 : 0.1}) 0%, 
         transparent 40%),
       linear-gradient(${mousePosition.x * 1.8}deg, 
-        hsl(var(--primary) / 0.02) 0%, 
-        hsl(var(--secondary) / 0.02) 50%, 
-        hsl(var(--accent) / 0.02) 100%)
+        hsl(var(--primary) / 0.05) 0%, 
+        hsl(var(--secondary) / 0.05) 50%, 
+        hsl(var(--accent) / 0.05) 100%)
     `,
     transition: isHovered 
       ? 'background 0.3s cubic-bezier(0.4, 0, 0.2, 1)' 
@@ -76,7 +76,7 @@ export const InteractiveGradient = () => {
   return (
     <div
       ref={containerRef}
-      className="absolute inset-0 hidden md:block pointer-events-none"
+      className="absolute inset-0 hidden md:block pointer-events-none z-10"
       style={gradientStyle}
     />
   );
