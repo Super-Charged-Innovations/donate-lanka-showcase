@@ -15,10 +15,7 @@ export const Hero = () => {
       <div className="container relative z-10 mx-auto px-4 lg:px-6">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <Badge variant="secondary" className="mb-6 px-4 py-2 text-sm">
-            <Heart className="w-4 h-4 mr-2" />
-            Trusted by 72,000+ donors • LKR 875M+ raised for 1,847+ projects
-          </Badge>
+          
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-relaxed">
