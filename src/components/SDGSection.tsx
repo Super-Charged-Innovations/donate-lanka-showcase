@@ -27,9 +27,7 @@ export const SDGSection = () => {
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">At FundLanka, every Startup will directly or indirectly support Sri Lanka's progress toward the
 Global 17 Sustainable Development Goals (SDGs). From eradicating poverty to protecting our environment, your generosity fuels real, measurable change across all 25 districts.</p>
-          <p className="text-lg text-muted-foreground mt-2 font-medium">
-            Discover how your support helps build a brighter, more sustainable future for all Sri Lankans.
-          </p>
+          <p className="text-lg text-muted-foreground mt-2 font-medium">Discover how your choice helps build a brighter, more sustainable future for all Sri Lankans.</p>
         </div>
 
         {/* SDG Grid */}
