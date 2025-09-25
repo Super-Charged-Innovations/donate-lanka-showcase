@@ -21,7 +21,7 @@ export const Hero = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-relaxed">
             Empowering{" "}
             <span className="bg-gradient-text bg-clip-text text-transparent">
-              Startups
+              Sri Lankan Startups
             </span>{" "}
             Through Smart Funding
           </h1>
