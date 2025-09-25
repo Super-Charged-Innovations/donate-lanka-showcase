@@ -37,14 +37,14 @@ export const Header = () => {
       >
         
         <div className={cn(
-          "mx-auto px-6 lg:px-8 rounded-full transition-all duration-300",
-          "bg-background/20 backdrop-blur-xl border border-white/20",
-          "shadow-lg shadow-primary/5",
+          "mx-auto px-4 lg:px-6 rounded-full transition-all duration-300",
+          "bg-background/10 backdrop-blur-2xl border border-white/15",
+          "shadow-2xl shadow-black/10",
           isScrolled 
-            ? "bg-background/30 backdrop-blur-2xl border-white/30 shadow-xl shadow-primary/10" 
-            : "bg-background/15 backdrop-blur-lg"
+            ? "bg-background/20 backdrop-blur-3xl border-white/25 shadow-2xl shadow-black/20" 
+            : "bg-background/8 backdrop-blur-xl"
         )}>
-          <div className="flex items-center justify-between h-14 lg:h-16">
+          <div className="flex items-center justify-between h-12 lg:h-14 px-2">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-1">
               <img 
