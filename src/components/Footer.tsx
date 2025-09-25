@@ -170,31 +170,7 @@ export const Footer = () => {
           <Separator className="my-8" />
 
           {/* Bottom Bar */}
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-4 text-sm text-muted-foreground">
-              <span>&copy; {currentYear} Donate Lanka. All rights reserved.</span>
-              <span>•</span>
-              <span>Licensed by Central</span>
-              <span>•</span>
-              
-            </div>
-
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Heart className="w-4 h-4 text-red-500" />
-                <span>Made with love in Sri Lanka</span>
-              </div>
-              
-              {/* Language Switcher */}
-              <div className="flex items-center gap-2">
-                <select className="text-sm bg-transparent border border-border rounded px-2 py-1">
-                  <option value="en">English</option>
-                  <option value="si">සිංහල</option>
-                  <option value="ta">தமிழ்</option>
-                </select>
-              </div>
-            </div>
-          </div>
+          
 
           {/* Regulatory Notice */}
           
