@@ -84,21 +84,21 @@ export const SDGSection = () => {
           </div>
 
           {/* Desktop: Custom row layout */}
-          <div className="hidden lg:block space-y-6">
+          <div className="hidden lg:block space-y-3">
             {/* Row 1: SDGs 1-5 */}
-            <div className="flex justify-center gap-6">
+            <div className="flex justify-center gap-4">
               {sdgData.slice(0, 5).map((sdg) => (
                 <Card 
                   key={sdg.id}
                   className={cn(
                     "cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg",
-                    "border-2 hover:border-primary/50 group w-48"
+                    "border-2 hover:border-primary/50 group w-44"
                   )}
                   onClick={() => handleSDGClick(sdg)}
                 >
-                  <CardContent className="p-6 text-center">
+                  <CardContent className="p-4 text-center">
                     {/* Official UN SDG Icon */}
-                    <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                       <img 
                         src={sdg.iconPath}
                         alt={`SDG ${sdg.id}: ${sdg.title}`}
@@ -107,14 +107,9 @@ export const SDGSection = () => {
                     </div>
                     
                     {/* Title */}
-                    <h3 className="font-semibold text-foreground mb-2 text-sm md:text-base group-hover:text-primary transition-colors">
+                    <h3 className="font-semibold text-foreground mb-1 text-sm group-hover:text-primary transition-colors">
                       {sdg.title}
                     </h3>
-                    
-                    {/* Project Count Badge */}
-                    <Badge variant="secondary" className="mb-3">
-                      {sdg.projectCount} Projects
-                    </Badge>
                     
                     {/* Sri Lankan Context */}
                     <p className="text-xs text-muted-foreground leading-relaxed">
@@ -126,19 +121,19 @@ export const SDGSection = () => {
             </div>
 
             {/* Row 2: SDGs 6-10 */}
-            <div className="flex justify-center gap-6">
+            <div className="flex justify-center gap-4">
               {sdgData.slice(5, 10).map((sdg) => (
                 <Card 
                   key={sdg.id}
                   className={cn(
                     "cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg",
-                    "border-2 hover:border-primary/50 group w-48"
+                    "border-2 hover:border-primary/50 group w-44"
                   )}
                   onClick={() => handleSDGClick(sdg)}
                 >
-                  <CardContent className="p-6 text-center">
+                  <CardContent className="p-4 text-center">
                     {/* Official UN SDG Icon */}
-                    <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                       <img 
                         src={sdg.iconPath}
                         alt={`SDG ${sdg.id}: ${sdg.title}`}
@@ -147,14 +142,9 @@ export const SDGSection = () => {
                     </div>
                     
                     {/* Title */}
-                    <h3 className="font-semibold text-foreground mb-2 text-sm md:text-base group-hover:text-primary transition-colors">
+                    <h3 className="font-semibold text-foreground mb-1 text-sm group-hover:text-primary transition-colors">
                       {sdg.title}
                     </h3>
-                    
-                    {/* Project Count Badge */}
-                    <Badge variant="secondary" className="mb-3">
-                      {sdg.projectCount} Projects
-                    </Badge>
                     
                     {/* Sri Lankan Context */}
                     <p className="text-xs text-muted-foreground leading-relaxed">
@@ -166,19 +156,19 @@ export const SDGSection = () => {
             </div>
 
             {/* Row 3: SDGs 11-14 */}
-            <div className="flex justify-center gap-6">
+            <div className="flex justify-center gap-4">
               {sdgData.slice(10, 14).map((sdg) => (
                 <Card 
                   key={sdg.id}
                   className={cn(
                     "cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg",
-                    "border-2 hover:border-primary/50 group w-48"
+                    "border-2 hover:border-primary/50 group w-44"
                   )}
                   onClick={() => handleSDGClick(sdg)}
                 >
-                  <CardContent className="p-6 text-center">
+                  <CardContent className="p-4 text-center">
                     {/* Official UN SDG Icon */}
-                    <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                       <img 
                         src={sdg.iconPath}
                         alt={`SDG ${sdg.id}: ${sdg.title}`}
@@ -187,14 +177,9 @@ export const SDGSection = () => {
                     </div>
                     
                     {/* Title */}
-                    <h3 className="font-semibold text-foreground mb-2 text-sm md:text-base group-hover:text-primary transition-colors">
+                    <h3 className="font-semibold text-foreground mb-1 text-sm group-hover:text-primary transition-colors">
                       {sdg.title}
                     </h3>
-                    
-                    {/* Project Count Badge */}
-                    <Badge variant="secondary" className="mb-3">
-                      {sdg.projectCount} Projects
-                    </Badge>
                     
                     {/* Sri Lankan Context */}
                     <p className="text-xs text-muted-foreground leading-relaxed">
@@ -206,19 +191,19 @@ export const SDGSection = () => {
             </div>
 
             {/* Row 4: SDGs 15-17 */}
-            <div className="flex justify-center gap-6">
+            <div className="flex justify-center gap-4">
               {sdgData.slice(14, 17).map((sdg) => (
                 <Card 
                   key={sdg.id}
                   className={cn(
                     "cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg",
-                    "border-2 hover:border-primary/50 group w-48"
+                    "border-2 hover:border-primary/50 group w-44"
                   )}
                   onClick={() => handleSDGClick(sdg)}
                 >
-                  <CardContent className="p-6 text-center">
+                  <CardContent className="p-4 text-center">
                     {/* Official UN SDG Icon */}
-                    <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                       <img 
                         src={sdg.iconPath}
                         alt={`SDG ${sdg.id}: ${sdg.title}`}
@@ -227,14 +212,9 @@ export const SDGSection = () => {
                     </div>
                     
                     {/* Title */}
-                    <h3 className="font-semibold text-foreground mb-2 text-sm md:text-base group-hover:text-primary transition-colors">
+                    <h3 className="font-semibold text-foreground mb-1 text-sm group-hover:text-primary transition-colors">
                       {sdg.title}
                     </h3>
-                    
-                    {/* Project Count Badge */}
-                    <Badge variant="secondary" className="mb-3">
-                      {sdg.projectCount} Projects
-                    </Badge>
                     
                     {/* Sri Lankan Context */}
                     <p className="text-xs text-muted-foreground leading-relaxed">
