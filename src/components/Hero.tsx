@@ -21,16 +21,16 @@ export const Hero = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-relaxed">
             Empowering{" "}
             <span className="bg-gradient-text bg-clip-text text-transparent">
-              Sri Lankan Communities
+              Startups
             </span>{" "}
-            Through Crowdfunding
+            Through Smart Funding
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            From Jaffna to Hambantota, we connect generous hearts with meaningful causes. 
-            Support education, healthcare, disaster relief, and community development 
-            projects that create lasting change across all 25 districts of Sri Lanka.
+            Connect innovative startups with investors and venture capitalists. 
+            Pitch your projects, showcase your vision, and secure the funding you need 
+            to transform ideas into successful businesses.
           </p>
 
 
