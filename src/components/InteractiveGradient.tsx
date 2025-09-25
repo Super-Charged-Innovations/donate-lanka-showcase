@@ -25,12 +25,17 @@ export const InteractiveGradient = () => {
         const x = ((e.clientX - rect.left) / rect.width) * 100;
         const y = ((e.clientY - rect.top) / rect.height) * 100;
         
+        console.log('Mouse position:', { x, y }); // Debug logging
         setMousePosition({ x: Math.max(0, Math.min(100, x)), y: Math.max(0, Math.min(100, y)) });
       });
     };
 
-    const handleMouseEnter = () => setIsHovered(true);
+    const handleMouseEnter = () => {
+      console.log('Mouse entered'); // Debug logging
+      setIsHovered(true);
+    };
     const handleMouseLeave = () => {
+      console.log('Mouse left'); // Debug logging
       setIsHovered(false);
       setMousePosition({ x: 50, y: 50 });
     };
@@ -52,31 +57,32 @@ export const InteractiveGradient = () => {
   const gradientStyle = {
     background: `
       radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, 
-        hsl(var(--primary) / ${isHovered ? 0.25 : 0.15}) 0%, 
-        hsl(var(--primary) / ${isHovered ? 0.15 : 0.08}) 25%, 
+        ${isHovered ? 'rgba(255, 215, 0, 0.6)' : 'rgba(255, 215, 0, 0.4)'} 0%, 
+        ${isHovered ? 'rgba(255, 215, 0, 0.3)' : 'rgba(255, 215, 0, 0.2)'} 25%, 
         transparent 50%),
       radial-gradient(circle at ${100 - mousePosition.x}% ${100 - mousePosition.y}%, 
-        hsl(var(--secondary) / ${isHovered ? 0.2 : 0.12}) 0%, 
-        hsl(var(--secondary) / ${isHovered ? 0.1 : 0.06}) 30%, 
+        ${isHovered ? 'rgba(220, 38, 127, 0.5)' : 'rgba(220, 38, 127, 0.3)'} 0%, 
+        ${isHovered ? 'rgba(220, 38, 127, 0.25)' : 'rgba(220, 38, 127, 0.15)'} 30%, 
         transparent 60%),
       radial-gradient(circle at ${mousePosition.x * 0.8}% ${mousePosition.y * 1.2}%, 
-        hsl(var(--accent) / ${isHovered ? 0.18 : 0.1}) 0%, 
+        ${isHovered ? 'rgba(16, 185, 129, 0.4)' : 'rgba(16, 185, 129, 0.25)'} 0%, 
         transparent 40%),
       linear-gradient(${mousePosition.x * 1.8}deg, 
-        hsl(var(--primary) / 0.05) 0%, 
-        hsl(var(--secondary) / 0.05) 50%, 
-        hsl(var(--accent) / 0.05) 100%)
+        rgba(255, 215, 0, 0.1) 0%, 
+        rgba(220, 38, 127, 0.1) 50%, 
+        rgba(16, 185, 129, 0.1) 100%)
     `,
     transition: isHovered 
       ? 'background 0.3s cubic-bezier(0.4, 0, 0.2, 1)' 
       : 'background 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
     willChange: 'background',
+    border: '1px solid rgba(255, 255, 255, 0.1)', // Debug border
   };
 
   return (
     <div
       ref={containerRef}
-      className="absolute inset-0 hidden md:block pointer-events-none z-10"
+      className="absolute inset-0 hidden md:block z-10"
       style={gradientStyle}
     />
   );
