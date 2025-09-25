@@ -1,53 +1,14 @@
-import { useEffect, useRef, useState } from "react";
-
 interface MousePosition {
   x: number;
   y: number;
 }
 
-export const InteractiveGradient = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [mousePosition, setMousePosition] = useState<MousePosition>({ x: 50, y: 50 });
-  const [isHovered, setIsHovered] = useState(false);
-  const animationRef = useRef<number>();
+interface InteractiveGradientProps {
+  mousePosition: MousePosition;
+  isHovered: boolean;
+}
 
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const handleMouseMove = (e: MouseEvent) => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-
-      animationRef.current = requestAnimationFrame(() => {
-        const rect = container.getBoundingClientRect();
-        const x = ((e.clientX - rect.left) / rect.width) * 100;
-        const y = ((e.clientY - rect.top) / rect.height) * 100;
-        
-        setMousePosition({ x: Math.max(0, Math.min(100, x)), y: Math.max(0, Math.min(100, y)) });
-      });
-    };
-
-    const handleMouseEnter = () => setIsHovered(true);
-    const handleMouseLeave = () => {
-      setIsHovered(false);
-      setMousePosition({ x: 50, y: 50 });
-    };
-
-    container.addEventListener("mousemove", handleMouseMove);
-    container.addEventListener("mouseenter", handleMouseEnter);
-    container.addEventListener("mouseleave", handleMouseLeave);
-
-    return () => {
-      container.removeEventListener("mousemove", handleMouseMove);
-      container.removeEventListener("mouseenter", handleMouseEnter);
-      container.removeEventListener("mouseleave", handleMouseLeave);
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-    };
-  }, []);
+export const InteractiveGradient = ({ mousePosition, isHovered }: InteractiveGradientProps) => {
 
   const gradientStyle = {
     background: `
@@ -87,7 +48,6 @@ export const InteractiveGradient = () => {
 
   return (
     <div
-      ref={containerRef}
       className="absolute inset-0 hidden md:block z-10"
       style={gradientStyle}
     />

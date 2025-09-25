@@ -2,11 +2,61 @@ import { ArrowRight, Play, Users, Heart, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { InteractiveGradient } from "./InteractiveGradient";
+import { useRef, useState, useEffect } from "react";
+
+interface MousePosition {
+  x: number;
+  y: number;
+}
+
 export const Hero = () => {
-    return <section className="relative min-h-screen flex items-center overflow-hidden pt-20 md:pt-0">
+  const heroRef = useRef<HTMLElement>(null);
+  const [mousePosition, setMousePosition] = useState<MousePosition>({ x: 50, y: 50 });
+  const [isHovered, setIsHovered] = useState(false);
+  const animationRef = useRef<number>();
+
+  useEffect(() => {
+    const hero = heroRef.current;
+    if (!hero) return;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+
+      animationRef.current = requestAnimationFrame(() => {
+        const rect = hero.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        
+        setMousePosition({ x: Math.max(0, Math.min(100, x)), y: Math.max(0, Math.min(100, y)) });
+      });
+    };
+
+    const handleMouseEnter = () => setIsHovered(true);
+    const handleMouseLeave = () => {
+      setIsHovered(false);
+      setMousePosition({ x: 50, y: 50 });
+    };
+
+    hero.addEventListener("mousemove", handleMouseMove);
+    hero.addEventListener("mouseenter", handleMouseEnter);
+    hero.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      hero.removeEventListener("mousemove", handleMouseMove);
+      hero.removeEventListener("mouseenter", handleMouseEnter);
+      hero.removeEventListener("mouseleave", handleMouseLeave);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, []);
+
+    return <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden pt-20 md:pt-0">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-hero opacity-80" />
-      <InteractiveGradient />
+      <InteractiveGradient mousePosition={mousePosition} isHovered={isHovered} />
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-20 h-20 md:w-32 md:h-32 bg-primary/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-20 right-10 w-32 h-32 md:w-48 md:h-48 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-1000" />
