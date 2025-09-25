@@ -89,5 +89,33 @@ const statistics = [{
   color: "text-secondary"
 }];
 export const StatisticsCounter = () => {
-  return;
+  return (
+    <section className="py-16 px-4 bg-muted/30">
+      <div className="container mx-auto max-w-6xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {statistics.map((stat, index) => {
+            const IconComponent = stat.icon;
+            return (
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 rounded-full bg-primary/10">
+                    <IconComponent className={`h-8 w-8 ${stat.color}`} />
+                  </div>
+                </div>
+                <div className="text-3xl font-bold text-foreground mb-2">
+                  <Counter
+                    end={stat.value}
+                    prefix={stat.prefix}
+                    suffix={stat.suffix}
+                    formatter={stat.formatter}
+                  />
+                </div>
+                <p className="text-muted-foreground font-medium">{stat.label}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 };
