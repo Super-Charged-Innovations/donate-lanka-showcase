@@ -1,19 +1,9 @@
-import { useState } from "react";
-import { Search, ArrowRight, Play, Users, Heart, Globe } from "lucide-react";
+import { ArrowRight, Play, Users, Heart, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 
 export const Hero = () => {
-  const [searchQuery, setSearchQuery] = useState("");
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      // Navigate to projects page with search query
-      window.location.href = `/projects?search=${encodeURIComponent(searchQuery)}`;
-    }
-  };
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -50,36 +40,9 @@ export const Hero = () => {
             projects that create lasting change across all 25 districts of Sri Lanka.
           </p>
 
-          {/* Search Bar */}
-          <form onSubmit={handleSearch} className="mb-8">
-            <div className="relative max-w-2xl mx-auto">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
-                <Input
-                  type="text"
-                  placeholder="Search water wells, mobile clinics, school scholarships..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-12 pr-32 py-4 text-base rounded-full border-2 bg-background/90 backdrop-blur-sm"
-                />
-                <Button
-                  type="submit"
-                  size="sm"
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 rounded-full px-6"
-                >
-                  Search
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              </div>
-            </div>
-          </form>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="px-8 py-4 text-base rounded-full">
-              Start a Campaign
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
             <Button variant="outline" size="lg" className="px-8 py-4 text-base rounded-full">
               <Play className="mr-2 w-5 h-5" />
               Watch How It Works

@@ -1,9 +1,7 @@
 import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { X, Search, User, LogIn, UserPlus } from "lucide-react";
+import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 
 interface NavigationItem {
@@ -59,17 +57,6 @@ export const MobileNav = ({ isOpen, onClose, navigationItems }: MobileNavProps) 
             </Button>
           </div>
 
-          {/* Search */}
-          <div className="p-4 border-b">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
-              <Input
-                placeholder="Search projects..."
-                className="pl-10"
-              />
-            </div>
-          </div>
-
           {/* Navigation Links */}
           <nav className="flex-1 p-4">
             <div className="space-y-2">
@@ -89,30 +76,6 @@ export const MobileNav = ({ isOpen, onClose, navigationItems }: MobileNavProps) 
               ))}
             </div>
           </nav>
-
-          {/* Actions */}
-          <div className="p-4 border-t space-y-3">
-            <Button asChild className="w-full" variant="secondary">
-              <Link to="/start">Start a Campaign</Link>
-            </Button>
-            
-            <Separator />
-            
-            <div className="space-y-2">
-              <Button asChild variant="outline" size="sm" className="w-full justify-start">
-                <Link to="/login">
-                  <LogIn className="w-4 h-4 mr-2" />
-                  Sign In
-                </Link>
-              </Button>
-              <Button asChild variant="ghost" size="sm" className="w-full justify-start">
-                <Link to="/login">
-                  <UserPlus className="w-4 h-4 mr-2" />
-                  Create Account
-                </Link>
-              </Button>
-            </div>
-          </div>
         </div>
       </div>
     </div>
