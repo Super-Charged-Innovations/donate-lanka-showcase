@@ -25,7 +25,7 @@ export const SDGSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Our Mission: Advancing Sri Lanka Through the UN Sustainable Development Goals
           </h2>
-          <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">At FundLanka, every project and donation directly supports Sri Lanka's progress toward the
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">At FundLanka, every Startup will directly or indirectly support Sri Lanka's progress toward the
 Global 17 Sustainable Development Goals (SDGs). From eradicating poverty to protecting our environment, your generosity fuels real, measurable change across all 25 districts.</p>
           <p className="text-lg text-muted-foreground mt-2 font-medium">
             Discover how your support helps build a brighter, more sustainable future for all Sri Lankans.
