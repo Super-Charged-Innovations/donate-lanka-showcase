@@ -15,14 +15,14 @@ const companyLogos = [{
 const LogoSlideshow = () => {
   return <div className="relative w-full overflow-hidden py-8">
       {/* Moving logos container */}
-      <div className="flex animate-scroll space-x-16">
+      <div className="flex animate-scroll-seamless">
         {/* First set of logos */}
-        {companyLogos.map((company, index) => <div key={`set1-${index}`} className="flex-shrink-0 flex items-center justify-center w-28 h-28 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 border border-border/50">
+        {companyLogos.map((company, index) => <div key={`set1-${index}`} className="flex-shrink-0 flex items-center justify-center w-28 h-28 mr-16 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 border border-border/50">
             <span className="text-3xl font-bold text-primary">{company.logo}</span>
           </div>)}
         
         {/* Duplicate set for seamless loop */}
-        {companyLogos.map((company, index) => <div key={`set2-${index}`} className="flex-shrink-0 flex items-center justify-center w-28 h-28 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 border border-border/50">
+        {companyLogos.map((company, index) => <div key={`set2-${index}`} className={`flex-shrink-0 flex items-center justify-center w-28 h-28 ${index < companyLogos.length - 1 ? 'mr-16' : ''} rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 border border-border/50`}>
             <span className="text-3xl font-bold text-primary">{company.logo}</span>
           </div>)}
       </div>

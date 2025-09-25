@@ -168,12 +168,21 @@ export default {
 					'100%': {
 						transform: 'translateX(-50%)'
 					}
+				},
+				'scroll-seamless': {
+					'0%': {
+						transform: 'translateX(0)'
+					},
+					'100%': {
+						transform: 'translateX(-704px)' // 4 logos * (112px + 64px spacing)
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'scroll': 'scroll 15s linear infinite'
+				'scroll': 'scroll 15s linear infinite',
+				'scroll-seamless': 'scroll-seamless 15s linear infinite'
 			}
 		}
 	},
