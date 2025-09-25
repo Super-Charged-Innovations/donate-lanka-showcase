@@ -38,11 +38,11 @@ export const Header = () => {
         
         <div className={cn(
           "mx-auto px-4 lg:px-6 rounded-full transition-all duration-300",
-          "bg-background/10 backdrop-blur-2xl border border-white/15",
-          "shadow-2xl shadow-black/10",
+          "bg-white/5 backdrop-blur-3xl border border-white/10",
+          "shadow-2xl shadow-black/5",
           isScrolled 
-            ? "bg-background/20 backdrop-blur-3xl border-white/25 shadow-2xl shadow-black/20" 
-            : "bg-background/8 backdrop-blur-xl"
+            ? "bg-white/8 backdrop-blur-3xl border-white/15 shadow-2xl shadow-black/10" 
+            : "bg-white/3 backdrop-blur-2xl border-white/8"
         )}>
           <div className="flex items-center justify-between h-12 lg:h-14 px-2">
             {/* Logo */}
