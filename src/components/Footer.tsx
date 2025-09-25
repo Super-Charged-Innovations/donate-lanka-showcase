@@ -2,55 +2,87 @@ import { Link } from "react-router-dom";
 import { Heart, Shield, CreditCard, FileText, Users, Mail, Phone, MapPin } from "lucide-react";
 import { SecurityBadges } from "@/components/SecurityBadges";
 import { Separator } from "@/components/ui/separator";
-
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
-
   const footerSections = {
     platform: {
       title: "Platform",
-      links: [
-        { label: "How It Works", href: "/how-it-works" },
-        { label: "Start a Campaign", href: "/create" },
-        { label: "Browse Projects", href: "/projects" },
-        { label: "Success Stories", href: "/success-stories" },
-        { label: "Impact Reports", href: "/impact" },
-      ]
+      links: [{
+        label: "How It Works",
+        href: "/how-it-works"
+      }, {
+        label: "Start a Campaign",
+        href: "/create"
+      }, {
+        label: "Browse Projects",
+        href: "/projects"
+      }, {
+        label: "Success Stories",
+        href: "/success-stories"
+      }, {
+        label: "Impact Reports",
+        href: "/impact"
+      }]
     },
     support: {
       title: "Support & Help",
-      links: [
-        { label: "Help Center", href: "/help" },
-        { label: "FAQ", href: "/faq" },
-        { label: "Campaign Guidelines", href: "/guidelines" },
-        { label: "Verification Process", href: "/verification" },
-        { label: "Contact Support", href: "/contact" },
-      ]
+      links: [{
+        label: "Help Center",
+        href: "/help"
+      }, {
+        label: "FAQ",
+        href: "/faq"
+      }, {
+        label: "Campaign Guidelines",
+        href: "/guidelines"
+      }, {
+        label: "Verification Process",
+        href: "/verification"
+      }, {
+        label: "Contact Support",
+        href: "/contact"
+      }]
     },
     legal: {
       title: "Legal & Compliance",
-      links: [
-        { label: "Terms of Service", href: "/terms" },
-        { label: "Privacy Policy", href: "/privacy" },
-        { label: "Cookie Policy", href: "/cookies" },
-        { label: "Refund Policy", href: "/refunds" },
-        { label: "Anti-Fraud Policy", href: "/anti-fraud" },
-      ]
+      links: [{
+        label: "Terms of Service",
+        href: "/terms"
+      }, {
+        label: "Privacy Policy",
+        href: "/privacy"
+      }, {
+        label: "Cookie Policy",
+        href: "/cookies"
+      }, {
+        label: "Refund Policy",
+        href: "/refunds"
+      }, {
+        label: "Anti-Fraud Policy",
+        href: "/anti-fraud"
+      }]
     },
     about: {
       title: "About Us",
-      links: [
-        { label: "Our Mission", href: "/about" },
-        { label: "Team", href: "/team" },
-        { label: "Careers", href: "/careers" },
-        { label: "Press & Media", href: "/press" },
-        { label: "Partner With Us", href: "/partners" },
-      ]
+      links: [{
+        label: "Our Mission",
+        href: "/about"
+      }, {
+        label: "Team",
+        href: "/team"
+      }, {
+        label: "Careers",
+        href: "/careers"
+      }, {
+        label: "Press & Media",
+        href: "/press"
+      }, {
+        label: "Partner With Us",
+        href: "/partners"
+      }]
     }
   };
-
-  return (
-    <footer className="bg-background border-t border-border">
+  return <footer className="bg-background border-t border-border">
       {/* Security & Trust Section */}
       <div className="bg-muted/30 py-8">
         <div className="container mx-auto px-4 lg:px-6">
@@ -123,23 +155,16 @@ export const Footer = () => {
             </div>
 
             {/* Footer Links */}
-            {Object.entries(footerSections).map(([key, section]) => (
-              <div key={key}>
+            {Object.entries(footerSections).map(([key, section]) => <div key={key}>
                 <h4 className="font-semibold text-foreground mb-4">{section.title}</h4>
                 <ul className="space-y-3">
-                  {section.links.map((link) => (
-                    <li key={link.href}>
-                      <Link 
-                        to={link.href}
-                        className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                      >
+                  {section.links.map(link => <li key={link.href}>
+                      <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                         {link.label}
                       </Link>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           <Separator className="my-8" />
@@ -172,22 +197,8 @@ export const Footer = () => {
           </div>
 
           {/* Regulatory Notice */}
-          <div className="mt-6 p-4 bg-muted/30 rounded-lg">
-            <div className="flex items-start gap-3">
-              <FileText className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-              <div className="text-xs text-muted-foreground">
-                <p className="font-medium mb-1">Regulatory Notice:</p>
-                <p>
-                  Donate Lanka is a licensed crowdfunding platform regulated by the Central Bank of Sri Lanka 
-                  and the Securities and Exchange Commission of Sri Lanka. All transactions are monitored for 
-                  compliance with anti-money laundering regulations. Donations may be tax-deductible subject to 
-                  local tax laws. Please consult your tax advisor for guidance.
-                </p>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
