@@ -33,11 +33,11 @@ const Partners = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <CardHeader>
-                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 p-3">
+                <div className="w-full h-24 flex items-center justify-center mx-auto mb-4">
                   <img 
                     src="/partners/hatch-logo.png" 
                     alt="Hatch Sri Lanka Logo" 
-                    className="w-full h-full object-contain"
+                    className="h-full w-auto object-contain max-w-full"
                   />
                 </div>
                 <Badge variant="outline" className="mb-2 mx-auto w-fit">Co-working Partner</Badge>
