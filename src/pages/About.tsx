@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Heart, Globe, Users, Target, Award, TrendingUp } from "lucide-react";
+import { Heart, Globe, Users, Target, Award, TrendingUp, Building2, Handshake, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -121,6 +121,68 @@ const About = () => {
               <CardContent>
                 <CardDescription>
                   Leveraging technology to make fundraising more effective, accessible, and impactful than ever.
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Partners */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Our Strategic Partners</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              We collaborate with leading organizations to amplify our impact and bring meaningful change to communities worldwide
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <CardHeader>
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Building2 className="w-8 h-8 text-primary" />
+                </div>
+                <Badge variant="outline" className="mb-2 mx-auto w-fit">Co-working Partner</Badge>
+                <CardTitle className="text-xl">Hatch Sri Lanka</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base">
+                  Leading co-working space provider in Sri Lanka, fostering innovation and entrepreneurship. 
+                  Hatch provides our team with world-class facilities and access to a vibrant startup ecosystem.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <CardHeader>
+                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Handshake className="w-8 h-8 text-secondary" />
+                </div>
+                <Badge variant="outline" className="mb-2 mx-auto w-fit">Co-founder</Badge>
+                <CardTitle className="text-xl">Veracity Group</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base">
+                  Strategic consulting and business development experts, bringing decades of experience in 
+                  scaling social impact ventures and connecting them with sustainable funding opportunities.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <CardHeader>
+                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Lightbulb className="w-8 h-8 text-accent" />
+                </div>
+                <Badge variant="outline" className="mb-2 mx-auto w-fit">Co-founder</Badge>
+                <CardTitle className="text-xl">Super Charged Innovations</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base">
+                  Technology innovation specialists focused on creating scalable solutions for social good. 
+                  They drive our technical strategy and ensure our platform leverages cutting-edge technologies.
                 </CardDescription>
               </CardContent>
             </Card>
