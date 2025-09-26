@@ -9,7 +9,7 @@ const About = () => {
     <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
       {/* Hero Section */}
       <section className="py-16 px-4 text-center">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-4xl pt-16">
           <Badge variant="secondary" className="mb-4">
             About Our Mission
           </Badge>
@@ -20,14 +20,6 @@ const About = () => {
             We're building a platform that connects passionate changemakers with impactful projects, 
             aligned with the United Nations Sustainable Development Goals to create a better world for all.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg">
-              <Link to="/projects">Explore Projects</Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <Link to="/create">Start a Campaign</Link>
-            </Button>
-          </div>
         </div>
       </section>
 
