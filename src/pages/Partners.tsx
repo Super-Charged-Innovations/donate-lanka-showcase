@@ -81,8 +81,12 @@ const Partners = () => {
 
             <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <CardHeader>
-                <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Lightbulb className="w-10 h-10 text-accent" />
+                <div className="w-full h-24 flex items-center justify-center mx-auto mb-4">
+                  <img 
+                    src="/partners/supercharged-logo.png" 
+                    alt="Super Charged Innovations Logo" 
+                    className="h-full w-auto object-contain max-w-full"
+                  />
                 </div>
                 <Badge variant="outline" className="mb-2 mx-auto w-fit">Co-founder</Badge>
                 <CardTitle className="text-2xl">Super Charged Innovations</CardTitle>
