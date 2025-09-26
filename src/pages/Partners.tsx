@@ -31,7 +31,7 @@ const Partners = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <Card className="relative overflow-hidden text-center bg-gradient-card border-2 border-blue-200/50 hover:border-blue-300/70 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <CardHeader>
                 <div className="w-full h-24 flex items-center justify-center mx-auto mb-4">
                   <img 
@@ -40,7 +40,7 @@ const Partners = () => {
                     className="h-full w-auto object-contain max-w-full"
                   />
                 </div>
-                <Badge variant="outline" className="mb-2 mx-auto w-fit">Co-working Partner</Badge>
+                <Badge variant="outline" className="mb-2 mx-auto w-fit border-blue-200 text-blue-700">Co-working Partner</Badge>
                 <CardTitle className="text-2xl">Hatch Sri Lanka</CardTitle>
               </CardHeader>
               <CardContent>
@@ -48,14 +48,19 @@ const Partners = () => {
                   Leading co-working space provider in Sri Lanka, fostering innovation and entrepreneurship. 
                   Hatch provides our team with world-class facilities and access to a vibrant startup ecosystem.
                 </CardDescription>
-                <div className="flex items-center justify-center text-sm text-muted-foreground">
+                <a 
+                  href="https://hatch.lk/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center text-sm text-blue-600 hover:text-blue-800 transition-colors duration-200 font-medium"
+                >
                   <ExternalLink className="w-4 h-4 mr-1" />
                   Learn more about Hatch
-                </div>
+                </a>
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <Card className="relative overflow-hidden text-center bg-gradient-card border-2 border-purple-200/50 hover:border-purple-300/70 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <CardHeader>
                 <div className="w-full h-24 flex items-center justify-center mx-auto mb-4">
                   <img 
@@ -64,7 +69,7 @@ const Partners = () => {
                     className="h-full w-auto object-contain max-w-full"
                   />
                 </div>
-                <Badge variant="outline" className="mb-2 mx-auto w-fit">Co-founder</Badge>
+                <Badge variant="outline" className="mb-2 mx-auto w-fit border-purple-200 text-purple-700">Co-founder</Badge>
                 <CardTitle className="text-2xl">Veracity Group</CardTitle>
               </CardHeader>
               <CardContent>
@@ -72,23 +77,28 @@ const Partners = () => {
                   Strategic consulting and business development experts, bringing decades of experience in 
                   scaling social impact ventures and connecting them with sustainable funding opportunities.
                 </CardDescription>
-                <div className="flex items-center justify-center text-sm text-muted-foreground">
+                <a 
+                  href="https://www.veracitygp.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center text-sm text-purple-600 hover:text-purple-800 transition-colors duration-200 font-medium"
+                >
                   <ExternalLink className="w-4 h-4 mr-1" />
                   Discover Veracity Group
-                </div>
+                </a>
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <Card className="relative overflow-hidden text-center bg-gradient-card border-2 border-teal-200/50 hover:border-teal-300/70 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <CardHeader>
                 <div className="w-full h-24 flex items-center justify-center mx-auto mb-4">
                   <img 
-                    src="/partners/supercharged-logo.png" 
+                    src="/partners/supercharged-logo-new.png" 
                     alt="Super Charged Innovations Logo" 
                     className="h-full w-auto object-contain max-w-full"
                   />
                 </div>
-                <Badge variant="outline" className="mb-2 mx-auto w-fit">Co-founder</Badge>
+                <Badge variant="outline" className="mb-2 mx-auto w-fit border-teal-200 text-teal-700">Co-founder</Badge>
                 <CardTitle className="text-2xl">Super Charged Innovations</CardTitle>
               </CardHeader>
               <CardContent>
@@ -96,10 +106,15 @@ const Partners = () => {
                   Technology innovation specialists focused on creating scalable solutions for social good. 
                   They drive our technical strategy and ensure our platform leverages cutting-edge technologies.
                 </CardDescription>
-                <div className="flex items-center justify-center text-sm text-muted-foreground">
+                <a 
+                  href="https://superchargedinnovations.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center text-sm text-teal-600 hover:text-teal-800 transition-colors duration-200 font-medium"
+                >
                   <ExternalLink className="w-4 h-4 mr-1" />
                   Explore innovations
-                </div>
+                </a>
               </CardContent>
             </Card>
           </div>
