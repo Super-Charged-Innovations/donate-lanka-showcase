@@ -154,20 +154,43 @@ const About = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* SDG Investment Trust */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Make a Difference?</h2>
+          <h2 className="text-3xl font-bold mb-6">Building Investor Confidence Through SDG Alignment</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Join thousands of changemakers who are already making an impact through our platform.
+            Startups that align with the UN Sustainable Development Goals demonstrate measurable impact, 
+            transparent reporting, and long-term vision—key factors that modern investors value when making funding decisions.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" asChild>
-              <Link to="/create">Start Your Campaign</Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <Link to="/projects">Support Projects</Link>
-            </Button>
+          <div className="grid md:grid-cols-2 gap-8 text-left">
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">Risk Mitigation</h3>
+              <p className="text-muted-foreground">
+                SDG-aligned businesses show proactive approaches to regulatory compliance, environmental risks, 
+                and social responsibility, reducing potential future liabilities for investors.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">Market Advantage</h3>
+              <p className="text-muted-foreground">
+                Companies addressing global challenges tap into growing markets for sustainable solutions, 
+                positioning themselves ahead of traditional competitors and regulatory changes.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">Transparent Metrics</h3>
+              <p className="text-muted-foreground">
+                SDG frameworks provide standardized impact measurement, giving investors clear visibility 
+                into both financial returns and societal value creation.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">ESG Compliance</h3>
+              <p className="text-muted-foreground">
+                Alignment with global sustainability goals helps startups meet increasing Environmental, 
+                Social, and Governance requirements from institutional investors and funds.
+              </p>
+            </div>
           </div>
         </div>
       </section>
