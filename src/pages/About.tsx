@@ -8,12 +8,19 @@ const About = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
       {/* Hero Section */}
-      <section className="py-16 px-4 text-center">
-        <div className="container mx-auto max-w-4xl pt-16">
+      <section className="relative py-16 px-4 text-center overflow-hidden">
+        {/* Background gradient */}
+        <div className="absolute inset-0 bg-gradient-hero opacity-80" />
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-20 h-20 md:w-32 md:h-32 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-20 right-10 w-32 h-32 md:w-48 md:h-48 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-1000" />
+          <div className="absolute top-1/2 left-1/3 w-16 h-16 md:w-24 md:h-24 bg-accent/10 rounded-full blur-2xl animate-pulse delay-500" />
+        </div>
+        <div className="container relative z-20 mx-auto max-w-4xl pt-16">
           <Badge variant="secondary" className="mb-4">
             About Our Mission
           </Badge>
-          <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight md:leading-relaxed">
             Empowering Change Through Collective Action
           </h1>
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
