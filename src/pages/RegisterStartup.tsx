@@ -561,15 +561,7 @@ const RegisterStartupPage = () => {
     <div className="min-h-screen bg-gradient-hero">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
-          <Link 
-            to="/register" 
-            className="flex items-center text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Registration
-          </Link>
-          
+        <div className="flex justify-center mb-8">
           <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">
             <Building2 className="w-3 h-3 mr-1" />
             Startup Registration
@@ -643,6 +635,17 @@ const RegisterStartupPage = () => {
                 )}
               </div>
             </form>
+            
+            {/* Back to Registration Link */}
+            <div className="pt-4 border-t">
+              <Link 
+                to="/register" 
+                className="flex items-center text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Back to Registration
+              </Link>
+            </div>
           </CardContent>
         </Card>
       </div>
