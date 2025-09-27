@@ -10,6 +10,10 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Partners from "./pages/Partners";
+import Register from "./pages/Register";
+import RegisterStartup from "./pages/RegisterStartup";
+import RegisterInvestor from "./pages/RegisterInvestor";
+import RegisterSuccess from "./pages/RegisterSuccess";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +32,10 @@ const App = () => (
                 <Route path="/" element={<Index />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/partners" element={<Partners />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/register/startup" element={<RegisterStartup />} />
+                <Route path="/register/investor" element={<RegisterInvestor />} />
+                <Route path="/register/success" element={<RegisterSuccess />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>

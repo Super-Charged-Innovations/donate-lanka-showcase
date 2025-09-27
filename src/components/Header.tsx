@@ -85,8 +85,11 @@ export const Header = () => {
                   "bg-warning/90 text-warning-foreground hover:bg-warning",
                   "backdrop-blur-sm border border-warning/30"
                 )}
+                asChild
               >
-                Connect with Us
+                <Link to="/register">
+                  Connect with Us
+                </Link>
               </Button>
 
               {/* Mobile Menu Button */}
