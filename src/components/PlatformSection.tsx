@@ -23,7 +23,7 @@ export const PlatformSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left Side - Startup Nation */}
           <ScrollReveal animation="fade-left" delay={200}>
-            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/50">
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/50 bg-gradient-hero/5">
               <CardContent className="p-8 text-center lg:text-left">
               {/* Icon and Badge */}
               <div className="flex items-center justify-center lg:justify-start mb-6">
@@ -46,44 +46,47 @@ export const PlatformSection = () => {
                 <img src="/partners/hatch-logo.png" alt="Hatch" className="h-8 object-contain" />
               </div>
 
-              {/* Description */}
+              {/* Mission Statement */}
               <div className="mb-8">
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Transform your innovative ideas into thriving businesses. Access funding, 
-                  mentorship, and a community of entrepreneurs ready to support your journey 
-                  from concept to market success.
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  Startup Nation is Sri Lanka's premier platform for transforming innovative ideas into thriving businesses. 
+                  We bridge the gap between visionary entrepreneurs and strategic investors, fostering an ecosystem where 
+                  groundbreaking startups can access the funding, mentorship, and resources they need to scale successfully.
                 </p>
                 
-                {/* Features */}
-                <div className="space-y-2 text-sm">
-                  <div className="flex items-center justify-center lg:justify-start text-muted-foreground">
-                    <Building2 className="w-4 h-4 mr-2 text-primary" />
-                    <span>Business Development Support</span>
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-foreground mb-3">Our Mission & Goals</h4>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    To establish Sri Lanka as a leading startup hub in South Asia by creating sustainable pathways for 
+                    entrepreneurs to build companies that drive economic growth, generate employment, and solve pressing 
+                    social challenges through innovative technology and business models.
+                  </p>
+                </div>
+
+                {/* Key Focus Areas */}
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-start justify-center lg:justify-start text-muted-foreground">
+                    <Building2 className="w-4 h-4 mr-3 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="font-medium text-foreground">Business Development & Mentorship:</span>
+                      <span className="block">Comprehensive support from ideation to market entry, including strategic planning, product development guidance, and industry-specific mentoring programs.</span>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-center lg:justify-start text-muted-foreground">
-                    <Users className="w-4 h-4 mr-2 text-primary" />
-                    <span>Investor Network Access</span>
+                  <div className="flex items-start justify-center lg:justify-start text-muted-foreground">
+                    <Users className="w-4 h-4 mr-3 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="font-medium text-foreground">Investor Network & Funding:</span>
+                      <span className="block">Direct access to angel investors, venture capitalists, and institutional funding partners across seed, Series A, and growth-stage investment rounds.</span>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-center lg:justify-start text-muted-foreground">
-                    <Rocket className="w-4 h-4 mr-2 text-primary" />
-                    <span>Scaling & Growth Resources</span>
+                  <div className="flex items-start justify-center lg:justify-start text-muted-foreground">
+                    <Rocket className="w-4 h-4 mr-3 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="font-medium text-foreground">Scaling & Market Expansion:</span>
+                      <span className="block">Strategic resources for regional and international expansion, including regulatory guidance, partnership facilitation, and market intelligence.</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              {/* CTA */}
-              <div className="space-y-3">
-                <Button asChild size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground group/btn">
-                  <Link to="/register-startup">
-                    Launch Your Startup
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="w-full border-primary/30 hover:border-primary">
-                  <Link to="/projects?category=startups">
-                    Explore Startup Projects
-                  </Link>
-                </Button>
               </div>
               </CardContent>
             </Card>
@@ -91,7 +94,7 @@ export const PlatformSection = () => {
 
           {/* Right Side - DonateLanka */}
           <ScrollReveal animation="fade-right" delay={400}>
-            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-secondary/50">
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-secondary/50 bg-gradient-hero/5">
               <CardContent className="p-8 text-center lg:text-left">
               {/* Icon and Title */}
               <div className="flex items-center justify-center lg:justify-start mb-6">
@@ -114,54 +117,53 @@ export const PlatformSection = () => {
                 <span className="text-sm font-medium text-secondary">Community-Driven Impact</span>
               </div>
 
-              {/* Description */}
+              {/* Mission Statement */}
               <div className="mb-8">
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Make a meaningful difference in Sri Lankan communities. Support local charities, 
-                  social causes, and grassroots initiatives that create lasting positive change 
-                  across all 25 districts.
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  DonateLanka is dedicated to creating sustainable social impact across Sri Lanka by connecting generous 
+                  donors with vetted charitable organizations and community-driven initiatives. We ensure transparency, 
+                  accountability, and measurable outcomes in every project, from disaster relief to education and healthcare.
                 </p>
                 
-                {/* Features */}
-                <div className="space-y-2 text-sm">
-                  <div className="flex items-center justify-center lg:justify-start text-muted-foreground">
-                    <Heart className="w-4 h-4 mr-2 text-secondary" />
-                    <span>Transparent Charity Projects</span>
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-foreground mb-3">Our Mission & Goals</h4>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    To build the most trusted platform for charitable giving in Sri Lanka, ensuring that every donation 
+                    creates maximum impact in addressing poverty, education gaps, healthcare needs, environmental challenges, 
+                    and disaster recovery efforts across all 25 districts.
+                  </p>
+                </div>
+
+                {/* Key Focus Areas */}
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-start justify-center lg:justify-start text-muted-foreground">
+                    <Heart className="w-4 h-4 mr-3 text-secondary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="font-medium text-foreground">Transparent Impact Tracking:</span>
+                      <span className="block">Real-time project updates, financial transparency, and measurable outcome reporting ensure donors see exactly how their contributions create change.</span>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-center lg:justify-start text-muted-foreground">
-                    <Users className="w-4 h-4 mr-2 text-secondary" />
-                    <span>Community Impact Tracking</span>
+                  <div className="flex items-start justify-center lg:justify-start text-muted-foreground">
+                    <Users className="w-4 h-4 mr-3 text-secondary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="font-medium text-foreground">Community-Centered Approach:</span>
+                      <span className="block">Direct partnerships with local NGOs, religious organizations, and grassroots movements to address the most pressing needs in each community.</span>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-center lg:justify-start text-muted-foreground">
-                    <Building2 className="w-4 h-4 mr-2 text-secondary" />
-                    <span>Local Organization Support</span>
+                  <div className="flex items-start justify-center lg:justify-start text-muted-foreground">
+                    <Building2 className="w-4 h-4 mr-3 text-secondary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <span className="font-medium text-foreground">Sustainable Development Focus:</span>
+                      <span className="block">Support for education, healthcare, environmental conservation, disaster preparedness, and economic empowerment projects that create long-term positive change.</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              {/* CTA */}
-              <div className="space-y-3">
-                <Button asChild size="lg" className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground group/btn">
-                  <Link to="/projects?category=charity">
-                    Support a Cause
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="w-full border-secondary/30 hover:border-secondary">
-                  <Link to="/start-campaign?type=charity">
-                    Start a Community Project
-                  </Link>
-                </Button>
               </div>
             </CardContent>
             </Card>
           </ScrollReveal>
         </div>
 
-        {/* Bottom CTA */}
-        <ScrollReveal animation="fade-up" delay={600}>
-          
-        </ScrollReveal>
       </div>
     </section>;
 };
