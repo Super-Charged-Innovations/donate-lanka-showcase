@@ -38,102 +38,172 @@ export const SDGSection = () => {
           <div className="mb-12">
             {/* Mobile/Tablet: Simple responsive grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:hidden">
-              {sdgData.map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-primary/50 group")} onClick={() => handleSDGClick(sdg)}>
+              {sdgData.map(sdg => (
+                <Card 
+                  key={sdg.id} 
+                  className={cn(
+                    "cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg",
+                    "border-2 hover:border-white/50 group"
+                  )}
+                  style={{ backgroundColor: sdg.color }}
+                  onClick={() => handleSDGClick(sdg)}
+                >
                   <CardContent className="p-6 text-center">
                     {/* Official UN SDG Icon */}
-                    <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                      <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
+                    <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-4 border-white">
+                      <img 
+                        src={sdg.iconPath} 
+                        alt={`SDG ${sdg.id}: ${sdg.title}`} 
+                        className="w-full h-full object-cover" 
+                      />
                     </div>
                     
                     {/* Title */}
-                    <h3 className="font-semibold text-foreground mb-2 text-sm md:text-base group-hover:text-primary transition-colors">
+                    <h3 className="font-semibold text-white mb-2 text-sm md:text-base group-hover:text-white/90 transition-colors">
                       {sdg.title}
                     </h3>
                     
                     {/* Project Count Badge */}
-                    <Badge variant="secondary" className="mb-3">
+                    <Badge variant="secondary" className="mb-3 bg-white/20 text-white border-white/30">
                       {sdg.projectCount} Projects
                     </Badge>
                     
                     {/* Sri Lankan Context */}
-                    <p className="text-xs text-muted-foreground leading-relaxed">
+                    <p className="text-xs text-white/90 leading-relaxed">
                       {sdg.sriLankanContext}
                     </p>
                   </CardContent>
-                </Card>)}
+                </Card>
+              ))}
             </div>
 
             {/* Desktop: Custom row layout */}
             <div className="hidden lg:block space-y-3">
               {/* Row 1: SDGs 1-5 */}
               <div className="flex justify-center gap-4">
-                {sdgData.slice(0, 5).map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-primary/50 group w-44")} onClick={() => handleSDGClick(sdg)}>
+                {sdgData.slice(0, 5).map(sdg => (
+                  <Card 
+                    key={sdg.id} 
+                    className={cn(
+                      "cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg",
+                      "border-2 hover:border-white/50 group w-44"
+                    )}
+                    style={{ backgroundColor: sdg.color }}
+                    onClick={() => handleSDGClick(sdg)}
+                  >
                     <CardContent className="p-4 text-center">
                       {/* Official UN SDG Icon */}
-                      <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                        <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
+                      <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-4 border-white">
+                        <img 
+                          src={sdg.iconPath} 
+                          alt={`SDG ${sdg.id}: ${sdg.title}`} 
+                          className="w-full h-full object-cover" 
+                        />
                       </div>
                       
                       {/* Title */}
-                      <h3 className="font-semibold text-foreground mb-1 text-sm group-hover:text-primary transition-colors">
+                      <h3 className="font-semibold text-white mb-1 text-sm group-hover:text-white/90 transition-colors">
                         {sdg.title}
                       </h3>
                       
                       {/* Sri Lankan Context */}
-                      <p className="text-xs text-muted-foreground leading-relaxed">
+                      <p className="text-xs text-white/90 leading-relaxed">
                         {sdg.sriLankanContext}
                       </p>
                     </CardContent>
-                  </Card>)}
+                  </Card>
+                ))}
               </div>
 
               {/* Remaining rows follow same pattern */}
               <div className="flex justify-center gap-4">
-                {sdgData.slice(5, 10).map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-primary/50 group w-44")} onClick={() => handleSDGClick(sdg)}>
+                {sdgData.slice(5, 10).map(sdg => (
+                  <Card 
+                    key={sdg.id} 
+                    className={cn(
+                      "cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg",
+                      "border-2 hover:border-white/50 group w-44"
+                    )}
+                    style={{ backgroundColor: sdg.color }}
+                    onClick={() => handleSDGClick(sdg)}
+                  >
                     <CardContent className="p-4 text-center">
-                      <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                        <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
+                      <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-4 border-white">
+                        <img 
+                          src={sdg.iconPath} 
+                          alt={`SDG ${sdg.id}: ${sdg.title}`} 
+                          className="w-full h-full object-cover" 
+                        />
                       </div>
-                      <h3 className="font-semibold text-foreground mb-1 text-sm group-hover:text-primary transition-colors">
+                      <h3 className="font-semibold text-white mb-1 text-sm group-hover:text-white/90 transition-colors">
                         {sdg.title}
                       </h3>
-                      <p className="text-xs text-muted-foreground leading-relaxed">
+                      <p className="text-xs text-white/90 leading-relaxed">
                         {sdg.sriLankanContext}
                       </p>
                     </CardContent>
-                  </Card>)}
+                  </Card>
+                ))}
               </div>
 
               <div className="flex justify-center gap-4">
-                {sdgData.slice(10, 14).map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-primary/50 group w-44")} onClick={() => handleSDGClick(sdg)}>
+                {sdgData.slice(10, 14).map(sdg => (
+                  <Card 
+                    key={sdg.id} 
+                    className={cn(
+                      "cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg",
+                      "border-2 hover:border-white/50 group w-44"
+                    )}
+                    style={{ backgroundColor: sdg.color }}
+                    onClick={() => handleSDGClick(sdg)}
+                  >
                     <CardContent className="p-4 text-center">
-                      <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                        <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
+                      <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-4 border-white">
+                        <img 
+                          src={sdg.iconPath} 
+                          alt={`SDG ${sdg.id}: ${sdg.title}`} 
+                          className="w-full h-full object-cover" 
+                        />
                       </div>
-                      <h3 className="font-semibold text-foreground mb-1 text-sm group-hover:text-primary transition-colors">
+                      <h3 className="font-semibold text-white mb-1 text-sm group-hover:text-white/90 transition-colors">
                         {sdg.title}
                       </h3>
-                      <p className="text-xs text-muted-foreground leading-relaxed">
+                      <p className="text-xs text-white/90 leading-relaxed">
                         {sdg.sriLankanContext}
                       </p>
                     </CardContent>
-                  </Card>)}
+                  </Card>
+                ))}
               </div>
 
               <div className="flex justify-center gap-4">
-                {sdgData.slice(14, 17).map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-primary/50 group w-44")} onClick={() => handleSDGClick(sdg)}>
+                {sdgData.slice(14, 17).map(sdg => (
+                  <Card 
+                    key={sdg.id} 
+                    className={cn(
+                      "cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg",
+                      "border-2 hover:border-white/50 group w-44"
+                    )}
+                    style={{ backgroundColor: sdg.color }}
+                    onClick={() => handleSDGClick(sdg)}
+                  >
                     <CardContent className="p-4 text-center">
-                      <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                        <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
+                      <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-4 border-white">
+                        <img 
+                          src={sdg.iconPath} 
+                          alt={`SDG ${sdg.id}: ${sdg.title}`} 
+                          className="w-full h-full object-cover" 
+                        />
                       </div>
-                      <h3 className="font-semibold text-foreground mb-1 text-sm group-hover:text-primary transition-colors">
+                      <h3 className="font-semibold text-white mb-1 text-sm group-hover:text-white/90 transition-colors">
                         {sdg.title}
                       </h3>
-                      <p className="text-xs text-muted-foreground leading-relaxed">
+                      <p className="text-xs text-white/90 leading-relaxed">
                         {sdg.sriLankanContext}
                       </p>
                     </CardContent>
-                  </Card>)}
+                  </Card>
+                ))}
               </div>
             </div>
           </div>
