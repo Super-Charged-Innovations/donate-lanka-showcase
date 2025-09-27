@@ -70,16 +70,16 @@ export const Hero = () => {
           
 
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6 leading-tight md:leading-relaxed px-2">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6 leading-tight md:leading-relaxed px-2 drop-shadow-lg">
             Empowering{" "}
-            <span className="bg-gradient-text bg-clip-text text-transparent">
+            <span className="bg-gradient-text bg-clip-text text-transparent drop-shadow-lg">
               Sri Lankan Startups
             </span>{" "}
             Through Smart Funding
           </h1>
 
           {/* Subheadline */}
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto px-4">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto px-4 drop-shadow-md">
             Connect innovative startups with investors and venture capitalists. 
             Pitch your projects, showcase your vision, and secure the funding you need 
             to transform ideas into successful businesses.
