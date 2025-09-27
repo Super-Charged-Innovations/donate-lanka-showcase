@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { InteractiveGradient } from "./InteractiveGradient";
 import { useRef, useState, useEffect } from "react";
 
+// Force rebuild to resolve Link import issue
+
 interface MousePosition {
   x: number;
   y: number;
