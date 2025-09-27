@@ -209,28 +209,6 @@ export const SDGSection = () => {
           </div>
         </ScrollReveal>
 
-        {/* Call to Action */}
-        <ScrollReveal animation="fade-up" delay={800}>
-          <div className="text-center space-y-6">
-            <div>
-              <h3 className="text-2xl font-bold text-foreground mb-2">Ready to make a difference?</h3>
-              <p className="text-muted-foreground">
-                Explore projects by SDG, or start your own campaign to help Sri Lanka achieve the 2030 Agenda!
-              </p>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button onClick={handleBrowseProjects} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                <Target className="mr-2 h-5 w-5" />
-                Browse Projects by SDG
-              </Button>
-              <Button onClick={handleLearnMore} variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                <ExternalLink className="mr-2 h-5 w-5" />
-                Learn More About the SDGs
-              </Button>
-            </div>
-          </div>
-        </ScrollReveal>
 
         {/* Footer Note */}
         <div className="mt-12 text-center">
