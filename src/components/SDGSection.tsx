@@ -59,17 +59,17 @@ export const SDGSection = () => {
                     </div>
                     
                     {/* Title */}
-                    <h3 className="font-semibold text-white mb-2 text-sm md:text-base group-hover:text-white/90 transition-colors">
+                    <h3 className="font-bold text-white mb-2 text-sm md:text-base group-hover:text-white/90 transition-colors drop-shadow-lg">
                       {sdg.title}
                     </h3>
                     
                     {/* Project Count Badge */}
-                    <Badge variant="secondary" className="mb-3 bg-white/20 text-white border-white/30">
+                    <Badge variant="secondary" className="mb-3 bg-white/20 text-white border-white/30 font-semibold drop-shadow-md">
                       {sdg.projectCount} Projects
                     </Badge>
                     
                     {/* Sri Lankan Context */}
-                    <p className="text-xs text-white/90 leading-relaxed">
+                    <p className="text-xs text-white/90 leading-relaxed font-semibold drop-shadow-md">
                       {sdg.sriLankanContext}
                     </p>
                   </CardContent>
@@ -102,12 +102,12 @@ export const SDGSection = () => {
                       </div>
                       
                       {/* Title */}
-                      <h3 className="font-semibold text-white mb-1 text-sm group-hover:text-white/90 transition-colors">
+                      <h3 className="font-bold text-white mb-1 text-sm group-hover:text-white/90 transition-colors drop-shadow-lg">
                         {sdg.title}
                       </h3>
                       
                       {/* Sri Lankan Context */}
-                      <p className="text-xs text-white/90 leading-relaxed">
+                      <p className="text-xs text-white/90 leading-relaxed font-semibold drop-shadow-md">
                         {sdg.sriLankanContext}
                       </p>
                     </CardContent>
@@ -135,10 +135,10 @@ export const SDGSection = () => {
                           className="w-full h-full object-cover" 
                         />
                       </div>
-                      <h3 className="font-semibold text-white mb-1 text-sm group-hover:text-white/90 transition-colors">
+                      <h3 className="font-bold text-white mb-1 text-sm group-hover:text-white/90 transition-colors drop-shadow-lg">
                         {sdg.title}
                       </h3>
-                      <p className="text-xs text-white/90 leading-relaxed">
+                      <p className="text-xs text-white/90 leading-relaxed font-semibold drop-shadow-md">
                         {sdg.sriLankanContext}
                       </p>
                     </CardContent>
@@ -165,10 +165,10 @@ export const SDGSection = () => {
                           className="w-full h-full object-cover" 
                         />
                       </div>
-                      <h3 className="font-semibold text-white mb-1 text-sm group-hover:text-white/90 transition-colors">
+                      <h3 className="font-bold text-white mb-1 text-sm group-hover:text-white/90 transition-colors drop-shadow-lg">
                         {sdg.title}
                       </h3>
-                      <p className="text-xs text-white/90 leading-relaxed">
+                      <p className="text-xs text-white/90 leading-relaxed font-semibold drop-shadow-md">
                         {sdg.sriLankanContext}
                       </p>
                     </CardContent>
@@ -195,10 +195,10 @@ export const SDGSection = () => {
                           className="w-full h-full object-cover" 
                         />
                       </div>
-                      <h3 className="font-semibold text-white mb-1 text-sm group-hover:text-white/90 transition-colors">
+                      <h3 className="font-bold text-white mb-1 text-sm group-hover:text-white/90 transition-colors drop-shadow-lg">
                         {sdg.title}
                       </h3>
-                      <p className="text-xs text-white/90 leading-relaxed">
+                      <p className="text-xs text-white/90 leading-relaxed font-semibold drop-shadow-md">
                         {sdg.sriLankanContext}
                       </p>
                     </CardContent>
