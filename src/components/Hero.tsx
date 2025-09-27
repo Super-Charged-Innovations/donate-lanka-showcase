@@ -89,8 +89,8 @@ export const Hero = () => {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-8 md:mb-12 px-4">
             <Button variant="outline" size="lg" className="px-6 md:px-8 py-3 md:py-4 text-sm md:text-base rounded-full w-full sm:w-auto">
-              <Play className="mr-2 w-4 h-4 md:w-5 md:h-5" />
-              Watch How It Works
+              <ArrowRight className="mr-2 w-4 h-4 md:w-5 md:h-5" />
+              Sign Up
             </Button>
           </div>
 
