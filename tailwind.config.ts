@@ -169,21 +169,9 @@ export default {
 						transform: 'translateX(-50%)'
 					}
 				},
-				'scroll-seamless': {
-					'0%': {
-						transform: 'translateX(0)'
-					},
-					'100%': {
-						transform: 'translateX(var(--scroll-distance, -50%))'
-					}
-				},
-				'scroll-seamless-responsive': {
-					'0%': {
-						transform: 'translate3d(0, 0, 0)'
-					},
-					'100%': {
-						transform: 'translate3d(var(--scroll-distance, -50%), 0, 0)'
-					}
+				'infinite-scroll': {
+					'0%': { transform: 'translate3d(0, 0, 0)' },
+					'100%': { transform: 'translate3d(-100%, 0, 0)' }
 				},
 				"fade-up": {
 					"0%": {
@@ -250,8 +238,7 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'scroll': 'scroll 15s linear infinite',
-				'scroll-seamless': 'scroll-seamless 15s linear infinite',
-				'scroll-seamless-responsive': 'scroll-seamless-responsive 15s linear infinite',
+				'infinite-scroll': 'infinite-scroll 20s linear infinite',
 				"fade-up": "fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
 				"fade-down": "fade-down 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
 				"fade-left": "fade-left 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
