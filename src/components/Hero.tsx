@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { InteractiveGradient } from "./InteractiveGradient";
+import { ScrollReveal } from "./ScrollReveal";
 import { useRef, useState, useEffect } from "react";
 
 // Force rebuild to resolve Link import issue
@@ -73,36 +74,42 @@ export const Hero = () => {
           
 
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6 leading-tight md:leading-relaxed px-2 drop-shadow-lg">
-            Empowering{" "}
-            <span className="bg-gradient-text bg-clip-text text-transparent drop-shadow-lg">
-              Sri Lankan Startups
-            </span>{" "}
-            Through Smart Funding
-          </h1>
+          <ScrollReveal animation="fade-up" delay={200}>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6 leading-tight md:leading-relaxed px-2 drop-shadow-lg">
+              Empowering{" "}
+              <span className="bg-gradient-text bg-clip-text text-transparent drop-shadow-lg">
+                Sri Lankan Startups
+              </span>{" "}
+              Through Smart Funding
+            </h1>
+          </ScrollReveal>
 
           {/* Subheadline */}
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto px-4 drop-shadow-md">
-            Connect innovative startups with investors and venture capitalists. 
-            Pitch your projects, showcase your vision, and secure the funding you need 
-            to transform ideas into successful businesses.
-          </p>
+          <ScrollReveal animation="fade-up" delay={400}>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto px-4 drop-shadow-md">
+              Connect innovative startups with investors and venture capitalists. 
+              Pitch your projects, showcase your vision, and secure the funding you need 
+              to transform ideas into successful businesses.
+            </p>
+          </ScrollReveal>
 
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-8 md:mb-12 px-4">
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="px-6 md:px-8 py-3 md:py-4 text-sm md:text-base rounded-full w-full sm:w-auto"
-              asChild
-            >
-              <Link to="/register">
-                <ArrowRight className="mr-2 w-4 h-4 md:w-5 md:h-5" />
-                Sign Up
-              </Link>
-            </Button>
-          </div>
+          <ScrollReveal animation="scale-up" delay={600}>
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-8 md:mb-12 px-4">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="px-6 md:px-8 py-3 md:py-4 text-sm md:text-base rounded-full w-full sm:w-auto"
+                asChild
+              >
+                <Link to="/register">
+                  <ArrowRight className="mr-2 w-4 h-4 md:w-5 md:h-5" />
+                  Sign Up
+                </Link>
+              </Button>
+            </div>
+          </ScrollReveal>
 
           {/* Trust Indicators */}
           

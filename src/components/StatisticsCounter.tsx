@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { ScrollReveal } from "./ScrollReveal";
 const companyLogos = [{
   name: "TechCorp",
   logo: "TC"
@@ -35,11 +36,15 @@ const LogoSlideshow = () => {
 export const StatisticsCounter = () => {
   return <section className="py-16 bg-muted/30">
       <div className="w-full">
-        <div className="text-center mb-8 px-4">
-          <h2 className="text-2xl font-bold text-foreground mb-2">Our Partners</h2>
-          <p className="text-muted-foreground">Partnering with innovative companies across Sri Lanka</p>
-        </div>
-        <LogoSlideshow />
+        <ScrollReveal animation="fade-up">
+          <div className="text-center mb-8 px-4">
+            <h2 className="text-2xl font-bold text-foreground mb-2">Our Partners</h2>
+            <p className="text-muted-foreground">Partnering with innovative companies across Sri Lanka</p>
+          </div>
+        </ScrollReveal>
+        <ScrollReveal animation="fade-left" delay={300}>
+          <LogoSlideshow />
+        </ScrollReveal>
       </div>
     </section>;
 };

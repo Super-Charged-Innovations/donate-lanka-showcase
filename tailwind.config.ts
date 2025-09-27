@@ -176,13 +176,79 @@ export default {
 					'100%': {
 						transform: 'translateX(-704px)' // 4 logos * (112px + 64px spacing)
 					}
-				}
+				},
+				"fade-up": {
+					"0%": {
+						opacity: "0",
+						transform: "translateY(30px)",
+					},
+					"100%": {
+						opacity: "1",
+						transform: "translateY(0)",
+					},
+				},
+				"fade-down": {
+					"0%": {
+						opacity: "0",
+						transform: "translateY(-30px)",
+					},
+					"100%": {
+						opacity: "1",
+						transform: "translateY(0)",
+					},
+				},
+				"fade-left": {
+					"0%": {
+						opacity: "0",
+						transform: "translateX(-30px)",
+					},
+					"100%": {
+						opacity: "1",
+						transform: "translateX(0)",
+					},
+				},
+				"fade-right": {
+					"0%": {
+						opacity: "0",
+						transform: "translateX(30px)",
+					},
+					"100%": {
+						opacity: "1",
+						transform: "translateX(0)",
+					},
+				},
+				"scale-up": {
+					"0%": {
+						opacity: "0",
+						transform: "scale(0.8)",
+					},
+					"100%": {
+						opacity: "1",
+						transform: "scale(1)",
+					},
+				},
+				"zoom-in": {
+					"0%": {
+						opacity: "0",
+						transform: "scale(0.5)",
+					},
+					"100%": {
+						opacity: "1",
+						transform: "scale(1)",
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'scroll': 'scroll 15s linear infinite',
-				'scroll-seamless': 'scroll-seamless 15s linear infinite'
+				'scroll-seamless': 'scroll-seamless 15s linear infinite',
+				"fade-up": "fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+				"fade-down": "fade-down 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+				"fade-left": "fade-left 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+				"fade-right": "fade-right 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+				"scale-up": "scale-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+				"zoom-in": "zoom-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
 			}
 		}
 	},

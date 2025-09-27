@@ -2,27 +2,31 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Building2, Heart, Rocket, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ScrollReveal } from "./ScrollReveal";
 
 export const PlatformSection = () => {
   return (
     <section className="py-16 px-4 bg-gradient-to-br from-background via-background to-muted/20">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Two Powerful Platforms, One Mission
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Whether you're building the next big startup or supporting community initiatives, 
-            FundLanka provides the perfect platform for your journey.
-          </p>
-        </div>
+        <ScrollReveal animation="fade-up">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Two Powerful Platforms, One Mission
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Whether you're building the next big startup or supporting community initiatives, 
+              FundLanka provides the perfect platform for your journey.
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Split Platform Cards */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left Side - Startup Nation */}
-          <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/50">
-            <CardContent className="p-8 text-center lg:text-left">
+          <ScrollReveal animation="fade-left" delay={200}>
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/50">
+              <CardContent className="p-8 text-center lg:text-left">
               {/* Icon and Badge */}
               <div className="flex items-center justify-center lg:justify-start mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center mr-4">
@@ -91,12 +95,14 @@ export const PlatformSection = () => {
                   </Link>
                 </Button>
               </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </ScrollReveal>
 
           {/* Right Side - DonateLanka */}
-          <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-secondary/50">
-            <CardContent className="p-8 text-center lg:text-left">
+          <ScrollReveal animation="fade-right" delay={400}>
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-secondary/50">
+              <CardContent className="p-8 text-center lg:text-left">
               {/* Icon and Title */}
               <div className="flex items-center justify-center lg:justify-start mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-secondary/20 to-primary/20 rounded-2xl flex items-center justify-center mr-4">
@@ -162,24 +168,27 @@ export const PlatformSection = () => {
                 </Button>
               </div>
             </CardContent>
-          </Card>
+            </Card>
+          </ScrollReveal>
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-12 p-8 bg-gradient-to-r from-primary/5 via-background to-secondary/5 rounded-2xl border border-border/50">
-          <h3 className="text-xl font-bold text-foreground mb-2">
-            Not sure which platform is right for you?
-          </h3>
-          <p className="text-muted-foreground mb-4">
-            Explore all projects and discover opportunities that match your interests and goals.
-          </p>
-          <Button asChild size="lg" variant="outline" className="border-primary/50 hover:bg-primary/5">
-            <Link to="/projects">
-              Browse All Projects
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
-        </div>
+        <ScrollReveal animation="fade-up" delay={600}>
+          <div className="text-center mt-12 p-8 bg-gradient-to-r from-primary/5 via-background to-secondary/5 rounded-2xl border border-border/50">
+            <h3 className="text-xl font-bold text-foreground mb-2">
+              Not sure which platform is right for you?
+            </h3>
+            <p className="text-muted-foreground mb-4">
+              Explore all projects and discover opportunities that match your interests and goals.
+            </p>
+            <Button asChild size="lg" variant="outline" className="border-primary/50 hover:bg-primary/5">
+              <Link to="/projects">
+                Browse All Projects
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

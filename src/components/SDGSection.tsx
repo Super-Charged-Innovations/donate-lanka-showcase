@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Target, Users, Lightbulb } from "lucide-react";
 import { sdgData, SDG } from "@/types/sdg";
 import { cn } from "@/lib/utils";
+import { ScrollReveal } from "./ScrollReveal";
 export const SDGSection = () => {
   const [selectedSDG, setSelectedSDG] = useState<SDG | null>(null);
   const handleSDGClick = (sdg: SDG) => {
@@ -21,59 +22,38 @@ export const SDGSection = () => {
   return <section className="py-16 px-4 bg-gradient-to-br from-background via-muted/30 to-background">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Our Mission: Advancing Sri Lanka Through the UN Sustainable Development Goals
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">At FundLanka, every Startup will directly or indirectly support Sri Lanka's progress toward the
-Global 17 Sustainable Development Goals (SDGs). From eradicating poverty to protecting our environment, your generosity fuels real, measurable change across all 25 districts.</p>
-          <p className="text-lg text-muted-foreground mt-2 font-medium">Discover how your choice helps build a brighter, more sustainable future for all Sri Lankans.</p>
-        </div>
+        <ScrollReveal animation="fade-up">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Mission: Advancing Sri Lanka Through the UN Sustainable Development Goals
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">At FundLanka, every Startup will directly or indirectly support Sri Lanka's progress toward the
+  Global 17 Sustainable Development Goals (SDGs). From eradicating poverty to protecting our environment, your generosity fuels real, measurable change across all 25 districts.</p>
+            <p className="text-lg text-muted-foreground mt-2 font-medium">Discover how your choice helps build a brighter, more sustainable future for all Sri Lankans.</p>
+          </div>
+        </ScrollReveal>
 
         {/* SDG Grid */}
-        <div className="mb-12">
-          {/* Mobile/Tablet: Simple responsive grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:hidden">
-            {sdgData.map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-primary/50 group")} onClick={() => handleSDGClick(sdg)}>
-                <CardContent className="p-6 text-center">
-                  {/* Official UN SDG Icon */}
-                  <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                    <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
-                  </div>
-                  
-                  {/* Title */}
-                  <h3 className="font-semibold text-foreground mb-2 text-sm md:text-base group-hover:text-primary transition-colors">
-                    {sdg.title}
-                  </h3>
-                  
-                  {/* Project Count Badge */}
-                  <Badge variant="secondary" className="mb-3">
-                    {sdg.projectCount} Projects
-                  </Badge>
-                  
-                  {/* Sri Lankan Context */}
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    {sdg.sriLankanContext}
-                  </p>
-                </CardContent>
-              </Card>)}
-          </div>
-
-          {/* Desktop: Custom row layout */}
-          <div className="hidden lg:block space-y-3">
-            {/* Row 1: SDGs 1-5 */}
-            <div className="flex justify-center gap-4">
-              {sdgData.slice(0, 5).map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-primary/50 group w-44")} onClick={() => handleSDGClick(sdg)}>
-                  <CardContent className="p-4 text-center">
+        <ScrollReveal animation="fade-up" delay={300}>
+          <div className="mb-12">
+            {/* Mobile/Tablet: Simple responsive grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:hidden">
+              {sdgData.map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-primary/50 group")} onClick={() => handleSDGClick(sdg)}>
+                  <CardContent className="p-6 text-center">
                     {/* Official UN SDG Icon */}
-                    <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                       <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
                     </div>
                     
                     {/* Title */}
-                    <h3 className="font-semibold text-foreground mb-1 text-sm group-hover:text-primary transition-colors">
+                    <h3 className="font-semibold text-foreground mb-2 text-sm md:text-base group-hover:text-primary transition-colors">
                       {sdg.title}
                     </h3>
+                    
+                    {/* Project Count Badge */}
+                    <Badge variant="secondary" className="mb-3">
+                      {sdg.projectCount} Projects
+                    </Badge>
                     
                     {/* Sri Lankan Context */}
                     <p className="text-xs text-muted-foreground leading-relaxed">
@@ -83,94 +63,104 @@ Global 17 Sustainable Development Goals (SDGs). From eradicating poverty to prot
                 </Card>)}
             </div>
 
-            {/* Row 2: SDGs 6-10 */}
-            <div className="flex justify-center gap-4">
-              {sdgData.slice(5, 10).map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-primary/50 group w-44")} onClick={() => handleSDGClick(sdg)}>
-                  <CardContent className="p-4 text-center">
-                    {/* Official UN SDG Icon */}
-                    <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                      <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
-                    </div>
-                    
-                    {/* Title */}
-                    <h3 className="font-semibold text-foreground mb-1 text-sm group-hover:text-primary transition-colors">
-                      {sdg.title}
-                    </h3>
-                    
-                    {/* Sri Lankan Context */}
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      {sdg.sriLankanContext}
-                    </p>
-                  </CardContent>
-                </Card>)}
-            </div>
+            {/* Desktop: Custom row layout */}
+            <div className="hidden lg:block space-y-3">
+              {/* Row 1: SDGs 1-5 */}
+              <div className="flex justify-center gap-4">
+                {sdgData.slice(0, 5).map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-primary/50 group w-44")} onClick={() => handleSDGClick(sdg)}>
+                    <CardContent className="p-4 text-center">
+                      {/* Official UN SDG Icon */}
+                      <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                        <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
+                      </div>
+                      
+                      {/* Title */}
+                      <h3 className="font-semibold text-foreground mb-1 text-sm group-hover:text-primary transition-colors">
+                        {sdg.title}
+                      </h3>
+                      
+                      {/* Sri Lankan Context */}
+                      <p className="text-xs text-muted-foreground leading-relaxed">
+                        {sdg.sriLankanContext}
+                      </p>
+                    </CardContent>
+                  </Card>)}
+              </div>
 
-            {/* Row 3: SDGs 11-14 */}
-            <div className="flex justify-center gap-4">
-              {sdgData.slice(10, 14).map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-primary/50 group w-44")} onClick={() => handleSDGClick(sdg)}>
-                  <CardContent className="p-4 text-center">
-                    {/* Official UN SDG Icon */}
-                    <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                      <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
-                    </div>
-                    
-                    {/* Title */}
-                    <h3 className="font-semibold text-foreground mb-1 text-sm group-hover:text-primary transition-colors">
-                      {sdg.title}
-                    </h3>
-                    
-                    {/* Sri Lankan Context */}
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      {sdg.sriLankanContext}
-                    </p>
-                  </CardContent>
-                </Card>)}
-            </div>
+              {/* Remaining rows follow same pattern */}
+              <div className="flex justify-center gap-4">
+                {sdgData.slice(5, 10).map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-primary/50 group w-44")} onClick={() => handleSDGClick(sdg)}>
+                    <CardContent className="p-4 text-center">
+                      <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                        <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-1 text-sm group-hover:text-primary transition-colors">
+                        {sdg.title}
+                      </h3>
+                      <p className="text-xs text-muted-foreground leading-relaxed">
+                        {sdg.sriLankanContext}
+                      </p>
+                    </CardContent>
+                  </Card>)}
+              </div>
 
-            {/* Row 4: SDGs 15-17 */}
-            <div className="flex justify-center gap-4">
-              {sdgData.slice(14, 17).map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-primary/50 group w-44")} onClick={() => handleSDGClick(sdg)}>
-                  <CardContent className="p-4 text-center">
-                    {/* Official UN SDG Icon */}
-                    <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                      <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
-                    </div>
-                    
-                    {/* Title */}
-                    <h3 className="font-semibold text-foreground mb-1 text-sm group-hover:text-primary transition-colors">
-                      {sdg.title}
-                    </h3>
-                    
-                    {/* Sri Lankan Context */}
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      {sdg.sriLankanContext}
-                    </p>
-                  </CardContent>
-                </Card>)}
+              <div className="flex justify-center gap-4">
+                {sdgData.slice(10, 14).map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-primary/50 group w-44")} onClick={() => handleSDGClick(sdg)}>
+                    <CardContent className="p-4 text-center">
+                      <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                        <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-1 text-sm group-hover:text-primary transition-colors">
+                        {sdg.title}
+                      </h3>
+                      <p className="text-xs text-muted-foreground leading-relaxed">
+                        {sdg.sriLankanContext}
+                      </p>
+                    </CardContent>
+                  </Card>)}
+              </div>
+
+              <div className="flex justify-center gap-4">
+                {sdgData.slice(14, 17).map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-primary/50 group w-44")} onClick={() => handleSDGClick(sdg)}>
+                    <CardContent className="p-4 text-center">
+                      <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                        <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-1 text-sm group-hover:text-primary transition-colors">
+                        {sdg.title}
+                      </h3>
+                      <p className="text-xs text-muted-foreground leading-relaxed">
+                        {sdg.sriLankanContext}
+                      </p>
+                    </CardContent>
+                  </Card>)}
+              </div>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Call to Action */}
-        <div className="text-center space-y-6">
-          <div>
-            <h3 className="text-2xl font-bold text-foreground mb-2">Ready to make a difference?</h3>
-            <p className="text-muted-foreground">
-              Explore projects by SDG, or start your own campaign to help Sri Lanka achieve the 2030 Agenda!
-            </p>
+        <ScrollReveal animation="fade-up" delay={800}>
+          <div className="text-center space-y-6">
+            <div>
+              <h3 className="text-2xl font-bold text-foreground mb-2">Ready to make a difference?</h3>
+              <p className="text-muted-foreground">
+                Explore projects by SDG, or start your own campaign to help Sri Lanka achieve the 2030 Agenda!
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button onClick={handleBrowseProjects} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Target className="mr-2 h-5 w-5" />
+                Browse Projects by SDG
+              </Button>
+              <Button onClick={handleLearnMore} variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                <ExternalLink className="mr-2 h-5 w-5" />
+                Learn More About the SDGs
+              </Button>
+            </div>
           </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button onClick={handleBrowseProjects} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              <Target className="mr-2 h-5 w-5" />
-              Browse Projects by SDG
-            </Button>
-            <Button onClick={handleLearnMore} variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              <ExternalLink className="mr-2 h-5 w-5" />
-              Learn More About the SDGs
-            </Button>
-          </div>
-        </div>
+        </ScrollReveal>
 
         {/* Footer Note */}
         <div className="mt-12 text-center">
