@@ -1,53 +1,82 @@
 import { ScrollReveal } from "./ScrollReveal";
 
-const companyLogos = [
+const partnerLogos = [
   {
     name: "TechCorp",
-    logo: "TC"
+    logo: "TC",
+    gradient: "from-blue-500/20 to-purple-500/20"
   },
   {
     name: "InnovateHub", 
-    logo: "IH"
+    logo: "IH",
+    gradient: "from-green-500/20 to-teal-500/20"
   },
   {
     name: "FutureTech",
-    logo: "FT"
+    logo: "FT",  
+    gradient: "from-orange-500/20 to-red-500/20"
   },
   {
     name: "NextGen Solutions",
-    logo: "NG"
+    logo: "NG",
+    gradient: "from-purple-500/20 to-pink-500/20"
+  },
+  {
+    name: "InnovateLabs",
+    logo: "IL",
+    gradient: "from-cyan-500/20 to-blue-500/20"
+  },
+  {
+    name: "StartupBase",
+    logo: "SB", 
+    gradient: "from-yellow-500/20 to-orange-500/20"
   }
 ];
 
 const LogoSlideshow = () => {
   return (
-    <div className="relative w-full overflow-hidden py-8">
-      {/* Logo track with infinite scroll animation */}
-      <div className="flex animate-infinite-scroll will-change-transform">
-        {/* First set of logos */}
-        {companyLogos.map((company, index) => (
+    <div className="relative w-full overflow-hidden py-12">
+      {/* Main container for infinite scroll */}
+      <div 
+        className="flex animate-infinite-scroll hover:animation-play-state-paused will-change-transform"
+        style={{
+          width: `${partnerLogos.length * 2 * 176}px`, // (logoWidth + margin) * 2 sets
+        }}
+      >
+        {/* First complete set */}
+        {partnerLogos.map((partner, index) => (
           <div 
-            key={`set1-${index}`} 
-            className="flex-shrink-0 flex items-center justify-center w-32 h-32 mr-12 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 border border-border/50 transition-transform duration-200 hover:scale-105"
+            key={`original-${index}`}
+            className="flex-shrink-0 w-32 h-32 mx-6 flex items-center justify-center rounded-2xl bg-gradient-to-br border border-border/30 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20 group"
+            style={{
+              background: `linear-gradient(135deg, hsl(var(--primary)/0.08), hsl(var(--secondary)/0.08))`
+            }}
           >
-            <span className="text-3xl font-bold text-primary">{company.logo}</span>
+            <div className="text-3xl font-bold bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
+              {partner.logo}
+            </div>
           </div>
         ))}
         
         {/* Exact duplicate set for seamless loop */}
-        {companyLogos.map((company, index) => (
+        {partnerLogos.map((partner, index) => (
           <div 
-            key={`set2-${index}`} 
-            className="flex-shrink-0 flex items-center justify-center w-32 h-32 mr-12 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 border border-border/50 transition-transform duration-200 hover:scale-105"
+            key={`duplicate-${index}`}
+            className="flex-shrink-0 w-32 h-32 mx-6 flex items-center justify-center rounded-2xl bg-gradient-to-br border border-border/30 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20 group"
+            style={{
+              background: `linear-gradient(135deg, hsl(var(--primary)/0.08), hsl(var(--secondary)/0.08))`
+            }}
           >
-            <span className="text-3xl font-bold text-primary">{company.logo}</span>
+            <div className="text-3xl font-bold bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
+              {partner.logo}
+            </div>
           </div>
         ))}
       </div>
       
-      {/* Fade edges for smooth disappearing effect */}
-      <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-background via-background/80 to-transparent pointer-events-none z-10" />
-      <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-background via-background/80 to-transparent pointer-events-none z-10" />
+      {/* Enhanced fade edges */}
+      <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-background via-background/90 to-transparent pointer-events-none z-10" />
+      <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-background via-background/90 to-transparent pointer-events-none z-10" />
     </div>
   );
 };

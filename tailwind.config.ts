@@ -171,7 +171,7 @@ export default {
 				},
 				'infinite-scroll': {
 					'0%': { transform: 'translate3d(0, 0, 0)' },
-					'100%': { transform: 'translate3d(-100%, 0, 0)' }
+					'100%': { transform: 'translate3d(-50%, 0, 0)' }
 				},
 				"fade-up": {
 					"0%": {
@@ -238,7 +238,8 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'scroll': 'scroll 15s linear infinite',
-				'infinite-scroll': 'infinite-scroll 20s linear infinite',
+				'infinite-scroll': 'infinite-scroll 25s linear infinite',
+				'infinite-scroll-hover': 'infinite-scroll 25s linear infinite paused',
 				"fade-up": "fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
 				"fade-down": "fade-down 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
 				"fade-left": "fade-left 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
