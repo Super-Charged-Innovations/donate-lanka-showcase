@@ -128,13 +128,13 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Partners */}
+      {/* The What, Why & How */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Strategic Partners</h2>
+            <h2 className="text-3xl font-bold mb-4">The What, The Why & The How</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We collaborate with leading organizations to amplify our impact and bring meaningful change to communities worldwide
+              Understanding our mission, our approach, and how we create meaningful connections between impact-driven investors and startups
             </p>
           </div>
           
@@ -142,15 +142,16 @@ const About = () => {
             <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <CardHeader>
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Building2 className="w-8 h-8 text-primary" />
+                  <Target className="w-8 h-8 text-primary" />
                 </div>
-                <Badge variant="outline" className="mb-2 mx-auto w-fit">Co-working Partner</Badge>
-                <CardTitle className="text-xl">Hatch Sri Lanka</CardTitle>
+                <Badge variant="outline" className="mb-2 mx-auto w-fit">The What</Badge>
+                <CardTitle className="text-xl">Startup Nation & Goals</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  Leading co-working space provider in Sri Lanka, fostering innovation and entrepreneurship. 
-                  Hatch provides our team with world-class facilities and access to a vibrant startup ecosystem.
+                  Startup Nation empowers entrepreneurs to build sustainable businesses that create jobs, drive economic growth, 
+                  and address real-world challenges. Our goal is to foster an ecosystem where innovation meets impact, 
+                  creating lasting value for communities and stakeholders.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -158,15 +159,16 @@ const About = () => {
             <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <CardHeader>
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Handshake className="w-8 h-8 text-secondary" />
+                  <Award className="w-8 h-8 text-secondary" />
                 </div>
-                <Badge variant="outline" className="mb-2 mx-auto w-fit">Co-founder</Badge>
-                <CardTitle className="text-xl">Veracity Group</CardTitle>
+                <Badge variant="outline" className="mb-2 mx-auto w-fit">The Why</Badge>
+                <CardTitle className="text-xl">SDG Alignment for Trust</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  Strategic consulting and business development experts, bringing decades of experience in 
-                  scaling social impact ventures and connecting them with sustainable funding opportunities.
+                  We use UN Sustainable Development Goals as our framework to build investor confidence. 
+                  SDG alignment provides measurable impact metrics, ensures transparency, and demonstrates 
+                  that startups are addressing global challenges with proven methodologies.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -174,15 +176,16 @@ const About = () => {
             <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <CardHeader>
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Lightbulb className="w-8 h-8 text-accent" />
+                  <Users className="w-8 h-8 text-accent" />
                 </div>
-                <Badge variant="outline" className="mb-2 mx-auto w-fit">Co-founder</Badge>
-                <CardTitle className="text-xl">Super Charged Innovations</CardTitle>
+                <Badge variant="outline" className="mb-2 mx-auto w-fit">The How</Badge>
+                <CardTitle className="text-xl">FundLanka's Connection</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  Technology innovation specialists focused on creating scalable solutions for social good. 
-                  They drive our technical strategy and ensure our platform leverages cutting-edge technologies.
+                  FundLanka creates a holistic platform that matches values-aligned investors with impact-driven startups. 
+                  Through standardized reporting, transparent metrics, and curated project discovery, 
+                  we accelerate meaningful connections and sustainable funding decisions.
                 </CardDescription>
               </CardContent>
             </Card>
