@@ -40,6 +40,26 @@ const partnerLogos = [
     name: "DataFlow",
     logo: "DF",
     gradient: "from-pink-500/20 to-rose-500/20"
+  },
+  {
+    name: "AlphaLabs",
+    logo: "AL",
+    gradient: "from-emerald-500/20 to-green-500/20"
+  },
+  {
+    name: "ByteWorks",
+    logo: "BW",
+    gradient: "from-violet-500/20 to-purple-500/20"
+  },
+  {
+    name: "CodeCore",
+    logo: "CC",
+    gradient: "from-amber-500/20 to-yellow-500/20"
+  },
+  {
+    name: "DevStream",
+    logo: "DS",
+    gradient: "from-lime-500/20 to-green-500/20"
   }
 ];
 
@@ -50,14 +70,14 @@ const LogoSlideshow = () => {
       <div 
         className="flex animate-infinite-scroll hover:animation-play-state-paused will-change-transform"
         style={{
-          width: `${partnerLogos.length * 2 * 200}px`, // (logoWidth + margin) * 2 sets
+          width: `${partnerLogos.length * 2 * 168}px`, // (logoWidth + margin) * 2 sets
         }}
       >
         {/* First complete set */}
         {partnerLogos.map((partner, index) => (
           <div 
             key={`original-${index}`}
-            className="flex-shrink-0 w-32 h-32 mx-8 flex items-center justify-center rounded-2xl bg-gradient-to-br border border-border/30 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20 group"
+            className="flex-shrink-0 w-32 h-32 mx-5 flex items-center justify-center rounded-2xl bg-gradient-to-br border border-border/30 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20 group"
             style={{
               background: `linear-gradient(135deg, hsl(var(--primary)/0.08), hsl(var(--secondary)/0.08))`
             }}
@@ -72,7 +92,7 @@ const LogoSlideshow = () => {
         {partnerLogos.map((partner, index) => (
           <div 
             key={`duplicate-${index}`}
-            className="flex-shrink-0 w-32 h-32 mx-8 flex items-center justify-center rounded-2xl bg-gradient-to-br border border-border/30 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20 group"
+            className="flex-shrink-0 w-32 h-32 mx-5 flex items-center justify-center rounded-2xl bg-gradient-to-br border border-border/30 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20 group"
             style={{
               background: `linear-gradient(135deg, hsl(var(--primary)/0.08), hsl(var(--secondary)/0.08))`
             }}
