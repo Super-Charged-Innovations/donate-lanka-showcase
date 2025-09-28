@@ -128,72 +128,53 @@ const About = () => {
         </div>
       </section>
 
-      {/* The What, Why & How */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">The What, The Why & The How</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Understanding our mission, our approach, and how we create meaningful connections between impact-driven investors and startups
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader>
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-primary" />
-                </div>
-                <Badge variant="outline" className="mb-2 mx-auto w-fit">The What</Badge>
-                <CardTitle className="text-xl">Startup Nation & Goals</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
-                  Startup Nation empowers entrepreneurs to build sustainable businesses that create jobs, drive economic growth, 
-                  and address real-world challenges. Our goal is to foster an ecosystem where innovation meets impact, 
-                  creating lasting value for communities and stakeholders.
-                </CardDescription>
-              </CardContent>
-            </Card>
+       {/* The What, Why & How */}
+       <section className="py-20 px-4">
+         <div className="container mx-auto max-w-6xl">
+           <div className="text-center mb-16">
+             <h2 className="text-4xl font-bold mb-4">The What, The Why & The How</h2>
+             <p className="text-lg text-muted-foreground">
+               Our mission, approach, and platform explained
+             </p>
+           </div>
+           
+           <div className="grid md:grid-cols-3 gap-12 md:gap-8">
+             {/* The What */}
+             <div className="text-center border-r-0 md:border-r border-border/30 pr-0 md:pr-8">
+               <div className="w-20 h-20 bg-primary/5 border border-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                 <Target className="w-10 h-10 text-primary" />
+               </div>
+               <h3 className="text-2xl font-bold mb-4 text-foreground">The What</h3>
+               <p className="text-muted-foreground text-base leading-relaxed">
+                 Startup Nation empowers entrepreneurs to build sustainable businesses that drive economic growth and create lasting impact.
+               </p>
+             </div>
 
-            <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader>
-                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-secondary" />
-                </div>
-                <Badge variant="outline" className="mb-2 mx-auto w-fit">The Why</Badge>
-                <CardTitle className="text-xl">SDG Alignment for Trust</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
-                  We use UN Sustainable Development Goals as our framework to build investor confidence. 
-                  SDG alignment provides measurable impact metrics, ensures transparency, and demonstrates 
-                  that startups are addressing global challenges with proven methodologies.
-                </CardDescription>
-              </CardContent>
-            </Card>
+             {/* The Why */}
+             <div className="text-center border-r-0 md:border-r border-border/30 pr-0 md:pr-8">
+               <div className="w-20 h-20 bg-secondary/5 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                 <Award className="w-10 h-10 text-secondary" />
+               </div>
+               <h3 className="text-2xl font-bold mb-4 text-foreground">The Why</h3>
+               <p className="text-muted-foreground text-base leading-relaxed">
+                 SDG alignment builds investor confidence through measurable impact metrics and transparent, proven methodologies.
+               </p>
+             </div>
 
-            <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader>
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-accent" />
-                </div>
-                <Badge variant="outline" className="mb-2 mx-auto w-fit">The How</Badge>
-                <CardTitle className="text-xl">FundLanka's Connection</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
-                  FundLanka creates a holistic platform that matches values-aligned investors with impact-driven startups. 
-                  Through standardized reporting, transparent metrics, and curated project discovery, 
-                  we accelerate meaningful connections and sustainable funding decisions.
-                </CardDescription>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* SDG Alignment */}
+             {/* The How */}
+             <div className="text-center">
+               <div className="w-20 h-20 bg-accent/5 border border-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                 <Users className="w-10 h-10 text-accent" />
+               </div>
+               <h3 className="text-2xl font-bold mb-4 text-foreground">The How</h3>
+               <p className="text-muted-foreground text-base leading-relaxed">
+                 FundLanka connects values-aligned investors with impact-driven startups through curated discovery and standardized reporting.
+               </p>
+             </div>
+           </div>
+         </div>
+       </section>
+       {/* SDG Alignment */}
       <section className="py-16 px-4 bg-muted/30">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl font-bold mb-6">Aligned with UN Sustainable Development Goals</h2>
