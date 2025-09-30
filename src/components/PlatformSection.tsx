@@ -90,10 +90,7 @@ export const PlatformSection = () => {
               <CardContent className="p-8 text-center lg:text-left">
               {/* Icon and Title */}
               <div className="text-center mb-8">
-                <img src="/donatelanka-logo.png" alt="DonateLanka" className="w-48 h-auto object-contain mx-auto mb-4" />
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-secondary transition-colors mb-2">
-                  DonateLanka
-                </h3>
+                <img src="/donatelanka-logo.png" alt="DonateLanka" className="w-64 h-auto object-contain mx-auto mb-4" />
                 <p className="text-muted-foreground font-medium">
                   Community Impact & Charitable Giving
                 </p>
