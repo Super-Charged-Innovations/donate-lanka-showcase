@@ -132,6 +132,7 @@ export default {
 				'gradient-newsletter': 'linear-gradient(135deg, hsl(var(--primary-500)), hsl(var(--warning)))',
 				'gradient-warm': 'linear-gradient(135deg, hsl(var(--warning)) 0%, hsl(var(--primary-400)) 50%, hsl(var(--secondary-400)) 100%)',
 				'gradient-card': 'linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--primary-50)) 100%)',
+				'gradient-card-contrast': 'linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--primary-100)) 30%, hsl(var(--secondary-100)) 70%, hsl(var(--card)) 100%)',
 			},
 			boxShadow: {
 				'card': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
