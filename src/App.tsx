@@ -3,10 +3,11 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
+import { AnimatedRoutes } from "@/components/AnimatedRoutes";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Partners from "./pages/Partners";
@@ -20,6 +21,20 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Route configuration with animation types
+const routes = [
+  { path: "/", element: <Index />, animationType: "fade" as const },
+  { path: "/about", element: <About />, animationType: "slideUp" as const },
+  { path: "/partners", element: <Partners />, animationType: "slide" as const },
+  { path: "/register", element: <RegisterPlatform />, animationType: "scale" as const },
+  { path: "/register/fundlanka", element: <RegisterFundLanka />, animationType: "slide" as const },
+  { path: "/register/fundlanka/startup", element: <RegisterStartup />, animationType: "slide" as const },
+  { path: "/register/fundlanka/investor", element: <RegisterInvestor />, animationType: "slide" as const },
+  { path: "/register/donatelanka", element: <RegisterDonateLanka />, animationType: "slide" as const },
+  { path: "/register/success", element: <RegisterSuccess />, animationType: "scale" as const },
+  { path: "*", element: <NotFound />, animationType: "fade" as const },
+];
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -30,19 +45,7 @@ const App = () => (
           <Header />
           <main>
             <ErrorBoundary>
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/partners" element={<Partners />} />
-            <Route path="/register" element={<RegisterPlatform />} />
-            <Route path="/register/fundlanka" element={<RegisterFundLanka />} />
-            <Route path="/register/fundlanka/startup" element={<RegisterStartup />} />
-            <Route path="/register/fundlanka/investor" element={<RegisterInvestor />} />
-            <Route path="/register/donatelanka" element={<RegisterDonateLanka />} />
-            <Route path="/register/success" element={<RegisterSuccess />} />
-                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-                <Route path="*" element={<NotFound />} />
-              </Routes>
+              <AnimatedRoutes routes={routes} />
             </ErrorBoundary>
           </main>
           <Footer />
