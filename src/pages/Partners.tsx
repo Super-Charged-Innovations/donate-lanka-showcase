@@ -34,11 +34,11 @@ const Partners = () => {
       {/* Partners Grid */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
             <ScrollReveal animation="fade-up" delay={100}>
-              <Card className="relative overflow-hidden text-center bg-gradient-card border-2 border-blue-200/50 hover:border-blue-300/70 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <Card className="relative overflow-hidden text-center h-full bg-gradient-card border-2 border-blue-300/70 hover:border-blue-400/90 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <CardHeader>
-                  <div className="w-full h-24 flex items-center justify-center mx-auto mb-4">
+                  <div className="w-full h-16 flex items-center justify-center mx-auto mb-4">
                     <img 
                       src="/partners/hatch-logo.png" 
                       alt="Hatch Sri Lanka Logo" 
@@ -67,7 +67,7 @@ const Partners = () => {
             </ScrollReveal>
 
             <ScrollReveal animation="fade-up" delay={200}>
-              <Card className="relative overflow-hidden text-center bg-gradient-card border-2 border-purple-200/50 hover:border-purple-300/70 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <Card className="relative overflow-hidden text-center h-full bg-gradient-card border-2 border-purple-300/70 hover:border-purple-400/90 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <CardHeader>
                   <div className="w-full h-24 flex items-center justify-center mx-auto mb-4">
                     <img 
@@ -98,9 +98,9 @@ const Partners = () => {
             </ScrollReveal>
 
             <ScrollReveal animation="fade-up" delay={300}>
-              <Card className="relative overflow-hidden text-center bg-gradient-card border-2 border-teal-200/50 hover:border-teal-300/70 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <Card className="relative overflow-hidden text-center h-full bg-gradient-card border-2 border-teal-300/70 hover:border-teal-400/90 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <CardHeader>
-                  <div className="w-full h-24 flex items-center justify-center mx-auto mb-4">
+                  <div className="w-full h-28 flex items-center justify-center mx-auto mb-4">
                     <img 
                       src="/partners/supercharged-logo-new.png" 
                       alt="Super Charged Innovations Logo" 
