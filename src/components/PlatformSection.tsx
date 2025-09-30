@@ -93,12 +93,17 @@ export const PlatformSection = () => {
             <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-secondary/50 bg-gradient-hero/5">
             <CardContent className="p-8">
               {/* Logo Section */}
-              <div className="h-48 flex items-center justify-center mb-6">
+              <div className="h-48 flex items-center justify-center mb-2">
                 <img 
                   src="/donatelanka-logo.png" 
                   alt="DonateLanka" 
                   className="w-auto h-32 object-contain mx-auto"
                 />
+              </div>
+              
+              {/* Platform Name */}
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold tracking-wider text-foreground">CROWDFUNDING</h3>
               </div>
 
               {/* Badge Section */}
