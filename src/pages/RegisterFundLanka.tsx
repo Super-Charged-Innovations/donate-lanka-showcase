@@ -21,7 +21,7 @@ const RegisterFundLanka = () => {
 
   return (
     <div className="min-h-screen bg-gradient-hero">
-      <div className="container mx-auto px-4 py-12 md:py-16">
+      <div className="container mx-auto px-4 pt-24 pb-12 md:pt-32 md:pb-16">
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-12">
           <Badge variant="outline" className="mb-4 bg-primary/10 text-primary border-primary/20">
