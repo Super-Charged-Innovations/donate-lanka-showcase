@@ -8,6 +8,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { AnimatedRoutes } from "@/components/AnimatedRoutes";
+import { logAnimationCapabilities } from "@/utils/animationTester";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Partners from "./pages/Partners";
@@ -18,6 +19,7 @@ import RegisterInvestor from "./pages/RegisterInvestor";
 import RegisterDonateLanka from "./pages/RegisterDonateLanka";
 import RegisterSuccess from "./pages/RegisterSuccess";
 import NotFound from "./pages/NotFound";
+import { useEffect } from "react";
 
 const queryClient = new QueryClient();
 
@@ -35,24 +37,33 @@ const routes = [
   { path: "*", element: <NotFound />, animationType: "fade" as const },
 ];
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <div className="min-h-screen bg-background">
-          <Header />
-          <main>
-            <ErrorBoundary>
-              <AnimatedRoutes routes={routes} />
-            </ErrorBoundary>
-          </main>
-          <Footer />
-        </div>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  // Log animation capabilities in dev mode for testing
+  useEffect(() => {
+    if (import.meta.env.DEV) {
+      logAnimationCapabilities();
+    }
+  }, []);
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <div className="min-h-screen bg-background">
+            <Header />
+            <main>
+              <ErrorBoundary>
+                <AnimatedRoutes routes={routes} />
+              </ErrorBoundary>
+            </main>
+            <Footer />
+          </div>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;

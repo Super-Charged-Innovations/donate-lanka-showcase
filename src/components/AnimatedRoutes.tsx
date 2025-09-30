@@ -4,6 +4,7 @@ import { ReactNode, useState, useEffect, Suspense } from "react";
 import { PageTransition } from "./PageTransition";
 import { LoadingTransition } from "./LoadingTransition";
 import { useNavigationDirection } from "@/hooks/useNavigationDirection";
+import { performanceMonitor } from "@/utils/performanceMonitor";
 import type { AnimationType } from "./PageTransition";
 
 interface AnimatedRouteConfig {
@@ -52,6 +53,18 @@ export const AnimatedRoutes = ({ routes }: AnimatedRoutesProps) => {
     return () => window.removeEventListener('pageTransition', handlePageTransition);
   }, []);
 
+  // Performance monitoring in dev mode
+  useEffect(() => {
+    if (import.meta.env.DEV) {
+      performanceMonitor.startMonitoring();
+      performanceMonitor.logNavigationMetrics(location.pathname);
+      
+      return () => {
+        performanceMonitor.stopMonitoring();
+      };
+    }
+  }, [location.pathname]);
+
   return (
     <>
       <LoadingTransition isLoading={isLoading} />
@@ -61,6 +74,9 @@ export const AnimatedRoutes = ({ routes }: AnimatedRoutesProps) => {
         onExitComplete={() => {
           // Cleanup and prepare for new page
           window.scrollTo(0, 0);
+          
+          // Trigger page transition event for coordination
+          window.dispatchEvent(new Event('pageTransition'));
         }}
       >
         <Routes location={location} key={location.pathname}>
