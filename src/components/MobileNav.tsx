@@ -20,28 +20,16 @@ export const MobileNav = ({ isOpen, onClose, navigationItems }: MobileNavProps) 
   if (!isOpen) return null;
 
   return (
-    <>
-      {/* Subtle Backdrop */}
-      <div 
-        className={cn(
-          "fixed inset-0 z-[90] lg:hidden transition-opacity duration-200",
-          isOpen ? "opacity-100 bg-black/20" : "opacity-0 pointer-events-none"
-        )}
-        onClick={onClose}
-        aria-hidden="true"
-      />
-      
-      {/* Dropdown Card */}
-      <div 
-        className={cn(
-          "fixed top-20 left-1/2 -translate-x-1/2 z-[95] lg:hidden",
-          "w-[90%] max-w-md",
-          "bg-white/8 backdrop-blur-3xl border border-white/15",
-          "rounded-2xl shadow-2xl shadow-black/10",
-          "transition-all duration-200 ease-out",
-          isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
-        )}
-      >
+    <div 
+      className={cn(
+        "fixed top-20 left-1/2 -translate-x-1/2 z-[95] lg:hidden",
+        "w-[90%] max-w-md",
+        "bg-white/8 backdrop-blur-3xl border border-white/15",
+        "rounded-2xl shadow-2xl shadow-black/10",
+        "transition-all duration-200 ease-out",
+        isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
+      )}
+    >
         {/* Navigation Links */}
         <nav className="p-3">
           <div className="space-y-1">
@@ -61,8 +49,7 @@ export const MobileNav = ({ isOpen, onClose, navigationItems }: MobileNavProps) 
               </Link>
             ))}
           </div>
-        </nav>
-      </div>
-    </>
+      </nav>
+    </div>
   );
 };
