@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Building2, Handshake, Lightbulb, ExternalLink } from "lucide-react";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 const Partners = () => {
   return (
@@ -34,92 +35,98 @@ const Partners = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="relative overflow-hidden text-center bg-gradient-card border-2 border-blue-200/50 hover:border-blue-300/70 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardHeader>
-                <div className="w-full h-24 flex items-center justify-center mx-auto mb-4">
-                  <img 
-                    src="/partners/hatch-logo.png" 
-                    alt="Hatch Sri Lanka Logo" 
-                    className="h-full w-auto object-contain max-w-full"
-                  />
-                </div>
-                <Badge variant="outline" className="mb-2 mx-auto w-fit border-blue-200 text-blue-700">Co-working Partner</Badge>
-                <CardTitle className="text-2xl">Hatch Sri Lanka</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base mb-4">
-                  Leading co-working space provider in Sri Lanka, fostering innovation and entrepreneurship. 
-                  Hatch provides our team with world-class facilities and access to a vibrant startup ecosystem.
-                </CardDescription>
-                <a 
-                  href="https://hatch.lk/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center text-sm text-blue-600 hover:text-blue-800 transition-colors duration-200 font-medium"
-                >
-                  <ExternalLink className="w-4 h-4 mr-1" />
-                  Learn more about Hatch
-                </a>
-              </CardContent>
-            </Card>
+            <ScrollReveal animation="fade-up" delay={100}>
+              <Card className="relative overflow-hidden text-center bg-gradient-card border-2 border-blue-200/50 hover:border-blue-300/70 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <CardHeader>
+                  <div className="w-full h-24 flex items-center justify-center mx-auto mb-4">
+                    <img 
+                      src="/partners/hatch-logo.png" 
+                      alt="Hatch Sri Lanka Logo" 
+                      className="h-full w-auto object-contain max-w-full"
+                    />
+                  </div>
+                  <Badge variant="outline" className="mb-2 mx-auto w-fit border-blue-200 text-blue-700">Co-working Partner</Badge>
+                  <CardTitle className="text-2xl">Hatch Sri Lanka</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base mb-4">
+                    Leading co-working space provider in Sri Lanka, fostering innovation and entrepreneurship. 
+                    Hatch provides our team with world-class facilities and access to a vibrant startup ecosystem.
+                  </CardDescription>
+                  <a 
+                    href="https://hatch.lk/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center text-sm text-blue-600 hover:text-blue-800 transition-colors duration-200 font-medium"
+                  >
+                    <ExternalLink className="w-4 h-4 mr-1" />
+                    Learn more about Hatch
+                  </a>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
 
-            <Card className="relative overflow-hidden text-center bg-gradient-card border-2 border-purple-200/50 hover:border-purple-300/70 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardHeader>
-                <div className="w-full h-24 flex items-center justify-center mx-auto mb-4">
-                  <img 
-                    src="/partners/veracity-logo.png" 
-                    alt="Veracity Group Logo" 
-                    className="h-full w-auto object-contain max-w-full"
-                  />
-                </div>
-                <Badge variant="outline" className="mb-2 mx-auto w-fit border-purple-200 text-purple-700">Co-founder</Badge>
-                <CardTitle className="text-2xl">Veracity Group</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base mb-4">
-                  Strategic consulting and business development experts, bringing decades of experience in 
-                  scaling social impact ventures and connecting them with sustainable funding opportunities.
-                </CardDescription>
-                <a 
-                  href="https://www.veracitygp.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center text-sm text-purple-600 hover:text-purple-800 transition-colors duration-200 font-medium"
-                >
-                  <ExternalLink className="w-4 h-4 mr-1" />
-                  Discover Veracity Group
-                </a>
-              </CardContent>
-            </Card>
+            <ScrollReveal animation="fade-up" delay={200}>
+              <Card className="relative overflow-hidden text-center bg-gradient-card border-2 border-purple-200/50 hover:border-purple-300/70 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <CardHeader>
+                  <div className="w-full h-24 flex items-center justify-center mx-auto mb-4">
+                    <img 
+                      src="/partners/veracity-logo.png" 
+                      alt="Veracity Group Logo" 
+                      className="h-full w-auto object-contain max-w-full"
+                    />
+                  </div>
+                  <Badge variant="outline" className="mb-2 mx-auto w-fit border-purple-200 text-purple-700">Co-founder</Badge>
+                  <CardTitle className="text-2xl">Veracity Group</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base mb-4">
+                    Strategic consulting and business development experts, bringing decades of experience in 
+                    scaling social impact ventures and connecting them with sustainable funding opportunities.
+                  </CardDescription>
+                  <a 
+                    href="https://www.veracitygp.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center text-sm text-purple-600 hover:text-purple-800 transition-colors duration-200 font-medium"
+                  >
+                    <ExternalLink className="w-4 h-4 mr-1" />
+                    Discover Veracity Group
+                  </a>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
 
-            <Card className="relative overflow-hidden text-center bg-gradient-card border-2 border-teal-200/50 hover:border-teal-300/70 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardHeader>
-                <div className="w-full h-24 flex items-center justify-center mx-auto mb-4">
-                  <img 
-                    src="/partners/supercharged-logo-new.png" 
-                    alt="Super Charged Innovations Logo" 
-                    className="h-full w-auto object-contain max-w-full"
-                  />
-                </div>
-                <Badge variant="outline" className="mb-2 mx-auto w-fit border-teal-200 text-teal-700">Co-founder</Badge>
-                <CardTitle className="text-2xl">Super Charged Innovations</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base mb-4">
-                  Technology innovation specialists focused on creating scalable solutions for social good. 
-                  They drive our technical strategy and ensure our platform leverages cutting-edge technologies.
-                </CardDescription>
-                <a 
-                  href="https://superchargedinnovations.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center text-sm text-teal-600 hover:text-teal-800 transition-colors duration-200 font-medium"
-                >
-                  <ExternalLink className="w-4 h-4 mr-1" />
-                  Explore innovations
-                </a>
-              </CardContent>
-            </Card>
+            <ScrollReveal animation="fade-up" delay={300}>
+              <Card className="relative overflow-hidden text-center bg-gradient-card border-2 border-teal-200/50 hover:border-teal-300/70 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <CardHeader>
+                  <div className="w-full h-24 flex items-center justify-center mx-auto mb-4">
+                    <img 
+                      src="/partners/supercharged-logo-new.png" 
+                      alt="Super Charged Innovations Logo" 
+                      className="h-full w-auto object-contain max-w-full"
+                    />
+                  </div>
+                  <Badge variant="outline" className="mb-2 mx-auto w-fit border-teal-200 text-teal-700">Co-founder</Badge>
+                  <CardTitle className="text-2xl">Super Charged Innovations</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base mb-4">
+                    Technology innovation specialists focused on creating scalable solutions for social good. 
+                    They drive our technical strategy and ensure our platform leverages cutting-edge technologies.
+                  </CardDescription>
+                  <a 
+                    href="https://superchargedinnovations.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center text-sm text-teal-600 hover:text-teal-800 transition-colors duration-200 font-medium"
+                  >
+                    <ExternalLink className="w-4 h-4 mr-1" />
+                    Explore innovations
+                  </a>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -127,39 +134,49 @@ const Partners = () => {
       {/* Partnership Benefits */}
       <section className="py-16 px-4 bg-muted/30">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold mb-6">Why We Partner</h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Our partnerships are built on shared values and complementary strengths that amplify our collective impact
-          </p>
+          <ScrollReveal animation="fade-up">
+            <h2 className="text-3xl font-bold mb-6">Why We Partner</h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Our partnerships are built on shared values and complementary strengths that amplify our collective impact
+            </p>
+          </ScrollReveal>
           <div className="grid md:grid-cols-2 gap-8 text-left">
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Expertise & Experience</h3>
-              <p className="text-muted-foreground">
-                Each partner brings specialized knowledge and proven track records in their respective fields, 
-                enhancing our platform's capabilities and reach.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Network & Resources</h3>
-              <p className="text-muted-foreground">
-                Through our partnerships, we gain access to extensive networks of investors, mentors, 
-                and changemakers committed to sustainable development.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Innovation & Technology</h3>
-              <p className="text-muted-foreground">
-                Our technology partners ensure we stay at the forefront of innovation, delivering 
-                cutting-edge solutions for social impact funding.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Global Reach</h3>
-              <p className="text-muted-foreground">
-                Strategic partnerships enable us to expand our impact globally while maintaining 
-                local expertise and cultural sensitivity in each market.
-              </p>
-            </div>
+            <ScrollReveal animation="fade-right" delay={100}>
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">Expertise & Experience</h3>
+                <p className="text-muted-foreground">
+                  Each partner brings specialized knowledge and proven track records in their respective fields, 
+                  enhancing our platform's capabilities and reach.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal animation="fade-left" delay={200}>
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">Network & Resources</h3>
+                <p className="text-muted-foreground">
+                  Through our partnerships, we gain access to extensive networks of investors, mentors, 
+                  and changemakers committed to sustainable development.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal animation="fade-right" delay={300}>
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">Innovation & Technology</h3>
+                <p className="text-muted-foreground">
+                  Our technology partners ensure we stay at the forefront of innovation, delivering 
+                  cutting-edge solutions for social impact funding.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal animation="fade-left" delay={400}>
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">Global Reach</h3>
+                <p className="text-muted-foreground">
+                  Strategic partnerships enable us to expand our impact globally while maintaining 
+                  local expertise and cultural sensitivity in each market.
+                </p>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

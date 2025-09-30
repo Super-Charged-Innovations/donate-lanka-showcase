@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Heart, Globe, Users, Target, Award, TrendingUp, Building2, Handshake, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ScrollReveal } from "@/components/ScrollReveal";
 const About = () => {
   return <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
       {/* Hero Section */}
@@ -34,97 +35,111 @@ const About = () => {
       {/* Mission & Values */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Mission & Values</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We believe in the power of collective action to address the world's most pressing challenges
-            </p>
-          </div>
+          <ScrollReveal animation="fade-up">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">Our Mission & Values</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                We believe in the power of collective action to address the world's most pressing challenges
+              </p>
+            </div>
+          </ScrollReveal>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-6 h-6 text-primary" />
-                </div>
-                <CardTitle>Compassion</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Every project on our platform is driven by genuine care for making a positive impact in the world.
-                </CardDescription>
-              </CardContent>
-            </Card>
+            <ScrollReveal animation="fade-up" delay={100}>
+              <Card className="text-center hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Heart className="w-6 h-6 text-primary" />
+                  </div>
+                  <CardTitle>Compassion</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Every project on our platform is driven by genuine care for making a positive impact in the world.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Globe className="w-6 h-6 text-primary" />
-                </div>
-                <CardTitle>Global Impact</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  We align with UN SDGs to ensure every contribution supports meaningful, measurable global progress.
-                </CardDescription>
-              </CardContent>
-            </Card>
+            <ScrollReveal animation="fade-up" delay={200}>
+              <Card className="text-center hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Globe className="w-6 h-6 text-primary" />
+                  </div>
+                  <CardTitle>Global Impact</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    We align with UN SDGs to ensure every contribution supports meaningful, measurable global progress.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-6 h-6 text-primary" />
-                </div>
-                <CardTitle>Community</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Building strong communities of supporters, creators, and beneficiaries working together for change.
-                </CardDescription>
-              </CardContent>
-            </Card>
+            <ScrollReveal animation="fade-up" delay={300}>
+              <Card className="text-center hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-6 h-6 text-primary" />
+                  </div>
+                  <CardTitle>Community</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Building strong communities of supporters, creators, and beneficiaries working together for change.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-6 h-6 text-primary" />
-                </div>
-                <CardTitle>Purpose-Driven</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Every feature and decision is made with the goal of maximizing positive impact and accessibility.
-                </CardDescription>
-              </CardContent>
-            </Card>
+            <ScrollReveal animation="fade-up" delay={100}>
+              <Card className="text-center hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Target className="w-6 h-6 text-primary" />
+                  </div>
+                  <CardTitle>Purpose-Driven</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Every feature and decision is made with the goal of maximizing positive impact and accessibility.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-6 h-6 text-primary" />
-                </div>
-                <CardTitle>Transparency</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Clear reporting, open communication, and honest progress updates on every funded project.
-                </CardDescription>
-              </CardContent>
-            </Card>
+            <ScrollReveal animation="fade-up" delay={200}>
+              <Card className="text-center hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Award className="w-6 h-6 text-primary" />
+                  </div>
+                  <CardTitle>Transparency</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Clear reporting, open communication, and honest progress updates on every funded project.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-6 h-6 text-primary" />
-                </div>
-                <CardTitle>Innovation</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Leveraging technology to make fundraising more effective, accessible, and impactful than ever.
-                </CardDescription>
-              </CardContent>
-            </Card>
+            <ScrollReveal animation="fade-up" delay={300}>
+              <Card className="text-center hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="w-6 h-6 text-primary" />
+                  </div>
+                  <CardTitle>Innovation</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Leveraging technology to make fundraising more effective, accessible, and impactful than ever.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -132,64 +147,76 @@ const About = () => {
        {/* The What, Why & How */}
        <section className="py-20 px-4">
          <div className="container mx-auto max-w-6xl">
-           <div className="text-center mb-16">
-             <h2 className="text-4xl font-bold mb-4">The What, The Why & The How</h2>
-             <p className="text-lg text-muted-foreground">
-               Our mission, approach, and platform explained
-             </p>
-           </div>
+           <ScrollReveal animation="fade-up">
+             <div className="text-center mb-16">
+               <h2 className="text-4xl font-bold mb-4">The What, The Why & The How</h2>
+               <p className="text-lg text-muted-foreground">
+                 Our mission, approach, and platform explained
+               </p>
+             </div>
+           </ScrollReveal>
            
            <div className="grid md:grid-cols-3 gap-12 md:gap-8">
              {/* The What */}
-             <div className="text-center border-r-0 md:border-r border-border/30 pr-0 md:pr-8">
-               <div className="w-20 h-20 bg-primary/5 border border-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                 <Target className="w-10 h-10 text-primary" />
+             <ScrollReveal animation="fade-up" delay={100}>
+               <div className="text-center border-r-0 md:border-r border-border/30 pr-0 md:pr-8">
+                 <div className="w-20 h-20 bg-primary/5 border border-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                   <Target className="w-10 h-10 text-primary" />
+                 </div>
+                 <h3 className="text-2xl font-bold mb-4 text-foreground">The What</h3>
+                 <p className="text-muted-foreground text-base leading-relaxed">
+                   Startup Nation empowers entrepreneurs to build sustainable businesses that drive economic growth and create lasting impact.
+                 </p>
                </div>
-               <h3 className="text-2xl font-bold mb-4 text-foreground">The What</h3>
-               <p className="text-muted-foreground text-base leading-relaxed">
-                 Startup Nation empowers entrepreneurs to build sustainable businesses that drive economic growth and create lasting impact.
-               </p>
-             </div>
+             </ScrollReveal>
 
              {/* The Why */}
-             <div className="text-center border-r-0 md:border-r border-border/30 pr-0 md:pr-8">
-               <div className="w-20 h-20 bg-secondary/5 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                 <Award className="w-10 h-10 text-secondary" />
+             <ScrollReveal animation="fade-up" delay={200}>
+               <div className="text-center border-r-0 md:border-r border-border/30 pr-0 md:pr-8">
+                 <div className="w-20 h-20 bg-secondary/5 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                   <Award className="w-10 h-10 text-secondary" />
+                 </div>
+                 <h3 className="text-2xl font-bold mb-4 text-foreground">The Why</h3>
+                 <p className="text-muted-foreground text-base leading-relaxed">
+                   SDG alignment builds investor confidence through measurable impact metrics and transparent, proven methodologies.
+                 </p>
                </div>
-               <h3 className="text-2xl font-bold mb-4 text-foreground">The Why</h3>
-               <p className="text-muted-foreground text-base leading-relaxed">
-                 SDG alignment builds investor confidence through measurable impact metrics and transparent, proven methodologies.
-               </p>
-             </div>
+             </ScrollReveal>
 
              {/* The How */}
-             <div className="text-center">
-               <div className="w-20 h-20 bg-accent/5 border border-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                 <Users className="w-10 h-10 text-accent" />
+             <ScrollReveal animation="fade-up" delay={300}>
+               <div className="text-center">
+                 <div className="w-20 h-20 bg-accent/5 border border-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                   <Users className="w-10 h-10 text-accent" />
+                 </div>
+                 <h3 className="text-2xl font-bold mb-4 text-foreground">The How</h3>
+                 <p className="text-muted-foreground text-base leading-relaxed">
+                   FundLanka connects values-aligned investors with impact-driven startups through curated discovery and standardized reporting.
+                 </p>
                </div>
-               <h3 className="text-2xl font-bold mb-4 text-foreground">The How</h3>
-               <p className="text-muted-foreground text-base leading-relaxed">
-                 FundLanka connects values-aligned investors with impact-driven startups through curated discovery and standardized reporting.
-               </p>
-             </div>
+             </ScrollReveal>
            </div>
          </div>
        </section>
        {/* SDG Alignment */}
       <section className="py-16 px-4 bg-muted/30">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold mb-6">Aligned with UN Sustainable Development Goals</h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Our platform is designed to support all 17 UN SDGs, ensuring that every project contributes 
-            to the global agenda for sustainable development by 2030.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
-            {Array.from({
-            length: 17
-          }, (_, i) => <div key={i + 1} className="aspect-square">
-                <img src={`/sdg-icons/sdg-${String(i + 1).padStart(2, '0')}.jpg`} alt={`SDG ${i + 1}`} className="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform" />
-              </div>)}
-          </div>
+          <ScrollReveal animation="fade-up">
+            <h2 className="text-3xl font-bold mb-6">Aligned with UN Sustainable Development Goals</h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Our platform is designed to support all 17 UN SDGs, ensuring that every project contributes 
+              to the global agenda for sustainable development by 2030.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal animation="scale-up" delay={200}>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
+              {Array.from({
+              length: 17
+            }, (_, i) => <div key={i + 1} className="aspect-square">
+                  <img src={`/sdg-icons/sdg-${String(i + 1).padStart(2, '0')}.jpg`} alt={`SDG ${i + 1}`} className="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform" />
+                </div>)}
+            </div>
+          </ScrollReveal>
           <Button asChild>
             
           </Button>
@@ -199,40 +226,50 @@ const About = () => {
       {/* SDG Investment Trust */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold mb-6">Building Investor Confidence Through SDG Alignment</h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Startups that align with the UN Sustainable Development Goals demonstrate measurable impact, 
-            transparent reporting, and long-term vision—key factors that modern investors value when making funding decisions.
-          </p>
+          <ScrollReveal animation="fade-up">
+            <h2 className="text-3xl font-bold mb-6">Building Investor Confidence Through SDG Alignment</h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Startups that align with the UN Sustainable Development Goals demonstrate measurable impact, 
+              transparent reporting, and long-term vision—key factors that modern investors value when making funding decisions.
+            </p>
+          </ScrollReveal>
           <div className="grid md:grid-cols-2 gap-8 text-left">
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Risk Mitigation</h3>
-              <p className="text-muted-foreground">
-                SDG-aligned businesses show proactive approaches to regulatory compliance, environmental risks, 
-                and social responsibility, reducing potential future liabilities for investors.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Market Advantage</h3>
-              <p className="text-muted-foreground">
-                Companies addressing global challenges tap into growing markets for sustainable solutions, 
-                positioning themselves ahead of traditional competitors and regulatory changes.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Transparent Metrics</h3>
-              <p className="text-muted-foreground">
-                SDG frameworks provide standardized impact measurement, giving investors clear visibility 
-                into both financial returns and societal value creation.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold">ESG Compliance</h3>
-              <p className="text-muted-foreground">
-                Alignment with global sustainability goals helps startups meet increasing Environmental, 
-                Social, and Governance requirements from institutional investors and funds.
-              </p>
-            </div>
+            <ScrollReveal animation="fade-right" delay={100}>
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">Risk Mitigation</h3>
+                <p className="text-muted-foreground">
+                  SDG-aligned businesses show proactive approaches to regulatory compliance, environmental risks, 
+                  and social responsibility, reducing potential future liabilities for investors.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal animation="fade-left" delay={200}>
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">Market Advantage</h3>
+                <p className="text-muted-foreground">
+                  Companies addressing global challenges tap into growing markets for sustainable solutions, 
+                  positioning themselves ahead of traditional competitors and regulatory changes.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal animation="fade-right" delay={300}>
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">Transparent Metrics</h3>
+                <p className="text-muted-foreground">
+                  SDG frameworks provide standardized impact measurement, giving investors clear visibility 
+                  into both financial returns and societal value creation.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal animation="fade-left" delay={400}>
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">ESG Compliance</h3>
+                <p className="text-muted-foreground">
+                  Alignment with global sustainability goals helps startups meet increasing Environmental, 
+                  Social, and Governance requirements from institutional investors and funds.
+                </p>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
