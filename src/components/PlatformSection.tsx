@@ -24,7 +24,7 @@ export const PlatformSection = () => {
           
           {/* Startup Nation Card */}
           <ScrollReveal animation="fade-left" delay={200}>
-            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/50 bg-gradient-hero/5">
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-orange-500/50 bg-gradient-hero/5">
             <CardContent className="p-8">
               {/* Logo Section */}
               <div className="h-48 flex items-center justify-center mb-2">
@@ -55,8 +55,8 @@ export const PlatformSection = () => {
               {/* Features Grid */}
               <div className="grid grid-cols-1 gap-6">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-3">
-                    <Building2 className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 bg-orange-500/10 rounded-2xl flex items-center justify-center mb-3">
+                    <Building2 className="w-8 h-8 text-orange-500" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Business Development</h4>
@@ -65,8 +65,8 @@ export const PlatformSection = () => {
                 </div>
                 
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-3">
-                    <Users className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 bg-orange-500/10 rounded-2xl flex items-center justify-center mb-3">
+                    <Users className="w-8 h-8 text-orange-500" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Investor Network</h4>
@@ -75,8 +75,8 @@ export const PlatformSection = () => {
                 </div>
                 
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-3">
-                    <Rocket className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 bg-orange-500/10 rounded-2xl flex items-center justify-center mb-3">
+                    <Rocket className="w-8 h-8 text-orange-500" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Growth Resources</h4>
