@@ -120,5 +120,8 @@ export const Hero = () => {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         
       </div>
+
+      {/* Fade Effect Overlay */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 md:h-48 bg-gradient-to-t from-background via-background/50 to-transparent z-30 pointer-events-none" />
     </section>;
 };
