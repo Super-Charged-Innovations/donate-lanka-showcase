@@ -1,18 +1,18 @@
 import { Variants } from "framer-motion";
 
-// Timing and easing optimized for smooth transitions
+// Timing and easing optimized for smooth transitions with existing UI
 export const pageTransition = {
-  duration: 0.4,
-  ease: [0.4, 0, 0.2, 1] as [number, number, number, number], // Custom cubic-bezier for smooth acceleration
+  duration: 0.35, // Slightly faster for better coordination with header/footer
+  ease: [0.4, 0, 0.2, 1] as [number, number, number, number],
 };
 
 export const fastTransition = {
-  duration: 0.25,
+  duration: 0.2, // Quick transitions to not conflict with scroll animations
   ease: [0.4, 0, 0.2, 1] as [number, number, number, number],
 };
 
 export const slowTransition = {
-  duration: 0.6,
+  duration: 0.5, // Slower for success page celebration effect
   ease: [0.4, 0, 0.2, 1] as [number, number, number, number],
 };
 
@@ -107,7 +107,7 @@ export const scaleVariants: Variants = {
   animate: {
     opacity: 1,
     scale: 1,
-    transition: pageTransition,
+    transition: slowTransition, // Use slower transition for celebration effect
   },
   exit: {
     opacity: 0,

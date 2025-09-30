@@ -31,14 +31,21 @@ export const AnimatedRoutes = ({ routes }: AnimatedRoutesProps) => {
     return () => clearTimeout(timer);
   }, [location.pathname]);
 
-  // Prevent animation conflicts with scroll reveal
+  // Prevent animation conflicts with scroll reveal and cleanup
   useEffect(() => {
     const handlePageTransition = () => {
       // Reset any ongoing scroll animations
       const scrollElements = document.querySelectorAll('[data-scroll-reveal]');
       scrollElements.forEach(el => {
         el.classList.remove('animate-fade-up', 'animate-scale-up', 'animate-fade-left');
+        (el as HTMLElement).style.willChange = 'auto';
       });
+      
+      // Cleanup header/footer animations
+      const header = document.querySelector('header');
+      const footer = document.querySelector('footer');
+      if (header) (header as HTMLElement).style.willChange = 'auto';
+      if (footer) (footer as HTMLElement).style.willChange = 'auto';
     };
 
     window.addEventListener('pageTransition', handlePageTransition);
