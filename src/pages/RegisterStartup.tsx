@@ -637,13 +637,13 @@ const RegisterStartupPage = () => {
             </form>
             
             {/* Back to Registration Link */}
-            <div className="pt-4 border-t">
+            <div className="pt-4 border-t text-center">
               <Link 
                 to="/register/fundlanka" 
-                className="flex items-center text-muted-foreground hover:text-foreground transition-colors"
+                className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Registration
+                Back to FundLanka
               </Link>
             </div>
           </CardContent>

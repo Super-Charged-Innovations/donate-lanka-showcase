@@ -22,14 +22,6 @@ const RegisterFundLanka = () => {
   return (
     <div className="min-h-screen bg-gradient-hero">
       <div className="container mx-auto px-4 py-12 md:py-16">
-        {/* Back Navigation */}
-        <div className="max-w-4xl mx-auto mb-6">
-          <Link to="/register" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to platform selection
-          </Link>
-        </div>
-
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-12">
           <Badge variant="outline" className="mb-4 bg-primary/10 text-primary border-primary/20">
@@ -166,13 +158,16 @@ const RegisterFundLanka = () => {
           </div>
 
           {/* Additional Info */}
-          <div className="text-center mt-12 space-y-4">
-            <p className="text-muted-foreground">
-              Already have an account? <Link to="/login" className="text-primary hover:underline">Sign in here</Link>
-            </p>
+          <div className="text-center mt-12 space-y-6">
             <p className="text-sm text-muted-foreground">
               By registering, you'll be notified when FundLanka officially launches with priority access to all features.
             </p>
+            
+            {/* Back Navigation */}
+            <Link to="/register" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to platform selection
+            </Link>
           </div>
         </div>
       </div>

@@ -111,10 +111,7 @@ const RegisterPlatform = () => {
           </div>
 
           {/* Additional Info */}
-          <div className="text-center mt-12 space-y-4">
-            <p className="text-muted-foreground">
-              Already have an account? <Link to="/login" className="text-primary hover:underline">Sign in here</Link>
-            </p>
+          <div className="text-center mt-12">
             <p className="text-sm text-muted-foreground">
               By registering, you'll be notified when the platforms officially launch with priority access to all features.
             </p>

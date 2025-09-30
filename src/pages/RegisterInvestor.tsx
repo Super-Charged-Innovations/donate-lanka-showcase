@@ -641,15 +641,7 @@ const RegisterInvestorPage = () => {
     <div className="min-h-screen bg-gradient-hero">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
-          <Link 
-            to="/register/fundlanka" 
-            className="flex items-center text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Registration
-          </Link>
-          
+        <div className="flex items-center justify-end mb-8">
           <Badge variant="outline" className="bg-secondary/10 text-secondary border-secondary/20">
             <Target className="w-3 h-3 mr-1" />
             Investor Registration
@@ -725,6 +717,14 @@ const RegisterInvestorPage = () => {
             </form>
           </CardContent>
         </Card>
+        
+        {/* Back Navigation */}
+        <div className="text-center mt-8">
+          <Link to="/register/fundlanka" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to FundLanka
+          </Link>
+        </div>
       </div>
     </div>
   );

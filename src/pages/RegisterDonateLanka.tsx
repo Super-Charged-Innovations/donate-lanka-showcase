@@ -86,14 +86,6 @@ const RegisterDonateLanka = () => {
   return (
     <div className="min-h-screen bg-gradient-hero">
       <div className="container mx-auto px-4 py-12 md:py-16">
-        {/* Back Navigation */}
-        <div className="max-w-2xl mx-auto mb-6">
-          <Link to="/register" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to platform selection
-          </Link>
-        </div>
-
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
           <div className="flex justify-center mb-4">
@@ -208,6 +200,14 @@ const RegisterDonateLanka = () => {
             </form>
           </CardContent>
         </Card>
+        
+        {/* Back Navigation */}
+        <div className="text-center mt-8">
+          <Link to="/register" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to platform selection
+          </Link>
+        </div>
       </div>
     </div>
   );
