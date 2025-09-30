@@ -107,8 +107,8 @@ export const Header = () => {
                   "lg:hidden rounded-full bg-white/10 hover:bg-white/20 focus-ring",
                   "backdrop-blur-sm border border-white/20"
                 )}
-                onClick={() => setIsMobileMenuOpen(true)}
-                aria-label="Open mobile menu"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                aria-label="Toggle mobile menu"
               >
                 <Menu className="w-5 h-5" />
               </Button>
