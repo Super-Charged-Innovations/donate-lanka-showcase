@@ -25,6 +25,9 @@ const Partners = () => {
             We collaborate with leading organizations to amplify our impact and bring meaningful change to communities worldwide
           </p>
         </div>
+        
+        {/* Fade Effect Overlay */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 md:h-48 bg-gradient-to-t from-background via-background/50 to-transparent z-30 pointer-events-none" />
       </section>
 
       {/* Partners Grid */}
