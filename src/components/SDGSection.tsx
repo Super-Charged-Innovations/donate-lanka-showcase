@@ -24,9 +24,8 @@ export const SDGSection = () => {
         {/* Header */}
         <ScrollReveal animation="fade-up">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our Mission: Advancing Sri Lanka Through the UN Sustainable Development Goals
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Mission: Advancing Sri Lanka Through the
+Sustainable Development Goals</h2>
             <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">At FundLanka, every Startup will directly or indirectly support Sri Lanka's progress toward the
   Global 17 Sustainable Development Goals (SDGs). From eradicating poverty to protecting our environment, your generosity fuels real, measurable change across all 25 districts.</p>
             <p className="text-lg text-muted-foreground mt-2 font-medium">Discover how your choice helps build a brighter, more sustainable future for all Sri Lankans.</p>
@@ -38,24 +37,13 @@ export const SDGSection = () => {
           <div className="mb-12">
             {/* Mobile/Tablet: Simple responsive grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:hidden">
-              {sdgData.map(sdg => (
-                <Card 
-                  key={sdg.id} 
-                  className={cn(
-                    "cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg",
-                    "border-2 hover:border-white/50 group"
-                  )}
-                  style={{ backgroundColor: sdg.color }}
-                  onClick={() => handleSDGClick(sdg)}
-                >
+              {sdgData.map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-white/50 group")} style={{
+              backgroundColor: sdg.color
+            }} onClick={() => handleSDGClick(sdg)}>
                   <CardContent className="p-6 text-center">
                     {/* Official UN SDG Icon */}
                     <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-4 border-white">
-                      <img 
-                        src={sdg.iconPath} 
-                        alt={`SDG ${sdg.id}: ${sdg.title}`} 
-                        className="w-full h-full object-cover" 
-                      />
+                      <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
                     </div>
                     
                     {/* Title */}
@@ -73,32 +61,20 @@ export const SDGSection = () => {
                       {sdg.sriLankanContext}
                     </p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
 
             {/* Desktop: Custom row layout */}
             <div className="hidden lg:block space-y-3">
               {/* Row 1: SDGs 1-5 */}
               <div className="flex justify-center gap-4">
-                {sdgData.slice(0, 5).map(sdg => (
-                  <Card 
-                    key={sdg.id} 
-                    className={cn(
-                      "cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg",
-                      "border-2 hover:border-white/50 group w-44"
-                    )}
-                    style={{ backgroundColor: sdg.color }}
-                    onClick={() => handleSDGClick(sdg)}
-                  >
+                {sdgData.slice(0, 5).map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-white/50 group w-44")} style={{
+                backgroundColor: sdg.color
+              }} onClick={() => handleSDGClick(sdg)}>
                     <CardContent className="p-4 text-center">
                       {/* Official UN SDG Icon */}
                       <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-4 border-white">
-                        <img 
-                          src={sdg.iconPath} 
-                          alt={`SDG ${sdg.id}: ${sdg.title}`} 
-                          className="w-full h-full object-cover" 
-                        />
+                        <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
                       </div>
                       
                       {/* Title */}
@@ -111,29 +87,17 @@ export const SDGSection = () => {
                         {sdg.sriLankanContext}
                       </p>
                     </CardContent>
-                  </Card>
-                ))}
+                  </Card>)}
               </div>
 
               {/* Remaining rows follow same pattern */}
               <div className="flex justify-center gap-4">
-                {sdgData.slice(5, 10).map(sdg => (
-                  <Card 
-                    key={sdg.id} 
-                    className={cn(
-                      "cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg",
-                      "border-2 hover:border-white/50 group w-44"
-                    )}
-                    style={{ backgroundColor: sdg.color }}
-                    onClick={() => handleSDGClick(sdg)}
-                  >
+                {sdgData.slice(5, 10).map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-white/50 group w-44")} style={{
+                backgroundColor: sdg.color
+              }} onClick={() => handleSDGClick(sdg)}>
                     <CardContent className="p-4 text-center">
                       <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-4 border-white">
-                        <img 
-                          src={sdg.iconPath} 
-                          alt={`SDG ${sdg.id}: ${sdg.title}`} 
-                          className="w-full h-full object-cover" 
-                        />
+                        <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
                       </div>
                       <h3 className="font-bold text-white mb-1 text-sm group-hover:text-white/90 transition-colors drop-shadow-lg">
                         {sdg.title}
@@ -142,28 +106,16 @@ export const SDGSection = () => {
                         {sdg.sriLankanContext}
                       </p>
                     </CardContent>
-                  </Card>
-                ))}
+                  </Card>)}
               </div>
 
               <div className="flex justify-center gap-4">
-                {sdgData.slice(10, 14).map(sdg => (
-                  <Card 
-                    key={sdg.id} 
-                    className={cn(
-                      "cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg",
-                      "border-2 hover:border-white/50 group w-44"
-                    )}
-                    style={{ backgroundColor: sdg.color }}
-                    onClick={() => handleSDGClick(sdg)}
-                  >
+                {sdgData.slice(10, 14).map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-white/50 group w-44")} style={{
+                backgroundColor: sdg.color
+              }} onClick={() => handleSDGClick(sdg)}>
                     <CardContent className="p-4 text-center">
                       <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-4 border-white">
-                        <img 
-                          src={sdg.iconPath} 
-                          alt={`SDG ${sdg.id}: ${sdg.title}`} 
-                          className="w-full h-full object-cover" 
-                        />
+                        <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
                       </div>
                       <h3 className="font-bold text-white mb-1 text-sm group-hover:text-white/90 transition-colors drop-shadow-lg">
                         {sdg.title}
@@ -172,28 +124,16 @@ export const SDGSection = () => {
                         {sdg.sriLankanContext}
                       </p>
                     </CardContent>
-                  </Card>
-                ))}
+                  </Card>)}
               </div>
 
               <div className="flex justify-center gap-4">
-                {sdgData.slice(14, 17).map(sdg => (
-                  <Card 
-                    key={sdg.id} 
-                    className={cn(
-                      "cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg",
-                      "border-2 hover:border-white/50 group w-44"
-                    )}
-                    style={{ backgroundColor: sdg.color }}
-                    onClick={() => handleSDGClick(sdg)}
-                  >
+                {sdgData.slice(14, 17).map(sdg => <Card key={sdg.id} className={cn("cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg", "border-2 hover:border-white/50 group w-44")} style={{
+                backgroundColor: sdg.color
+              }} onClick={() => handleSDGClick(sdg)}>
                     <CardContent className="p-4 text-center">
                       <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-4 border-white">
-                        <img 
-                          src={sdg.iconPath} 
-                          alt={`SDG ${sdg.id}: ${sdg.title}`} 
-                          className="w-full h-full object-cover" 
-                        />
+                        <img src={sdg.iconPath} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
                       </div>
                       <h3 className="font-bold text-white mb-1 text-sm group-hover:text-white/90 transition-colors drop-shadow-lg">
                         {sdg.title}
@@ -202,8 +142,7 @@ export const SDGSection = () => {
                         {sdg.sriLankanContext}
                       </p>
                     </CardContent>
-                  </Card>
-                ))}
+                  </Card>)}
               </div>
             </div>
           </div>
