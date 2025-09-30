@@ -30,24 +30,30 @@ export const MobileNav = ({ isOpen, onClose, navigationItems }: MobileNavProps) 
     };
   }, [isOpen]);
 
-  useEffect(() => {
-    onClose();
-  }, [location.pathname, onClose]);
-
   const isActive = (href: string) => location.pathname === href;
 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 lg:hidden">
+    <div className="fixed inset-0 z-[100] lg:hidden" style={{ willChange: isOpen ? 'opacity' : 'auto' }}>
       {/* Backdrop */}
       <div 
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm"
+        className={cn(
+          "fixed inset-0 bg-black/50 transition-opacity duration-200",
+          isOpen ? "opacity-100" : "opacity-0"
+        )}
         onClick={onClose}
+        aria-hidden="true"
       />
       
       {/* Mobile Menu */}
-      <div className="fixed right-0 top-0 h-full w-full max-w-sm bg-background border-l shadow-lg">
+      <div 
+        className={cn(
+          "fixed right-0 top-0 h-full w-full max-w-sm bg-background border-l shadow-lg transition-transform duration-200 ease-out",
+          isOpen ? "translate-x-0" : "translate-x-full"
+        )}
+        style={{ willChange: isOpen ? 'transform' : 'auto' }}
+      >
         <div className="flex flex-col h-full">
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b">
@@ -58,12 +64,13 @@ export const MobileNav = ({ isOpen, onClose, navigationItems }: MobileNavProps) 
           </div>
 
           {/* Navigation Links */}
-          <nav className="flex-1 p-4">
+          <nav className="flex-1 p-4 overflow-y-auto">
             <div className="space-y-2">
               {navigationItems.map((item) => (
                 <Link
                   key={item.href}
                   to={item.href}
+                  onClick={onClose}
                   className={cn(
                     "block px-3 py-2 rounded-md text-sm font-medium transition-colors",
                     isActive(item.href)
