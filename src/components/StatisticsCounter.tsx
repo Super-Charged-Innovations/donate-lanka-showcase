@@ -2,64 +2,24 @@ import { ScrollReveal } from "./ScrollReveal";
 
 const partnerLogos = [
   {
-    name: "TechCorp",
-    logo: "TC",
-    gradient: "from-blue-500/20 to-purple-500/20"
+    name: "Startup Nation",
+    logoUrl: "/startup-nation-logo.png"
   },
   {
-    name: "InnovateHub", 
-    logo: "IH",
-    gradient: "from-green-500/20 to-teal-500/20"
+    name: "DonateLanka",
+    logoUrl: "/donatelanka-logo.png"
   },
   {
-    name: "FutureTech",
-    logo: "FT",  
-    gradient: "from-orange-500/20 to-red-500/20"
+    name: "Hatch",
+    logoUrl: "/partners/hatch-logo.png"
   },
   {
-    name: "NextGen Solutions",
-    logo: "NG",
-    gradient: "from-purple-500/20 to-pink-500/20"
+    name: "Veracity",
+    logoUrl: "/partners/veracity-logo.png"
   },
   {
-    name: "InnovateLabs",
-    logo: "IL",
-    gradient: "from-cyan-500/20 to-blue-500/20"
-  },
-  {
-    name: "StartupBase",
-    logo: "SB", 
-    gradient: "from-yellow-500/20 to-orange-500/20"
-  },
-  {
-    name: "CloudTech",
-    logo: "CT",
-    gradient: "from-indigo-500/20 to-blue-500/20"
-  },
-  {
-    name: "DataFlow",
-    logo: "DF",
-    gradient: "from-pink-500/20 to-rose-500/20"
-  },
-  {
-    name: "AlphaLabs",
-    logo: "AL",
-    gradient: "from-emerald-500/20 to-green-500/20"
-  },
-  {
-    name: "ByteWorks",
-    logo: "BW",
-    gradient: "from-violet-500/20 to-purple-500/20"
-  },
-  {
-    name: "CodeCore",
-    logo: "CC",
-    gradient: "from-amber-500/20 to-yellow-500/20"
-  },
-  {
-    name: "DevStream",
-    logo: "DS",
-    gradient: "from-lime-500/20 to-green-500/20"
+    name: "Supercharged",
+    logoUrl: "/partners/supercharged-logo-new.png"
   }
 ];
 
@@ -70,21 +30,23 @@ const LogoSlideshow = () => {
       <div 
         className="flex animate-infinite-scroll hover:animation-play-state-paused will-change-transform"
         style={{
-          width: `${partnerLogos.length * 2 * 168}px`, // (logoWidth + margin) * 2 sets
+          width: `${partnerLogos.length * 2 * 200}px`, // (logoWidth + margin) * 2 sets
         }}
       >
         {/* First complete set */}
         {partnerLogos.map((partner, index) => (
           <div 
             key={`original-${index}`}
-            className="flex-shrink-0 w-32 h-32 mx-5 flex items-center justify-center rounded-2xl bg-gradient-to-br border border-border/30 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20 group"
+            className="flex-shrink-0 w-40 h-32 mx-5 flex items-center justify-center rounded-2xl bg-gradient-to-br border border-border/30 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20 group p-4"
             style={{
               background: `linear-gradient(135deg, hsl(var(--primary)/0.08), hsl(var(--secondary)/0.08))`
             }}
           >
-            <div className="text-3xl font-bold bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
-              {partner.logo}
-            </div>
+            <img 
+              src={partner.logoUrl} 
+              alt={partner.name}
+              className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-300"
+            />
           </div>
         ))}
         
@@ -92,14 +54,16 @@ const LogoSlideshow = () => {
         {partnerLogos.map((partner, index) => (
           <div 
             key={`duplicate-${index}`}
-            className="flex-shrink-0 w-32 h-32 mx-5 flex items-center justify-center rounded-2xl bg-gradient-to-br border border-border/30 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20 group"
+            className="flex-shrink-0 w-40 h-32 mx-5 flex items-center justify-center rounded-2xl bg-gradient-to-br border border-border/30 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20 group p-4"
             style={{
               background: `linear-gradient(135deg, hsl(var(--primary)/0.08), hsl(var(--secondary)/0.08))`
             }}
           >
-            <div className="text-3xl font-bold bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
-              {partner.logo}
-            </div>
+            <img 
+              src={partner.logoUrl} 
+              alt={partner.name}
+              className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-300"
+            />
           </div>
         ))}
       </div>
