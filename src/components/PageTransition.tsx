@@ -1,13 +1,15 @@
 import { motion, HTMLMotionProps } from "framer-motion";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import {
   fadeVariants,
   slideLeftVariants,
   slideRightVariants,
   slideUpVariants,
   scaleVariants,
+  reducedMotionVariants,
 } from "@/lib/pageAnimations";
 import { NavigationDirection } from "@/hooks/useNavigationDirection";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export type AnimationType = "fade" | "slide" | "scale" | "slideUp";
 
@@ -24,8 +26,20 @@ export const PageTransition = ({
   className = "",
   ...props
 }: PageTransitionProps) => {
-  // Select variant based on animation type and direction
+  const prefersReducedMotion = useReducedMotion();
+
+  // Reset scroll animations when page changes
+  useEffect(() => {
+    // Allow ScrollReveal components to re-trigger on page change
+    window.dispatchEvent(new Event('pageTransition'));
+  }, []);
+
+  // Select variant based on animation type, direction, and motion preference
   const getVariants = () => {
+    if (prefersReducedMotion) {
+      return reducedMotionVariants;
+    }
+
     switch (animationType) {
       case "slide":
         return direction === "backward" ? slideRightVariants : slideLeftVariants;
@@ -47,6 +61,16 @@ export const PageTransition = ({
       variants={getVariants()}
       className={className}
       {...props}
+      // Accessibility: Maintain focus management
+      onAnimationComplete={() => {
+        // Focus first focusable element after animation
+        const firstFocusable = document.querySelector<HTMLElement>(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        if (firstFocusable && document.activeElement === document.body) {
+          firstFocusable.focus();
+        }
+      }}
     >
       {children}
     </motion.div>

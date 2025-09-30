@@ -116,6 +116,27 @@ export const scaleVariants: Variants = {
   },
 };
 
+// Reduced motion variants for accessibility
+export const reducedMotionVariants: Variants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.15,
+      ease: "linear"
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.1,
+      ease: "linear"
+    },
+  },
+};
+
 // Page-specific presets
 export const pagePresets = {
   home: fadeVariants,
