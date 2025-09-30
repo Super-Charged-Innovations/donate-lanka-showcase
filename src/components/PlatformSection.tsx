@@ -90,7 +90,7 @@ export const PlatformSection = () => {
               <CardContent className="p-8 text-center lg:text-left">
               {/* Icon and Title */}
               <div className="text-center mb-8">
-                <div className="w-24 h-24 bg-gradient-to-br from-secondary/20 to-primary/20 rounded-3xl flex items-center justify-center mx-auto mb-4 p-3">
+                <div className="w-48 h-32 bg-gradient-to-br from-secondary/20 to-primary/20 rounded-3xl flex items-center justify-center mx-auto mb-4 p-4">
                   <img src="/donatelanka-logo.png" alt="DonateLanka" className="w-full h-full object-contain" />
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-secondary transition-colors mb-2">
