@@ -18,6 +18,7 @@ const RegisterSuccessPage = () => {
   const { type, email } = location.state || { type: 'startup', email: '' };
 
   const isStartup = type === 'startup';
+  const isDonateLanka = type === 'donatelanka';
   
   return (
     <div className="min-h-screen bg-gradient-hero">
@@ -39,11 +40,14 @@ const RegisterSuccessPage = () => {
             </Badge>
             
             <CardTitle className="text-3xl font-bold mb-2">
-              Welcome to Fund Lanka!
+              {isDonateLanka ? "You're on the Waitlist!" : "Welcome to Fund Lanka!"}
             </CardTitle>
             
             <p className="text-muted-foreground text-lg">
-              Thank you for registering. You're now part of Sri Lanka's premier funding ecosystem.
+              {isDonateLanka 
+                ? "Thank you for joining the DonateLanka waitlist. We'll notify you as soon as we launch!"
+                : "Thank you for registering. You're now part of Sri Lanka's premier funding ecosystem."
+              }
             </p>
           </CardHeader>
 
@@ -93,7 +97,9 @@ const RegisterSuccessPage = () => {
                   <div>
                     <h4 className="font-semibold">Early Access Benefits</h4>
                     <p className="text-sm text-muted-foreground">
-                      {isStartup 
+                      {isDonateLanka
+                        ? "Get early access to transparent donation tracking and social impact campaigns."
+                        : isStartup 
                         ? "Get early access to our investor network and funding opportunities."
                         : "Get early access to curated startup deals and investment opportunities."
                       }
@@ -108,7 +114,9 @@ const RegisterSuccessPage = () => {
                   <div>
                     <h4 className="font-semibold">Platform Features</h4>
                     <p className="text-sm text-muted-foreground">
-                      {isStartup
+                      {isDonateLanka
+                        ? "Access to verified nonprofits, impact reports, and donation tracking."
+                        : isStartup
                         ? "Access to pitch deck builder, investor matching, and funding analytics."
                         : "Access to deal flow, due diligence tools, and portfolio management."
                       }
@@ -132,9 +140,9 @@ const RegisterSuccessPage = () => {
                   </Link>
                 </Button>
                 
-                <Button asChild>
+                <Button asChild variant={isDonateLanka ? "secondary" : "default"}>
                   <Link to="/about">
-                    Learn More About Fund Lanka
+                    Learn More About {isDonateLanka ? 'DonateLanka' : 'Fund Lanka'}
                   </Link>
                 </Button>
               </div>
@@ -143,7 +151,7 @@ const RegisterSuccessPage = () => {
             {/* Additional Info */}
             <div className="text-center pt-4 text-sm text-muted-foreground space-y-2">
               <p>
-                Questions? Contact us at <a href="mailto:hello@fundlanka.com" className="text-primary hover:underline">hello@fundlanka.com</a>
+                Questions? Contact us at <a href={`mailto:hello@${isDonateLanka ? 'donatelanka' : 'fundlanka'}.com`} className="text-primary hover:underline">hello@{isDonateLanka ? 'donatelanka' : 'fundlanka'}.com</a>
               </p>
               <p>
                 We typically launch new features within 2-4 weeks of pre-launch registration.

@@ -10,9 +10,11 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Partners from "./pages/Partners";
-import Register from "./pages/Register";
+import RegisterPlatform from "./pages/RegisterPlatform";
+import RegisterFundLanka from "./pages/RegisterFundLanka";
 import RegisterStartup from "./pages/RegisterStartup";
 import RegisterInvestor from "./pages/RegisterInvestor";
+import RegisterDonateLanka from "./pages/RegisterDonateLanka";
 import RegisterSuccess from "./pages/RegisterSuccess";
 import NotFound from "./pages/NotFound";
 
@@ -32,10 +34,12 @@ const App = () => (
                 <Route path="/" element={<Index />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/partners" element={<Partners />} />
-                <Route path="/register" element={<Register />} />
-                <Route path="/register/startup" element={<RegisterStartup />} />
-                <Route path="/register/investor" element={<RegisterInvestor />} />
-                <Route path="/register/success" element={<RegisterSuccess />} />
+            <Route path="/register" element={<RegisterPlatform />} />
+            <Route path="/register/fundlanka" element={<RegisterFundLanka />} />
+            <Route path="/register/fundlanka/startup" element={<RegisterStartup />} />
+            <Route path="/register/fundlanka/investor" element={<RegisterInvestor />} />
+            <Route path="/register/donatelanka" element={<RegisterDonateLanka />} />
+            <Route path="/register/success" element={<RegisterSuccess />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>

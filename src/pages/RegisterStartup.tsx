@@ -639,7 +639,7 @@ const RegisterStartupPage = () => {
             {/* Back to Registration Link */}
             <div className="pt-4 border-t">
               <Link 
-                to="/register" 
+                to="/register/fundlanka" 
                 className="flex items-center text-muted-foreground hover:text-foreground transition-colors"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />

@@ -65,7 +65,16 @@ export interface InvestorRegistrationData extends BaseRegistrationData {
   aum?: number; // Assets under management
 }
 
-export type RegistrationData = StartupRegistrationData | InvestorRegistrationData;
+export interface DonateLankaWaitlistData {
+  type: 'donatelanka';
+  email: string;
+  companyName?: string;
+  newsletterOptIn?: boolean;
+  termsAccepted: boolean;
+  registrationDate: string;
+}
+
+export type RegistrationData = StartupRegistrationData | InvestorRegistrationData | DonateLankaWaitlistData;
 
 export interface RegistrationFormState {
   currentStep: number;

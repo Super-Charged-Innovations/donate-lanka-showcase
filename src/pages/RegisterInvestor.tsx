@@ -643,7 +643,7 @@ const RegisterInvestorPage = () => {
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <Link 
-            to="/register" 
+            to="/register/fundlanka" 
             className="flex items-center text-muted-foreground hover:text-foreground transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />

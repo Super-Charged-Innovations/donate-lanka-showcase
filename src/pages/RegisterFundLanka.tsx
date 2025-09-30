@@ -11,26 +11,35 @@ import {
   Shield, 
   Target,
   ArrowRight,
-  CheckCircle2
+  CheckCircle2,
+  ArrowLeft
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const RegisterPage = () => {
+const RegisterFundLanka = () => {
   const [selectedType, setSelectedType] = useState<'startup' | 'investor' | null>(null);
 
   return (
     <div className="min-h-screen bg-gradient-hero">
       <div className="container mx-auto px-4 py-12 md:py-16">
+        {/* Back Navigation */}
+        <div className="max-w-4xl mx-auto mb-6">
+          <Link to="/register" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to platform selection
+          </Link>
+        </div>
+
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-12">
           <Badge variant="outline" className="mb-4 bg-primary/10 text-primary border-primary/20">
-            Pre-Launch Registration
+            FundLanka Registration
           </Badge>
           <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6 bg-gradient-text bg-clip-text text-transparent">
-            Join Fund Lanka Early
+            Join FundLanka Early
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Be part of Sri Lanka's premier funding ecosystem. Register now to get early access when we launch.
+            Be part of Sri Lanka's premier investment ecosystem. Register now to get early access when we launch.
           </p>
         </div>
 
@@ -90,7 +99,7 @@ const RegisterPage = () => {
                   variant={selectedType === 'startup' ? "default" : "outline"}
                   asChild
                 >
-                  <Link to="/register/startup">
+                  <Link to="/register/fundlanka/startup">
                     Get Started as Startup
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
@@ -147,7 +156,7 @@ const RegisterPage = () => {
                   variant={selectedType === 'investor' ? "secondary" : "outline"}
                   asChild
                 >
-                  <Link to="/register/investor">
+                  <Link to="/register/fundlanka/investor">
                     Get Started as Investor
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
@@ -162,7 +171,7 @@ const RegisterPage = () => {
               Already have an account? <Link to="/login" className="text-primary hover:underline">Sign in here</Link>
             </p>
             <p className="text-sm text-muted-foreground">
-              By registering, you'll be notified when Fund Lanka officially launches with priority access to all features.
+              By registering, you'll be notified when FundLanka officially launches with priority access to all features.
             </p>
           </div>
         </div>
@@ -171,4 +180,4 @@ const RegisterPage = () => {
   );
 };
 
-export default RegisterPage;
+export default RegisterFundLanka;
