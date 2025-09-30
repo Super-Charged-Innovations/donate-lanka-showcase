@@ -23,7 +23,8 @@ export const PlatformSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           
           {/* Startup Nation Card */}
-          <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/50 bg-gradient-hero/5">
+          <ScrollReveal animation="fade-left" delay={200}>
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/50 bg-gradient-hero/5">
             <CardContent className="p-8">
               {/* Logo Section */}
               <div className="h-48 flex items-center justify-center mb-6">
@@ -80,9 +81,11 @@ export const PlatformSection = () => {
               </div>
             </CardContent>
           </Card>
+          </ScrollReveal>
 
           {/* DonateLanka Card */}
-          <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-secondary/50 bg-gradient-hero/5">
+          <ScrollReveal animation="fade-right" delay={400}>
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-secondary/50 bg-gradient-hero/5">
             <CardContent className="p-8">
               {/* Logo Section */}
               <div className="h-48 flex items-center justify-center mb-6">
@@ -139,6 +142,7 @@ export const PlatformSection = () => {
               </div>
             </CardContent>
           </Card>
+          </ScrollReveal>
 
         </div>
       </div>
