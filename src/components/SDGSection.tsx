@@ -149,193 +149,80 @@ Sustainable Development Goals</h2>
         </div>
       </div>
 
-      {/* SDG Detail Modal - Infographic Style */}
+      {/* SDG Detail Modal - Content Focused */}
       <Dialog open={!!selectedSDG} onOpenChange={() => setSelectedSDG(null)}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-background via-card to-muted/20">
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
           {selectedSDG && (
             <div className="space-y-6">
-              {/* Hero Section */}
-              <div 
-                className="relative rounded-2xl p-8 overflow-hidden"
-                style={{
-                  background: `linear-gradient(135deg, ${selectedSDG.color}ee 0%, ${selectedSDG.color}cc 100%)`
-                }}
-              >
-                <div className="relative z-10 flex items-center gap-6">
-                  <div className="w-24 h-24 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                    <img 
-                      src={selectedSDG.iconPath} 
-                      alt={`SDG ${selectedSDG.id}: ${selectedSDG.title}`} 
-                      className="w-full h-full object-cover" 
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h2 className="text-3xl font-bold text-white drop-shadow-lg mb-2">
+              {/* Hero Section with Photo */}
+              <div className="relative rounded-2xl overflow-hidden h-64">
+                <img 
+                  src={selectedSDG.iconPath} 
+                  alt={`SDG ${selectedSDG.id}: ${selectedSDG.title}`} 
+                  className="w-full h-full object-cover"
+                />
+                <div 
+                  className="absolute inset-0 flex items-end p-8"
+                  style={{
+                    background: `linear-gradient(to top, ${selectedSDG.color}ee 0%, ${selectedSDG.color}88 50%, transparent 100%)`
+                  }}
+                >
+                  <div>
+                    <h2 className="text-4xl font-bold text-white drop-shadow-lg mb-2">
                       {selectedSDG.title}
                     </h2>
-                    <p className="text-white/95 text-lg font-medium drop-shadow-md">
-                      SDG {selectedSDG.id}
+                    <p className="text-white/95 text-xl font-medium drop-shadow-md">
+                      SDG Goal {selectedSDG.id}
                     </p>
                   </div>
-                  <Badge className="bg-white/20 text-white border-white/40 text-lg px-6 py-2 backdrop-blur-sm">
-                    {selectedSDG.projectCount} Projects
-                  </Badge>
                 </div>
               </div>
 
-              {/* Key Statistics Grid */}
-              <div className="grid md:grid-cols-3 gap-4">
-                <Card className="bg-gradient-card-contrast border-2 border-primary/30 hover:border-primary/50 transition-all shadow-lg">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div 
-                        className="p-3 rounded-xl"
-                        style={{ backgroundColor: `${selectedSDG.color}20` }}
-                      >
-                        <DollarSign className="w-6 h-6" style={{ color: selectedSDG.color }} />
-                      </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground font-medium">Total Funding</p>
-                        <p className="text-2xl font-bold text-foreground">Rs. 12.4M</p>
-                      </div>
-                    </div>
-                    <Progress value={78} className="h-2" />
-                    <p className="text-xs text-muted-foreground mt-2">78% of annual goal</p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-gradient-card-contrast border-2 border-primary/30 hover:border-primary/50 transition-all shadow-lg">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div 
-                        className="p-3 rounded-xl"
-                        style={{ backgroundColor: `${selectedSDG.color}20` }}
-                      >
-                        <Users className="w-6 h-6" style={{ color: selectedSDG.color }} />
-                      </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground font-medium">Beneficiaries</p>
-                        <p className="text-2xl font-bold text-foreground">8,245</p>
-                      </div>
-                    </div>
-                    <Progress value={65} className="h-2" />
-                    <p className="text-xs text-muted-foreground mt-2">Across 15 districts</p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-gradient-card-contrast border-2 border-primary/30 hover:border-primary/50 transition-all shadow-lg">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div 
-                        className="p-3 rounded-xl"
-                        style={{ backgroundColor: `${selectedSDG.color}20` }}
-                      >
-                        <CheckCircle2 className="w-6 h-6" style={{ color: selectedSDG.color }} />
-                      </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground font-medium">Completed</p>
-                        <p className="text-2xl font-bold text-foreground">32/45</p>
-                      </div>
-                    </div>
-                    <Progress value={71} className="h-2" />
-                    <p className="text-xs text-muted-foreground mt-2">71% completion rate</p>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Two Column Layout */}
-              <div className="grid md:grid-cols-2 gap-6">
-                {/* Left Column: Description & Context */}
-                <div className="space-y-4">
-                  <Card className="bg-gradient-card-contrast border-2 border-primary/30 shadow-lg">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-2 mb-3">
-                        <Target className="w-5 h-5 text-primary" />
-                        <h3 className="font-bold text-lg text-foreground">Global Goal</h3>
-                      </div>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {selectedSDG.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="bg-gradient-card-contrast border-2 border-primary/30 shadow-lg">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-2 mb-3">
-                        <Heart className="w-5 h-5 text-primary" />
-                        <h3 className="font-bold text-lg text-foreground">Impact in Sri Lanka</h3>
-                      </div>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {selectedSDG.sriLankanContext}
-                      </p>
-                    </CardContent>
-                  </Card>
+              {/* Main Content */}
+              <div className="space-y-6 px-2">
+                {/* Global Goal */}
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <Target className="w-7 h-7 text-primary" />
+                    <h3 className="text-2xl font-bold text-foreground">What is this Goal?</h3>
+                  </div>
+                  <p className="text-xl text-muted-foreground leading-relaxed">
+                    {selectedSDG.description}
+                  </p>
                 </div>
 
-                {/* Right Column: Impact Metrics */}
-                <div className="space-y-4">
-                  <Card className="bg-gradient-card-contrast border-2 border-primary/30 shadow-lg">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-2 mb-4">
-                        <TrendingUp className="w-5 h-5 text-primary" />
-                        <h3 className="font-bold text-lg text-foreground">Key Achievements</h3>
-                      </div>
-                      <div className="space-y-4">
-                        <div>
-                          <div className="flex justify-between mb-2">
-                            <span className="text-sm font-medium text-foreground">Livelihood Programs</span>
-                            <span className="text-sm font-bold text-primary">85%</span>
-                          </div>
-                          <Progress value={85} className="h-2" />
-                        </div>
-                        <div>
-                          <div className="flex justify-between mb-2">
-                            <span className="text-sm font-medium text-foreground">Emergency Relief</span>
-                            <span className="text-sm font-bold text-primary">92%</span>
-                          </div>
-                          <Progress value={92} className="h-2" />
-                        </div>
-                        <div>
-                          <div className="flex justify-between mb-2">
-                            <span className="text-sm font-medium text-foreground">Skills Training</span>
-                            <span className="text-sm font-bold text-primary">78%</span>
-                          </div>
-                          <Progress value={78} className="h-2" />
-                        </div>
-                        <div>
-                          <div className="flex justify-between mb-2">
-                            <span className="text-sm font-medium text-foreground">Community Support</span>
-                            <span className="text-sm font-bold text-primary">88%</span>
-                          </div>
-                          <Progress value={88} className="h-2" />
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
+                {/* Sri Lankan Context */}
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <Heart className="w-7 h-7 text-primary" />
+                    <h3 className="text-2xl font-bold text-foreground">How We're Making an Impact in Sri Lanka</h3>
+                  </div>
+                  <p className="text-xl text-muted-foreground leading-relaxed">
+                    {selectedSDG.sriLankanContext}
+                  </p>
+                </div>
 
-                  <Card className="bg-gradient-card-contrast border-2 border-primary/30 shadow-lg">
-                    <CardContent className="p-6">
-                      <h3 className="font-bold text-lg text-foreground mb-3">Quick Facts</h3>
-                      <div className="space-y-3">
-                        <div className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                          <p className="text-sm text-muted-foreground">Active in 15 out of 25 districts</p>
-                        </div>
-                        <div className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                          <p className="text-sm text-muted-foreground">Over 8,000 families directly supported</p>
-                        </div>
-                        <div className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                          <p className="text-sm text-muted-foreground">32 projects successfully completed</p>
-                        </div>
-                        <div className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                          <p className="text-sm text-muted-foreground">Rs. 12.4M raised for poverty alleviation</p>
-                        </div>
+                {/* Project Stats */}
+                <div className="bg-muted/30 rounded-xl p-6 border-2 border-primary/20">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <CheckCircle2 className="w-8 h-8 text-success" />
+                      <div>
+                        <p className="text-lg text-muted-foreground">Active Projects</p>
+                        <p className="text-3xl font-bold text-foreground">{selectedSDG.projectCount}</p>
                       </div>
-                    </CardContent>
-                  </Card>
+                    </div>
+                    <Badge 
+                      className="text-lg px-6 py-2"
+                      style={{ 
+                        backgroundColor: `${selectedSDG.color}20`,
+                        color: selectedSDG.color,
+                        borderColor: selectedSDG.color
+                      }}
+                    >
+                      Supporting SDG {selectedSDG.id}
+                    </Badge>
+                  </div>
                 </div>
               </div>
             </div>
