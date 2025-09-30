@@ -158,7 +158,7 @@ Sustainable Development Goals</h2>
               <div className="relative rounded-2xl overflow-hidden h-64">
                 <img 
                   src={selectedSDG.iconPath} 
-                  alt={`SDG ${selectedSDG.id}: ${selectedSDG.title}`} 
+                  alt={selectedSDG.title} 
                   className="w-full h-full object-cover"
                 />
                 <div 
@@ -168,26 +168,42 @@ Sustainable Development Goals</h2>
                   }}
                 >
                   <div>
-                    <h2 className="text-4xl font-bold text-white drop-shadow-lg mb-2">
+                    <h2 className="text-4xl font-bold text-white drop-shadow-lg">
                       {selectedSDG.title}
                     </h2>
-                    <p className="text-white/95 text-xl font-medium drop-shadow-md">
-                      SDG Goal {selectedSDG.id}
-                    </p>
                   </div>
                 </div>
               </div>
 
               {/* Main Content */}
-              <div className="space-y-6 px-2">
+              <div className="space-y-8 px-2">
                 {/* Global Goal */}
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <Target className="w-7 h-7 text-primary" />
-                    <h3 className="text-2xl font-bold text-foreground">What is this Goal?</h3>
+                    <h3 className="text-2xl font-bold text-foreground">The Global Mission</h3>
                   </div>
-                  <p className="text-xl text-muted-foreground leading-relaxed">
+                  <p className="text-xl text-muted-foreground leading-relaxed mb-4">
                     {selectedSDG.description}
+                  </p>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    This goal represents a fundamental commitment to human dignity and sustainable development. 
+                    It addresses critical challenges that affect millions of people worldwide and requires 
+                    coordinated action from governments, organizations, and communities to create lasting change.
+                  </p>
+                </div>
+
+                {/* Why It Matters */}
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <Users className="w-7 h-7 text-primary" />
+                    <h3 className="text-2xl font-bold text-foreground">Why This Matters</h3>
+                  </div>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Achieving this goal creates ripple effects across society—improving health, education, 
+                    economic opportunities, and environmental sustainability. When communities thrive in this area, 
+                    they're better equipped to tackle other challenges and build resilient, prosperous futures 
+                    for generations to come.
                   </p>
                 </div>
 
@@ -195,34 +211,16 @@ Sustainable Development Goals</h2>
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <Heart className="w-7 h-7 text-primary" />
-                    <h3 className="text-2xl font-bold text-foreground">How We're Making an Impact in Sri Lanka</h3>
+                    <h3 className="text-2xl font-bold text-foreground">Our Impact in Sri Lanka</h3>
                   </div>
-                  <p className="text-xl text-muted-foreground leading-relaxed">
+                  <p className="text-xl text-muted-foreground leading-relaxed mb-4">
                     {selectedSDG.sriLankanContext}
                   </p>
-                </div>
-
-                {/* Project Stats */}
-                <div className="bg-muted/30 rounded-xl p-6 border-2 border-primary/20">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <CheckCircle2 className="w-8 h-8 text-success" />
-                      <div>
-                        <p className="text-lg text-muted-foreground">Active Projects</p>
-                        <p className="text-3xl font-bold text-foreground">{selectedSDG.projectCount}</p>
-                      </div>
-                    </div>
-                    <Badge 
-                      className="text-lg px-6 py-2"
-                      style={{ 
-                        backgroundColor: `${selectedSDG.color}20`,
-                        color: selectedSDG.color,
-                        borderColor: selectedSDG.color
-                      }}
-                    >
-                      Supporting SDG {selectedSDG.id}
-                    </Badge>
-                  </div>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Through FundLanka, communities across all 25 districts are receiving the support they need 
+                    to make real progress toward this goal. Local initiatives are creating sustainable solutions 
+                    that address immediate needs while building long-term capacity for positive change.
+                  </p>
                 </div>
               </div>
             </div>
