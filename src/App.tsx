@@ -24,9 +24,9 @@ const queryClient = new QueryClient();
 // Route configuration with animation types
 const routes = [
   { path: "/", element: <Index />, animationType: "fade" as const },
-  { path: "/about", element: <About />, animationType: "slideUp" as const },
-  { path: "/partners", element: <Partners />, animationType: "slide" as const },
-  { path: "/register", element: <RegisterPlatform />, animationType: "scale" as const },
+  { path: "/about", element: <About />, animationType: "fade" as const },
+  { path: "/partners", element: <Partners />, animationType: "fade" as const },
+  { path: "/register", element: <RegisterPlatform />, animationType: "slide" as const },
   { path: "/register/fundlanka", element: <RegisterFundLanka />, animationType: "slide" as const },
   { path: "/register/fundlanka/startup", element: <RegisterStartup />, animationType: "slide" as const },
   { path: "/register/fundlanka/investor", element: <RegisterInvestor />, animationType: "slide" as const },
