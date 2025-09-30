@@ -88,8 +88,8 @@ export const PlatformSection = () => {
               <CardContent className="p-8 text-center lg:text-left">
               {/* Icon and Title */}
               <div className="text-center mb-8">
-                <img src="/donatelanka-logo.png" alt="DonateLanka" className="w-64 h-auto object-contain mx-auto mb-4" />
-                <p className="text-muted-foreground font-medium">
+                <img src="/donatelanka-logo.png" alt="DonateLanka" className="w-64 h-auto object-contain mx-auto mb-6" />
+                <p className="text-muted-foreground font-medium mt-2">
                   Community Impact & Charitable Giving
                 </p>
               </div>
