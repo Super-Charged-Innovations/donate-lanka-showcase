@@ -22,62 +22,62 @@ export const PlatformSection = () => {
           {/* Left Side - Startup Nation */}
           <ScrollReveal animation="fade-left" delay={200}>
             <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/50 bg-gradient-hero/5">
-              <CardContent className="p-8 text-center lg:text-left">
-              {/* Icon and Badge */}
-              <div className="text-center mb-8">
-                <img src="/startup-nation-logo.png" alt="Startup Nation" className="w-64 h-auto object-contain mx-auto mb-4" />
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors mb-2 uppercase">
-                  Startup Nation
-                </h3>
-                <p className="text-muted-foreground font-medium">
-                  Empowering Sri Lankan Entrepreneurs
+              <CardContent className="p-8 text-center">
+                {/* Header Section */}
+                <div className="text-center mb-8">
+                  <img src="/startup-nation-logo.png" alt="Startup Nation" className="w-64 h-auto object-contain mx-auto mb-4" />
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors mb-2 uppercase">
+                    Startup Nation
+                  </h3>
+                  <p className="text-muted-foreground font-medium">
+                    Empowering Sri Lankan Entrepreneurs
+                  </p>
+                </div>
+
+                {/* Badge */}
+                <div className="flex items-center justify-center mb-6 p-3 bg-muted/30 rounded-lg">
+                  <span className="text-sm text-muted-foreground mr-3">Powered by</span>
+                  <img src="/partners/hatch-logo.png" alt="Hatch" className="h-6 object-contain" />
+                </div>
+
+                {/* Description */}
+                <p className="text-center text-muted-foreground mb-8 leading-relaxed">
+                  Transform your ideas into successful businesses. Access funding, mentorship, 
+                  and investors to scale your startup.
                 </p>
-              </div>
 
-              {/* Powered By Hatch */}
-              <div className="flex items-center justify-center mb-6 p-3 bg-muted/30 rounded-lg">
-                <span className="text-sm text-muted-foreground mr-3">Powered by</span>
-                <img src="/partners/hatch-logo.png" alt="Hatch" className="h-6 object-contain" />
-              </div>
-
-              {/* Description */}
-              <p className="text-center text-muted-foreground mb-8 leading-relaxed">
-                Transform your ideas into successful businesses. Access funding, mentorship, 
-                and investors to scale your startup.
-              </p>
-
-              {/* Features */}
-              <div className="grid grid-cols-1 gap-6 mb-8">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-3">
-                    <Building2 className="w-8 h-8 text-primary" />
+                {/* Features */}
+                <div className="grid grid-cols-1 gap-6">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-3">
+                      <Building2 className="w-8 h-8 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-1">Business Development</h4>
+                      <p className="text-sm text-muted-foreground">Expert guidance from concept to market</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-1">Business Development</h4>
-                    <p className="text-sm text-muted-foreground">Expert guidance from concept to market</p>
+                  
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-3">
+                      <Users className="w-8 h-8 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-1">Investor Network</h4>
+                      <p className="text-sm text-muted-foreground">Connect with VCs and angel investors</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-3">
+                      <Rocket className="w-8 h-8 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-1">Growth Resources</h4>
+                      <p className="text-sm text-muted-foreground">Tools and support for scaling up</p>
+                    </div>
                   </div>
                 </div>
-                
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-3">
-                    <Users className="w-8 h-8 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-1">Investor Network</h4>
-                    <p className="text-sm text-muted-foreground">Connect with VCs and angel investors</p>
-                  </div>
-                </div>
-                
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-3">
-                    <Rocket className="w-8 h-8 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-1">Growth Resources</h4>
-                    <p className="text-sm text-muted-foreground">Tools and support for scaling up</p>
-                  </div>
-                </div>
-              </div>
               </CardContent>
             </Card>
           </ScrollReveal>
@@ -85,60 +85,62 @@ export const PlatformSection = () => {
           {/* Right Side - DonateLanka */}
           <ScrollReveal animation="fade-right" delay={400}>
             <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-secondary/50 bg-gradient-hero/5">
-              <CardContent className="p-8 text-center lg:text-left">
-              {/* Icon and Title */}
-              <div className="text-center mb-8">
-                <img src="/donatelanka-logo.png" alt="DonateLanka" className="w-64 h-auto object-contain mx-auto mb-6" />
-                <p className="text-muted-foreground font-medium mt-2">
-                  Community Impact & Charitable Giving
+              <CardContent className="p-8 text-center">
+                {/* Header Section */}
+                <div className="text-center mb-8">
+                  <img src="/donatelanka-logo.png" alt="DonateLanka" className="w-64 h-auto object-contain mx-auto mb-4" />
+                  {/* Spacer to match Startup Nation's title height */}
+                  <div className="h-[2.75rem] mb-2"></div>
+                  <p className="text-muted-foreground font-medium">
+                    Community Impact & Charitable Giving
+                  </p>
+                </div>
+
+                {/* Badge */}
+                <div className="flex items-center justify-center mb-6 p-3 bg-secondary/10 rounded-lg">
+                  <Users className="w-5 h-5 text-secondary mr-2" />
+                  <span className="text-sm font-medium text-secondary">Community-Driven Impact</span>
+                </div>
+
+                {/* Description */}
+                <p className="text-center text-muted-foreground mb-8 leading-relaxed">
+                  Support meaningful causes and community projects across Sri Lanka. 
+                  Create lasting impact through transparent charitable giving.
                 </p>
-              </div>
 
-              {/* Community Focus Badge */}
-              <div className="flex items-center justify-center mb-6 p-3 bg-secondary/10 rounded-lg">
-                <Users className="w-5 h-5 text-secondary mr-2" />
-                <span className="text-sm font-medium text-secondary">Community-Driven Impact</span>
-              </div>
-
-              {/* Description */}
-              <p className="text-center text-muted-foreground mb-8 leading-relaxed">
-                Support meaningful causes and community projects across Sri Lanka. 
-                Create lasting impact through transparent charitable giving.
-              </p>
-
-              {/* Features */}
-              <div className="grid grid-cols-1 gap-6 mb-8">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-3">
-                    <Heart className="w-8 h-8 text-secondary" />
+                {/* Features */}
+                <div className="grid grid-cols-1 gap-6">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-3">
+                      <Heart className="w-8 h-8 text-secondary" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-1">Transparent Projects</h4>
+                      <p className="text-sm text-muted-foreground">Track your impact with real-time updates</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-1">Transparent Projects</h4>
-                    <p className="text-sm text-muted-foreground">Track your impact with real-time updates</p>
+                  
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-3">
+                      <Users className="w-8 h-8 text-secondary" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-1">Community Focus</h4>
+                      <p className="text-sm text-muted-foreground">Support local NGOs and grassroots initiatives</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-3">
+                      <Globe className="w-8 h-8 text-secondary" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-1">Island-wide Reach</h4>
+                      <p className="text-sm text-muted-foreground">Projects across all 25 districts</p>
+                    </div>
                   </div>
                 </div>
-                
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-3">
-                    <Users className="w-8 h-8 text-secondary" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-1">Community Focus</h4>
-                    <p className="text-sm text-muted-foreground">Support local NGOs and grassroots initiatives</p>
-                  </div>
-                </div>
-                
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-3">
-                    <Globe className="w-8 h-8 text-secondary" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-1">Island-wide Reach</h4>
-                    <p className="text-sm text-muted-foreground">Projects across all 25 districts</p>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
+              </CardContent>
             </Card>
           </ScrollReveal>
         </div>
