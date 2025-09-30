@@ -25,8 +25,8 @@ export const PlatformSection = () => {
               <CardContent className="p-8 text-center lg:text-left">
               {/* Icon and Badge */}
               <div className="text-center mb-8">
-                <img src="/startup-nation-logo.png" alt="Startup Nation" className="w-32 h-auto object-contain mx-auto mb-4" />
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors mb-2">
+                <img src="/startup-nation-logo.png" alt="Startup Nation" className="w-64 h-auto object-contain mx-auto mb-4" />
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors mb-2 uppercase">
                   Startup Nation
                 </h3>
                 <p className="text-muted-foreground font-medium">
