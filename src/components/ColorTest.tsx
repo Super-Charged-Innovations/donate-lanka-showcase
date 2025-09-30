@@ -9,8 +9,7 @@ export const ColorTest = () => {
   const [isDark, setIsDark] = useState(false);
 
   const toggleTheme = () => {
-    setIsDark(!isDark);
-    document.documentElement.classList.toggle('dark');
+    // Dark mode disabled - light mode only
   };
 
   return (
