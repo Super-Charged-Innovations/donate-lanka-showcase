@@ -43,11 +43,11 @@ export const Header = () => {
       >
         <div className={cn(
           "mx-auto px-4 lg:px-6 rounded-full transition-all duration-300",
-          "bg-background/80 backdrop-blur-xl border border-border/50",
-          "shadow-xl",
+          "bg-white/5 backdrop-blur-3xl border border-white/10",
+          "shadow-2xl shadow-black/5",
           isScrolled 
-            ? "bg-background/95 backdrop-blur-2xl border-border shadow-2xl" 
-            : "bg-background/80 backdrop-blur-xl border-border/50"
+            ? "bg-white/8 backdrop-blur-3xl border-white/15 shadow-2xl shadow-black/10" 
+            : "bg-white/3 backdrop-blur-2xl border-white/8"
         )}>
           <div className="flex items-center justify-between h-12 lg:h-14 px-2">
             {/* Logo */}
@@ -70,7 +70,7 @@ export const Header = () => {
                   to={item.href}
                   className={cn(
                     "text-sm font-medium transition-all duration-200 px-4 py-2 rounded-full focus-ring",
-                    "hover:bg-accent hover:text-warning backdrop-blur-sm",
+                    "hover:bg-white/10 hover:text-warning backdrop-blur-sm",
                     isActive(item.href)
                       ? "bg-warning/20 text-warning border border-warning/30"
                       : "text-foreground/80 hover:text-foreground"
@@ -104,8 +104,8 @@ export const Header = () => {
                 variant="ghost"
                 size="sm"
                 className={cn(
-                  "lg:hidden rounded-full bg-accent hover:bg-accent/80 focus-ring",
-                  "backdrop-blur-sm border border-border"
+                  "lg:hidden rounded-full bg-white/10 hover:bg-white/20 focus-ring",
+                  "backdrop-blur-sm border border-white/20"
                 )}
                 onClick={() => setIsMobileMenuOpen(true)}
                 aria-label="Open mobile menu"
