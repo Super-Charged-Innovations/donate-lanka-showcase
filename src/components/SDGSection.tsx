@@ -200,10 +200,7 @@ Sustainable Development Goals</h2>
                     <h3 className="text-2xl font-bold text-foreground">Why This Matters</h3>
                   </div>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    Achieving this goal creates ripple effects across society—improving health, education, 
-                    economic opportunities, and environmental sustainability. When communities thrive in this area, 
-                    they're better equipped to tackle other challenges and build resilient, prosperous futures 
-                    for generations to come.
+                    {selectedSDG.importance}
                   </p>
                 </div>
 
