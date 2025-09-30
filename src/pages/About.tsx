@@ -3,10 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Heart, Globe, Users, Target, Award, TrendingUp, Building2, Handshake, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const About = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
+  return <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
       {/* Hero Section */}
       <section className="relative py-16 px-4 text-center overflow-hidden">
         {/* Background gradient */}
@@ -183,18 +181,14 @@ const About = () => {
             to the global agenda for sustainable development by 2030.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
-            {Array.from({ length: 17 }, (_, i) => (
-              <div key={i + 1} className="aspect-square">
-                <img
-                  src={`/sdg-icons/sdg-${String(i + 1).padStart(2, '0')}.jpg`}
-                  alt={`SDG ${i + 1}`}
-                  className="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform"
-                />
-              </div>
-            ))}
+            {Array.from({
+            length: 17
+          }, (_, i) => <div key={i + 1} className="aspect-square">
+                <img src={`/sdg-icons/sdg-${String(i + 1).padStart(2, '0')}.jpg`} alt={`SDG ${i + 1}`} className="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform" />
+              </div>)}
           </div>
           <Button asChild>
-            <Link to="/projects">Explore Projects</Link>
+            
           </Button>
         </div>
       </section>
@@ -239,8 +233,6 @@ const About = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
